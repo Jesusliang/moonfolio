@@ -1,0 +1,53 @@
+$smallBreakpoint: 600px;
+$mediumBreakpoint: 960px;
+$largeBreakpoint: 1280px;
+$xLargeBreakpoint: 1400px;
+
+// Media queries
+@mixin mediaSmall {
+  @media (max-width: $smallBreakpoint) {
+    @content;
+  }
+}
+@mixin mediaMedium {
+  @media (max-width: $mediumBreakpoint) {
+    @content;
+  }
+}
+@mixin mediaLarge {
+  @media (max-width: $largeBreakpoint) {
+    @content;
+  }
+}
+@mixin mediaXLarge {
+  @media (max-width: $xLargeBreakpoint) {
+    @content;
+  }
+}
+
+@mixin mediaMinSmall {
+  @media (min-width: $smallBreakpoint) {
+    @content;
+  }
+}
+@mixin mediaMinMedium {
+  @media (min-width: $mediumBreakpoint) {
+    @content;
+  }
+}
+@mixin mediaMinLarge {
+  @media (min-width: $largeBreakpoint) {
+    @content;
+  }
+}
+@mixin mediaMinXLarge {
+  @media (min-width: $xLargeBreakpoint) {
+    @content;
+  }
+}
+
+:export {
+  smallBreakpoint: $smallBreakpoint;
+  mediumBreakpoint: $mediumBreakpoint;
+  largeBreakpoint: $largeBreakpoint;
+}

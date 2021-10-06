@@ -1,0 +1,41 @@
+.astronaut {
+  animation: float 4s infinite linear;
+
+  .leftArm {
+    animation: waveArm 1s infinite linear;
+    transform-origin: 120% 50%;
+  }
+}
+
+@keyframes waveArm {
+  0% {
+    transform: rotate(0);
+  }
+  25% {
+    transform: rotate(-1deg);
+  }
+  50% {
+    transform: rotate(0);
+  }
+  75% {
+    transform: rotate(1deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translate(0px, 0);
+  }
+  25% {
+    transform: translate(5px, 2px);
+  }
+  75% {
+    transform: translate(5px, -6px);
+  }
+  100% {
+    transform: translate(0px, 0);
+  }
+}
