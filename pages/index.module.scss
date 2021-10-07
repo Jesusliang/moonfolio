@@ -2,6 +2,8 @@
 
 .home {
   overflow-x: hidden;
+  color: white;
+  overflow: hidden;
 }
 
 .background {
@@ -72,7 +74,12 @@
 }
 
 .myWork {
-  min-height: 50vh;
+  min-height: 100vh;
+  text-align: center;
+  h1 {
+    font-size: 3rem;
+    font-weight: 400;
+  }
 }
 
 @keyframes float {

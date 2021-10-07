@@ -3,12 +3,12 @@
 
   .rightArm {
     animation: waveArm 1s infinite linear;
-    transform-origin: 0% 70%;
+    transform-origin: 50% 50%;
   }
 }
 
 .fire {
-  animation: fire 0.7s infinite alternate linear;
+  animation: fire 0.7s infinite alternate-reverse linear;
   transform-origin: 54% 80%;
 }
 
@@ -32,13 +32,13 @@
     transform: rotate(0);
   }
   25% {
-    transform: rotate(-0.8deg);
+    transform: rotate(-4deg);
   }
   50% {
     transform: rotate(0);
   }
   75% {
-    transform: rotate(0.8deg);
+    transform: rotate(4deg);
   }
   100% {
     transform: rotate(0);
@@ -52,7 +52,7 @@
   25% {
     transform: scale(1, 1);
   }
-  75% {
+  50% {
     transform: scale(0.95, 0.95);
   }
   100% {
