@@ -1,75 +1,89 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import styles from "./index.module.scss";
-import RocketHello from "../components/svgs/rocketHello/RocketHello";
-import { useEffect, useRef, useState } from "react";
-import { isMobile } from "react-device-detect";
-import FadeInOutScroll from "../components/FadeInOutScroll/FadeInOutScroll";
 import Navbar from "../components/navbar/Navbar";
+import {
+  Box,
+  Heading,
+  Image,
+  Link,
+  Text,
+  useColorModeValue
+} from "@chakra-ui/react";
+import Hero from "../components/Home/Hero/Hero";
+import ProjectArticle from "../components/projectArticle/ProjectArticle";
 
 const Home: NextPage = () => {
-  const [offsetY, setOffsetY] = useState(0);
-  const myWorkEl = useRef<HTMLDivElement>(null);
-
-  const handleScroll = () => {
-    setOffsetY(window.pageYOffset);
-  };
-
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
   return (
-    <div className={styles.home}>
+    <Box
+      sx={{
+        overflowX: "hidden",
+        overflow: "hidden",
+        color: useColorModeValue("black", "white")
+      }}
+    >
       <Head>
         <title>Moonfolio</title>
         <meta name="description" content="Jesus Liang's Portfolio!" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className={styles.background}></div>
-      <Navbar />
 
-      <div className={styles.hero}>
-        <div className={styles.heroTitle}>
-          <p>Jesus Liang</p>
-          <p>Web developer</p>
-        </div>
-        <div className={styles.descriptionContainer}>
-          <div
-            className={styles.description}
-            style={{
-              opacity: `${offsetY > 0 ? 100 - offsetY * 0.5 : 100}%`
+      <Navbar />
+      <Hero />
+      <Box
+        sx={{
+          padding: "2rem 0",
+          backgroundColor: useColorModeValue("gray.100", "gray.800"),
+          "&>*:not(:first-of-type)": {
+            marginTop: "5rem"
+          }
+        }}
+        id="work"
+      >
+        <Box>
+          <Text fontSize={"5xl"} fontWeight={"semibold"} textAlign="center">
+            My work 💼
+          </Text>
+          <Box
+            width="80%"
+            display="flex"
+            alignItems="center"
+            flexDirection="column"
+            marginTop="6rem"
+            marginX="auto"
+            sx={{
+              "&>*:not(:first-of-type)": {
+                marginTop: "5rem"
+              }
             }}
           >
-            I&apos;ll make your product scale to the{" "}
-            <span className={styles.moon}>
-              🌕
-              <span className={styles.glow} />
-            </span>
-            through the web
-          </div>
-          <div
-            className={styles.astronautContainer}
-            style={{
-              transform: `translate(${
-                isMobile ? offsetY * 0.8 : offsetY * 2
-              }px,-${offsetY * 0.1}px)`
-            }}
-          >
-            <RocketHello />
-          </div>
-        </div>
-      </div>
-      <FadeInOutScroll>
-        <div className={styles.myWork} ref={myWorkEl}>
-          <h1>My work</h1>
-          <div className={styles.myWork}></div>
-        </div>
-      </FadeInOutScroll>
-    </div>
+            <ProjectArticle
+              title="Availroom Booking Widget"
+              description="Un motor de reservas que se puede integrar dentro de cualquier web facilmente"
+            />
+            <ProjectArticle
+              title="Availroom Booking Widget"
+              description="Un motor de reservas que se puede integrar dentro de cualquier web facilmente"
+            />
+            <ProjectArticle
+              title="Availroom Booking Widget"
+              description="Un motor de reservas que se puede integrar dentro de cualquier web facilmente"
+            />
+            <ProjectArticle
+              title="Availroom Booking Widget"
+              description="Un motor de reservas que se puede integrar dentro de cualquier web facilmente"
+            />
+          </Box>
+        </Box>
+        <Box>
+          <Text fontSize={"5xl"} fontWeight={"semibold"} textAlign="center">
+            My Skills 💡
+          </Text>
+          <Box>
+            
+          </Box>
+        </Box>
+      </Box>
+    </Box>
   );
 };
 
