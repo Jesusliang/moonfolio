@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { isMobile } from "react-device-detect";
 import RocketHello from "../../../components/svgs/rocketHello/RocketHello";
 import { css } from "@emotion/react";
-import { Box, Button, chakra, Text } from "@chakra-ui/react";
+import { Box, Button, chakra, Link, Text } from "@chakra-ui/react";
 import styles from "./Hero.module.scss";
 
 interface Props {}
@@ -99,29 +99,37 @@ const Hero: React.FC<Props> = (props) => {
             <chakra.span />
           </chakra.span>{" "}
           through the web
-          <Button
-            display="block"
-            margin="auto"
-            marginTop="5%"
-            colorScheme="yellow"
-            zIndex="100"
-            position="relative"
-            // bgColor="black"
-            sx={{
-              "&::before": {
-                content: '""',
-                boxShadow: "0 0 35px 15px rgba(255, 255, 0, 0.6)",
-                position: "absolute",
-                left: "50%",
-                top: "50%",
-                transform: "translate(-50%,-50%)",
-                zIndex: "-10",
-                width: "100%"
-              }
+          <Link
+            href="#contact"
+            textDecor={"none"}
+            _hover={{
+              textDecor: "none"
             }}
           >
-            Contact me
-          </Button>
+            <Button
+              display="block"
+              margin="auto"
+              marginTop="5%"
+              colorScheme="yellow"
+              zIndex="100"
+              position="relative"
+              // bgColor="black"
+              sx={{
+                "&::before": {
+                  content: '""',
+                  boxShadow: "0 0 35px 15px rgba(255, 255, 0, 0.6)",
+                  position: "absolute",
+                  left: "50%",
+                  top: "50%",
+                  transform: "translate(-50%,-50%)",
+                  zIndex: "-10",
+                  width: "100%"
+                }
+              }}
+            >
+              Contact me
+            </Button>
+          </Link>
         </Box>
         <Box
           sx={{

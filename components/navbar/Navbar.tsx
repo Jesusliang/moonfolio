@@ -29,15 +29,18 @@ const Navbar: React.FC<Props> = (props) => {
       <Box
         sx={{
           "&>*:not(:first-of-type)": {
-            marginLeft: "1rem"
+            marginLeft: { base: "1rem", md: "1.5rem" }
           },
           marginRight: "1rem"
         }}
         fontWeight="medium"
-        fontSize="xl"
+        fontSize={{ base: "sm", md: "xl" }}
       >
-        <Link>Home</Link>
+        <Link href="#home">Home</Link>
         <Link href="#work">My Work</Link>
+        <Link href="#skills">Skills</Link>
+        <Link href="#about">About</Link>
+        <Link href="#contact">Contact</Link>
       </Box>
     </Box>
   );

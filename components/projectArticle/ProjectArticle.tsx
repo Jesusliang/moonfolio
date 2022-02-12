@@ -18,6 +18,8 @@ import {
 interface Props {
   title: string;
   description: string;
+  links?: { key: string; url: string }[];
+  image: string;
 }
 const ProjectArticle: React.FC<Props> = (props) => {
   const [openContentModal, setOpenContentModal] = useState(false);
@@ -37,24 +39,29 @@ const ProjectArticle: React.FC<Props> = (props) => {
         <Box
           width={{ base: "100%", sm: "85%" }}
           height="100%"
+          maxHeight="300px"
           zIndex="2"
           marginLeft={{ base: "0", sm: "5%" }}
           marginTop="5%"
+          overflow={"hidden"}
+          borderRadius="md"
         >
-          <Link
+          {/* <Link
             textDecoration="none"
             _hover={{ textDecoration: "none" }}
             onClick={() => {
               setOpenContentModal(true);
             }}
-          >
-            <Image
-              borderRadius="md"
-              src={"./images/bookingWidget.png"}
-              alt="bookingWidget"
-              objectFit="cover"
-            />
-          </Link>
+          > */}
+          <Image
+            height="100%"
+            width="100%"
+            src={props.image}
+            alt="bookingWidget"
+            objectFit="cover"
+            objectPosition="top"
+          />
+          {/* </Link> */}
         </Box>
         <Box
           zIndex="1"
@@ -81,15 +88,15 @@ const ProjectArticle: React.FC<Props> = (props) => {
         marginTop={{ base: "1rem", md: "0" }}
       >
         <Heading marginTop="1" fontSize="3xl">
-          <Link
+          {/* <Link
             textDecoration="none"
             _hover={{ textDecoration: "none" }}
             onClick={() => {
               setOpenContentModal(true);
             }}
-          >
-            {props.title}
-          </Link>
+          > */}
+          {props.title}
+          {/* </Link> */}
         </Heading>
         <Text
           as="p"
@@ -99,17 +106,15 @@ const ProjectArticle: React.FC<Props> = (props) => {
         >
           {props.description}
         </Text>
-        <Box marginTop={{ base: "1rem", md: "auto" }} fontSize="sm">
-          <Text>
-            Website:{" "}
-            <Link color="blue">
-              https://www.availroom.com/productos/motor-de-reservas
-            </Link>
-          </Text>
-          <Text>
-            Demo:{" "}
-            <Link color="blue">https://www.bookingengine.availroom.com</Link>
-          </Text>
+        <Box marginTop={"1rem"} fontSize="sm">
+          {props.links?.map(({ key, url }) => (
+            <Text key={props.title + url}>
+              {key}:{" "}
+              <Link color="blue" href={url} target="_blank">
+                {url}
+              </Link>
+            </Text>
+          ))}
         </Box>
       </Box>
       <Modal
