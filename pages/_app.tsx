@@ -3,6 +3,7 @@ import "../styles/globals.css";
 import "../styles/normalize.css";
 import type { AppProps } from "next/app";
 import Fonts from "../config/Fonts";
+import { ParallaxProvider } from "react-scroll-parallax";
 
 const config: ThemeConfig = {
   initialColorMode: "light",
@@ -20,7 +21,9 @@ export const theme = extendTheme({
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ChakraProvider theme={theme}>
-      <Component {...pageProps} />
+      <ParallaxProvider>
+        <Component {...pageProps} />
+      </ParallaxProvider>
     </ChakraProvider>
   );
 }

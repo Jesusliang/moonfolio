@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { isMobile } from "react-device-detect";
 import RocketHello from "../../../components/svgs/rocketHello/RocketHello";
 import { css } from "@emotion/react";
-import { Box, chakra, Text } from "@chakra-ui/react";
+import { Box, Button, chakra, Text } from "@chakra-ui/react";
 import styles from "./Hero.module.scss";
 
 interface Props {}
@@ -29,7 +29,9 @@ const Hero: React.FC<Props> = (props) => {
         color: "white",
         position: "relative",
         overflow: "hidden",
-        paddingTop: "3rem"
+        paddingTop: "3rem",
+        display: "flex",
+        flexDir: "column"
       }}
     >
       <Box
@@ -52,58 +54,79 @@ const Hero: React.FC<Props> = (props) => {
         `}
       >
         <Text>Jesus Liang</Text>
-        <Text>Web Developer</Text>
+        <Text>Fullstack Developer</Text>
       </Box>
       <Box
         sx={{
-          position: "absolute",
-          marginTop: "5rem",
           textAlign: "center",
-          left: "50%",
-          top: "50%",
-          transform: "translate(-50%,-50%)"
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          width: { base: "90%", lg: "750px" },
+          margin: "auto",
+          marginTop: "auto"
         }}
       >
         <Box
-          css={css`
-            font-size: 1.7rem;
-            width: 300px;
-          `}
-          style={{
+          sx={{
+            fontSize: { base: "2rem", md: "2.5rem" },
             opacity: `${offsetY > 0 ? 100 - offsetY * 0.5 : 100}%`
           }}
         >
           I&apos;ll make your product scale to the{" "}
           <chakra.span
             className={styles.moon}
-            css={css`
-              display: inline-block;
-              border-radius: 50%;
-              font-size: 1.5rem;
-              border: none;
-              background: transparent;
-              position: relative;
-              z-index: 100;
-              filter: saturate(75%);
-              &::before {
-                content: "";
-                box-shadow: 0 0 35px 15px rgba(255, 255, 0, 0.717);
-                position: absolute;
-                left: 50%;
-                top: 50%;
-                z-index: 50;
+            sx={{
+              display: "inline-block",
+              borderRadius: "50%",
+              fontSize: { base: "2rem", md: "3rem" },
+              border: "none",
+              background: "transparent",
+              position: "relative",
+              zIndex: "100",
+              filter: "saturate(75%)",
+              "&::before": {
+                content: '""',
+                boxShadow: "0 0 35px 15px rgba(255, 255, 0, 0.717)",
+                position: "absolute",
+                left: "50%",
+                top: "50%",
+                zIndex: "50"
               }
-            `}
+            }}
           >
             🌕
             <chakra.span />
           </chakra.span>{" "}
           through the web
+          <Button
+            display="block"
+            margin="auto"
+            marginTop="5%"
+            colorScheme="yellow"
+            zIndex="100"
+            position="relative"
+            // bgColor="black"
+            sx={{
+              "&::before": {
+                content: '""',
+                boxShadow: "0 0 35px 15px rgba(255, 255, 0, 0.6)",
+                position: "absolute",
+                left: "50%",
+                top: "50%",
+                transform: "translate(-50%,-50%)",
+                zIndex: "-10",
+                width: "100%"
+              }
+            }}
+          >
+            Contact me
+          </Button>
         </Box>
         <Box
           sx={{
-            width: "255px",
-            height: "300px",
+            width: { base: "200px", md: "255px" },
+            // height: "300px",
             marginTop: "2rem"
           }}
           style={{

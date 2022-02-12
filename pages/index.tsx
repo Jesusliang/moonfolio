@@ -11,6 +11,7 @@ import {
 } from "@chakra-ui/react";
 import Hero from "../components/Home/Hero/Hero";
 import ProjectArticle from "../components/projectArticle/ProjectArticle";
+import Skills from "../components/Home/Skills/Skills";
 
 const Home: NextPage = () => {
   return (
@@ -29,17 +30,17 @@ const Home: NextPage = () => {
 
       <Navbar />
       <Hero />
-      <Box
-        sx={{
-          padding: "2rem 0",
-          backgroundColor: useColorModeValue("gray.100", "gray.800"),
-          "&>*:not(:first-of-type)": {
-            marginTop: "5rem"
-          }
-        }}
-        id="work"
-      >
-        <Box>
+      <Box>
+        <Box
+          sx={{
+            padding: "3rem 0",
+            backgroundColor: useColorModeValue("gray.100", "gray.800"),
+            "&>*:not(:first-of-type)": {
+              marginTop: "5rem"
+            }
+          }}
+          id="work"
+        >
           <Text fontSize={"5xl"} fontWeight={"semibold"} textAlign="center">
             My work 💼
           </Text>
@@ -74,14 +75,7 @@ const Home: NextPage = () => {
             />
           </Box>
         </Box>
-        <Box>
-          <Text fontSize={"5xl"} fontWeight={"semibold"} textAlign="center">
-            My Skills 💡
-          </Text>
-          <Box>
-            
-          </Box>
-        </Box>
+        <Skills />
       </Box>
     </Box>
   );
