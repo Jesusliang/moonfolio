@@ -42,5 +42,6 @@ export default async function handler(
       subject: "portfolio contact email",
       text: `from: ${req.body.name} - ${req.body.email} \n ${req.body.message}`
     });
+    res.status(200).send(true);
   }
 }
