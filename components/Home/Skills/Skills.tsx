@@ -88,7 +88,7 @@ const Skills: React.FC<Props> = (props) => {
             textAlign={"center"}
             color="black"
             transform={{ base: "translateX(30%)", lg: "translateX(120%)" }}
-            mt="2rem"
+            mt="2.8rem"
             zIndex="-10"
           >
             <Text fontSize={"2xl"} fontWeight={"medium"}>
