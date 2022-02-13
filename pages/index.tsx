@@ -26,8 +26,15 @@ const Home: NextPage = () => {
       id="home"
     >
       <Head>
-        <title>Moonfolio</title>
-        <meta name="description" content="Jesus Liang's Portfolio!" />
+        <title>Jesus Liang</title>
+        <meta
+          name="description"
+          content="Jesus Liang Fullstack web developer portfolio"
+        />
+        <meta
+          name="keywords"
+          content="Web Developer, developer, JavaScript, Typescript, fullstack developer, Jesus David Liang, Jesus Liang, Fullstack, Full-stack"
+        />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
