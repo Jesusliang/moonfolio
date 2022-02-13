@@ -90,12 +90,14 @@ const AboutMe = () => {
             </Box>
           </Box>
           <Box borderRadius="lg" color="black" padding="0 3rem">
-            <Avatar
-              size={"2xl"}
-              src={"/images/me.jpg"}
-              marginX="auto"
-              mb={"3rem"}
-            />
+            <Box textAlign={{ base: "center", md: "initial" }}>
+              <Avatar
+                size={"2xl"}
+                src={"/images/me.jpg"}
+                marginX="auto"
+                mb={"3rem"}
+              />
+            </Box>
             <Text>
               I am a fullstack Javascript/Typescript developer. With
               specialization in React and Nodejs. I love development, learning
