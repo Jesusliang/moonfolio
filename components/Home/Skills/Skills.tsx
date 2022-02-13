@@ -37,7 +37,7 @@ const Skills: React.FC<Props> = (props) => {
             <SvgReadingAstronaut />
           </Parallax>
         </Box>
-        <Parallax speed={2}>
+        <Parallax speed={4}>
           <Box
             maxW={{ base: "200px", md: "350px" }}
             w={"full"}
@@ -77,7 +77,7 @@ const Skills: React.FC<Props> = (props) => {
             </Text>
           </Box>
         </Parallax>
-        <Parallax speed={-2}>
+        <Parallax speed={-4}>
           <Box
             maxW={{ base: "200px", md: "350px" }}
             w={"full"}

@@ -5,12 +5,15 @@ import {
   Text,
   Button,
   Avatar,
-  useColorModeValue
+  useColorModeValue,
+  useToast,
+  Link
 } from "@chakra-ui/react";
 import { MdEmail } from "react-icons/md";
 import { BsLinkedin } from "react-icons/bs";
 
 const AboutMe = () => {
+  const toast = useToast();
   return (
     <Box
       position={"relative"}
@@ -59,18 +62,31 @@ const AboutMe = () => {
                 border={"2px solid transparent"}
                 _hover={{ border: "2px solid blue", borderColor: "blue.600" }}
                 leftIcon={<MdEmail size="20px" />}
+                onClick={() => {
+                  navigator.clipboard.writeText("jesusliang96@gmail.com");
+                  toast({
+                    title: "Copied to clipboard!",
+                    status: "success",
+                    isClosable: true
+                  });
+                }}
               >
                 jesusliang96@gmail.com
               </Button>
-              <Button
-                size="md"
-                variant="ghost"
-                border={"2px solid transparent"}
-                _hover={{ border: "2px solid blue", borderColor: "blue.600" }}
-                leftIcon={<BsLinkedin size="20px" />}
+              <Link
+                href="https://linkedin.com/in/jesus-liang/"
+                target={"_blank"}
               >
-                https://linkedin.com/in/jesus-liang/
-              </Button>
+                <Button
+                  size="md"
+                  variant="ghost"
+                  border={"2px solid transparent"}
+                  _hover={{ border: "2px solid blue", borderColor: "blue.600" }}
+                  leftIcon={<BsLinkedin size="20px" />}
+                >
+                  https://linkedin.com/in/jesus-liang/
+                </Button>
+              </Link>
             </Box>
           </Box>
           <Box borderRadius="lg" color="black" padding="0 3rem">
@@ -81,14 +97,13 @@ const AboutMe = () => {
               mb={"3rem"}
             />
             <Text>
-              Soy un desarrollador fullstack de Javascript/Typescript. Con
-              especialización en React y Nodejs. Me encanta el desarrollo,
-              aprender cosas nuevas y resolver problemas! <br /> <br />
-              Actualmente lidero un pequeño equipo frontend en una startup
-              llamada Availroom en el cual me encargo principalmente de la
-              arquitectura frontend de todos los proyectos asi como de
-              mantenerlos. Asimismo, también he desarrollado en situaciones
-              microservicios
+              I am a fullstack Javascript/Typescript developer. With
+              specialization in React and Nodejs. I love development, learning
+              new things and solving problems! <br /> <br />I currently lead a
+              small frontend team in a startup called Availroom in which I
+              mainly take care of the frontend architecture of all projects as
+              well as maintaining them. Likewise, I have also developed
+              microservices.
             </Text>
           </Box>
         </Box>

@@ -73,32 +73,35 @@ const Hero: React.FC<Props> = (props) => {
             opacity: `${offsetY > 0 ? 100 - offsetY * 0.5 : 100}%`
           }}
         >
-          I&apos;ll make your product scale to the{" "}
-          <chakra.span
-            className={styles.moon}
-            sx={{
-              display: "inline-block",
-              borderRadius: "50%",
-              fontSize: { base: "2rem", md: "3rem" },
-              border: "none",
-              background: "transparent",
-              position: "relative",
-              zIndex: "100",
-              filter: "saturate(75%)",
-              "&::before": {
-                content: '""',
-                boxShadow: "0 0 35px 15px rgba(255, 255, 0, 0.717)",
-                position: "absolute",
-                left: "50%",
-                top: "50%",
-                zIndex: "50"
-              }
-            }}
-          >
-            🌕
-            <chakra.span />
-          </chakra.span>{" "}
-          through the web
+          <Box>
+            I&apos;ll make your product scale to the{" "}
+            <chakra.span
+              className={styles.moon}
+              sx={{
+                display: "inline-block",
+                borderRadius: "50%",
+                fontSize: { base: "2rem", md: "3rem" },
+                border: "none",
+                background: "transparent",
+                position: "relative",
+                zIndex: "100",
+                filter: "saturate(75%)",
+                "&::before": {
+                  content: '""',
+                  boxShadow: "0 0 35px 15px rgba(255, 255, 0, 0.717)",
+                  position: "absolute",
+                  left: "50%",
+                  top: "50%",
+                  zIndex: "50"
+                }
+              }}
+            >
+              🌕
+              <chakra.span />
+            </chakra.span>{" "}
+            through the web
+          </Box>
+
           <Link
             href="#contact"
             textDecor={"none"}
@@ -107,7 +110,7 @@ const Hero: React.FC<Props> = (props) => {
             }}
           >
             <Button
-              display="block"
+              display="inline-block"
               margin="auto"
               marginTop="5%"
               colorScheme="yellow"

@@ -1,0 +1,52 @@
+.rocket {
+  width: 5rem;
+  position: absolute;
+  left: 50%;
+  z-index: 50;
+  top: 110%;
+  animation: flyAway 1s linear, shake 0.3s infinite;
+}
+
+@keyframes flyAway {
+  0% {
+    top: 110%;
+  }
+  100% {
+    top: -100%;
+  }
+}
+@keyframes shake {
+  0% {
+    transform: translate(calc(-50% - 1px), 1px);
+  }
+  10% {
+    transform: translate(calc(-50% + 1px), -1px);
+  }
+  20% {
+    transform: translate(calc(-50% - 1px), 0px);
+  }
+  30% {
+    transform: translate(calc(-50% + 1px), 1px);
+  }
+  40% {
+    transform: translate(calc(-50% - 1px), -1px);
+  }
+  50% {
+    transform: translate(calc(-50% + 1px), 1px);
+  }
+  60% {
+    transform: translate(calc(-50% - 1px), 1px);
+  }
+  70% {
+    transform: translate(calc(-50% + 1px), 1px);
+  }
+  80% {
+    transform: translate(calc(-50% - 1px), -1px);
+  }
+  90% {
+    transform: translate(calc(-50% + 1px), 1px);
+  }
+  100% {
+    transform: translate(calc(-50% - 1px), -1px);
+  }
+}
