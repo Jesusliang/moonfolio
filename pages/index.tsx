@@ -75,10 +75,6 @@ const Home: NextPage = () => {
                 {
                   key: "Product Website",
                   url: "https://www.availroom.com/productos/motor-de-reservas"
-                },
-                {
-                  key: "Demo",
-                  url: "https://bookingengine.availroom.com"
                 }
               ]}
             />
