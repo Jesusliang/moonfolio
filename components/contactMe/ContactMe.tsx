@@ -20,7 +20,7 @@ import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { BsPerson } from "react-icons/bs";
 import { MdEmail, MdOutlineEmail } from "react-icons/md";
-import SvgRocket from "../svgs/flyAwayRocket/flyAwayRocket";
+import SvgRocket from "../svgs/flyAwayRocket/FlyAwayRocket";
 interface Props {}
 const ContactMe: React.FC<Props> = (props) => {
   const toast = useToast();
