@@ -8,8 +8,8 @@ module.exports = {
     });
 
     return config;
-  },
-  experimental: {
-    concurrentFeatures: true
   }
+  // experimental: {
+  //   concurrentFeatures: true
+  // }
 };
