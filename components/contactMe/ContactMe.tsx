@@ -11,7 +11,6 @@ import {
   Link,
   Text,
   Textarea,
-  useColorModeValue,
   useToast,
   VStack
 } from "@chakra-ui/react";
@@ -55,10 +54,10 @@ const ContactMe: React.FC<Props> = (props) => {
       </Text>
       <Box display={"grid"} placeItems="center" marginTop={"2rem"}>
         <Box
-          bg={useColorModeValue("white", "gray.700")}
+          bg={"white"}
           borderRadius="lg"
           p={8}
-          color={useColorModeValue("gray.700", "whiteAlpha.900")}
+          color={"gray.700"}
           shadow="base"
           width={"90%"}
           maxW="400px"

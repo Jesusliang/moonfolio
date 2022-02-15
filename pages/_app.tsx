@@ -25,13 +25,11 @@ export const theme = extendTheme({
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <Suspense fallback="">
-      <ChakraProvider theme={theme}>
-        <ParallaxProvider>
-          <Component {...pageProps} />
-        </ParallaxProvider>
-      </ChakraProvider>
-    </Suspense>
+    <ChakraProvider theme={theme}>
+      <ParallaxProvider>
+        <Component {...pageProps} />
+      </ParallaxProvider>
+    </ChakraProvider>
   );
 }
 export default MyApp;

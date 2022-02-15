@@ -6,8 +6,6 @@ import {
   ListItem,
   Slide,
   UnorderedList,
-  useColorMode,
-  useColorModeValue,
   useMediaQuery
 } from "@chakra-ui/react";
 import React, { useState } from "react";
@@ -16,7 +14,6 @@ interface Props {}
 const Navbar: React.FC<Props> = (props) => {
   const { t } = useTranslation();
   const [isSmallScreen] = useMediaQuery("(max-width: 768px)");
-  const { toggleColorMode } = useColorMode();
   const [openNavbar, setOpenNavbar] = useState(false);
   return (
     <>
@@ -25,7 +22,7 @@ const Navbar: React.FC<Props> = (props) => {
         sx={{
           width: "100%",
           height: "3rem",
-          background: useColorModeValue("gray.900", "gray.900"),
+          background: "gray.900",
           display: "flex",
           alignItems: "center",
           justifyContent: "flex-end",

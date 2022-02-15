@@ -5,7 +5,6 @@ import {
   Text,
   Button,
   Avatar,
-  useColorModeValue,
   useToast,
   Link
 } from "@chakra-ui/react";
@@ -14,14 +13,14 @@ import { BsLinkedin } from "react-icons/bs";
 import { useTranslation } from "react-i18next";
 
 const AboutMe = () => {
-  const { t } = useTranslation();
+  const { t, ready } = useTranslation();
   const toast = useToast();
   return (
     <Box
       position={"relative"}
       sx={{
         padding: "4rem 0",
-        backgroundColor: useColorModeValue("gray.100", "gray.800"),
+        backgroundColor: "gray.100",
         "&>*:not(:first-of-type)": {
           marginTop: "5rem"
         }

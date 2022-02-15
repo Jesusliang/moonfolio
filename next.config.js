@@ -1,15 +1,16 @@
 /** @type {import('next').NextConfig} */
 module.exports = {
-  reactStrictMode: true,
-  webpack(config) {
-    config.module.rules.push({
-      test: /\.svg$/,
-      use: ["@svgr/webpack"]
-    });
+  reactStrictMode: true
+  // webpack(config) {
+  //   config.module.rules.push({
+  //     test: /\.svg$/,
+  //     use: ["@svgr/webpack"]
+  //   });
 
-    return config;
-  }
+  //   return config;
+  // }
   // experimental: {
   //   concurrentFeatures: true
   // }
+  // i18n
 };

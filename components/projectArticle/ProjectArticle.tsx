@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import {
   Box,
   Link,
-  useColorModeValue,
   Heading,
   Image,
   Text,
@@ -91,10 +90,7 @@ const ProjectArticle: React.FC<Props> = (props) => {
           display={{ base: "none", md: "block" }}
         >
           <Box
-            bgGradient={useColorModeValue(
-              "radial(blue.600 1px, transparent 1px)",
-              "radial(blue.300 1px, transparent 1px)"
-            )}
+            bgGradient={"radial(blue.600 1px, transparent 1px)"}
             backgroundSize="20px 20px"
             opacity="0.4"
             height="100%"
@@ -118,12 +114,7 @@ const ProjectArticle: React.FC<Props> = (props) => {
           {props.title}
           {/* </Link> */}
         </Heading>
-        <Text
-          as="p"
-          marginTop=".25rem"
-          color={useColorModeValue("gray.700", "gray.200")}
-          fontSize="lg"
-        >
+        <Text as="p" marginTop=".25rem" color={"gray.700"} fontSize="lg">
           {props.description}
         </Text>
         <Box marginTop={"1rem"} fontSize="sm">

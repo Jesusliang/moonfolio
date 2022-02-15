@@ -4,6 +4,7 @@ import Navbar from "../components/navbar/Navbar";
 import {
   Box,
   Button,
+  chakra,
   Image,
   Modal,
   ModalBody,
@@ -12,8 +13,7 @@ import {
   ModalFooter,
   ModalHeader,
   ModalOverlay,
-  Text,
-  useColorModeValue
+  Text
 } from "@chakra-ui/react";
 import Hero from "../components/Home/Hero/Hero";
 import ProjectArticle from "../components/projectArticle/ProjectArticle";
@@ -22,17 +22,60 @@ import AboutMe from "../components/aboutMe/AboutMe";
 import ContactMe from "../components/contactMe/ContactMe";
 import { useTranslation } from "react-i18next";
 import { useState } from "react";
+import styles from "../components/Home/Hero/Hero.module.scss";
 
 const Home: NextPage = () => {
-  const { t, i18n } = useTranslation();
+  const { t, i18n, ready } = useTranslation();
   const [languageModalOpen, setLanguageModalOpen] = useState(true);
 
+  if (!ready) {
+    return (
+      <Box height={"100vh"} width="100%" display="grid" placeItems="center">
+        <Box
+          sx={{
+            position: "fixed",
+            width: "100vw",
+            height: "100vh",
+            backgroundImage: 'url("/images/background.svg")',
+            backgroundSize: "500% 150%",
+            backgroundPosition: "center",
+            zIndex: "-900",
+            top: "0"
+          }}
+        />
+        <chakra.span
+          className={styles.moon}
+          sx={{
+            display: "inline-block",
+            borderRadius: "50%",
+            fontSize: "5rem",
+            border: "none",
+            background: "transparent",
+            position: "relative",
+            zIndex: "100",
+            filter: "saturate(75%)",
+            "&::before": {
+              content: '""',
+              boxShadow: "0 0 2rem 2rem rgba(255, 255, 0, 0.717)",
+              position: "absolute",
+              left: "50%",
+              top: "50%",
+              zIndex: "50"
+            }
+          }}
+        >
+          🌕
+          <chakra.span />
+        </chakra.span>
+      </Box>
+    );
+  }
   return (
     <Box
       sx={{
         overflowX: "hidden",
         overflow: "hidden",
-        color: useColorModeValue("black", "white")
+        color: "black"
       }}
       id="home"
     >
@@ -55,7 +98,7 @@ const Home: NextPage = () => {
         <Box
           sx={{
             padding: "3rem 0",
-            backgroundColor: useColorModeValue("gray.100", "gray.800"),
+            backgroundColor: "gray.100",
             "&>*:not(:first-of-type)": {
               marginTop: "5rem"
             }
