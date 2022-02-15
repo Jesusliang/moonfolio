@@ -29,52 +29,7 @@ const Home: NextPage = () => {
   const [languageModalOpen, setLanguageModalOpen] = useState(true);
 
   if (!ready) {
-    return (
-      <Box
-        height={"100vh"}
-        width="100%"
-        display="flex"
-        justifyContent={"center"}
-        alignItems="center"
-      >
-        <Box
-          sx={{
-            position: "fixed",
-            width: "100vw",
-            height: "100vh",
-            backgroundImage: 'url("/images/background.svg")',
-            backgroundSize: "500% 150%",
-            backgroundPosition: "center",
-            zIndex: "-900",
-            top: "0"
-          }}
-        />
-        <chakra.span
-          className={styles.moon}
-          sx={{
-            display: "inline-block",
-            borderRadius: "50%",
-            fontSize: "5rem",
-            border: "none",
-            background: "transparent",
-            position: "relative",
-            zIndex: "100",
-            filter: "saturate(75%)",
-            "&::before": {
-              content: '""',
-              boxShadow: "0 0 2rem 2rem rgba(255, 255, 0, 0.717)",
-              position: "absolute",
-              left: "50%",
-              top: "50%",
-              zIndex: "50"
-            }
-          }}
-        >
-          🌕
-          <chakra.span />
-        </chakra.span>
-      </Box>
-    );
+    return null;
   }
   return (
     <Box
