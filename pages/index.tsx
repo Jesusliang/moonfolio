@@ -30,7 +30,13 @@ const Home: NextPage = () => {
 
   if (!ready) {
     return (
-      <Box height={"100vh"} width="100%" display="grid" placeItems="center">
+      <Box
+        height={"100vh"}
+        width="100%"
+        display="flex"
+        justifyContent={"center"}
+        alignItems="center"
+      >
         <Box
           sx={{
             position: "fixed",
