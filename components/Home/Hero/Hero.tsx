@@ -116,11 +116,10 @@ const Hero: React.FC<Props> = (props) => {
               colorScheme="yellow"
               zIndex="100"
               position="relative"
-              // bgColor="black"
               sx={{
                 "&::before": {
                   content: '""',
-                  boxShadow: "0 0 35px 15px rgba(255, 255, 0, 0.6)",
+                  boxShadow: "0 0 35px 10px rgba(255, 255, 0, 0.6)",
                   position: "absolute",
                   left: "50%",
                   top: "50%",
@@ -131,6 +130,30 @@ const Hero: React.FC<Props> = (props) => {
               }}
             >
               Contact me
+            </Button>
+          </Link>
+          <Link href="/files/jesusliang_developer.pdf" target={"_blank"}>
+            <Button
+              display="inline-block"
+              margin="auto"
+              colorScheme="yellow"
+              zIndex="100"
+              position="relative"
+              marginLeft="2rem"
+              sx={{
+                "&::before": {
+                  content: '""',
+                  boxShadow: "0 0 35px 10px rgba(255, 255, 0, 0.6)",
+                  position: "absolute",
+                  left: "50%",
+                  top: "50%",
+                  transform: "translate(-50%,-50%)",
+                  zIndex: "-10",
+                  width: "100%"
+                }
+              }}
+            >
+              My resume
             </Button>
           </Link>
         </Box>
