@@ -103,6 +103,7 @@ const Hero: React.FC<Props> = (props) => {
           </Box>
 
           <Link
+            marginTop="5%"
             href="#contact"
             textDecor={"none"}
             _hover={{
@@ -112,7 +113,6 @@ const Hero: React.FC<Props> = (props) => {
             <Button
               display="inline-block"
               margin="auto"
-              marginTop="5%"
               colorScheme="yellow"
               zIndex="100"
               position="relative"
