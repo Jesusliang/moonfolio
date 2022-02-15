@@ -21,6 +21,7 @@ interface Props {
   links?: { key: string; url: string }[];
   image?: string;
   video?: string;
+  poster?: string;
 }
 const ProjectArticle: React.FC<Props> = (props) => {
   const [openContentModal, setOpenContentModal] = useState(false);
@@ -65,6 +66,8 @@ const ProjectArticle: React.FC<Props> = (props) => {
             />
           ) : (
             <video
+              poster={props.poster}
+              preload="none"
               controls
               width={"100%"}
               height="300"

@@ -1,12 +1,20 @@
 import React, { useEffect, useState } from "react";
 import { isMobile } from "react-device-detect";
 import RocketHello from "../../../components/svgs/rocketHello/RocketHello";
-import { css } from "@emotion/react";
 import { Box, Button, chakra, Link, Text } from "@chakra-ui/react";
 import styles from "./Hero.module.scss";
+import Image from "next/image";
+import { useTranslation } from "react-i18next";
 
 interface Props {}
+
+const languages = [
+  { value: "en", label: "En", image: "/images/gbflag.png" },
+  { value: "es", label: "Es", image: "/images/spainflag.png" }
+];
 const Hero: React.FC<Props> = (props) => {
+  const { t, i18n } = useTranslation();
+
   const [offsetY, setOffsetY] = useState(0);
 
   const handleScroll = () => {
@@ -19,6 +27,7 @@ const Hero: React.FC<Props> = (props) => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
   return (
     <Box
       sx={{
@@ -35,26 +44,60 @@ const Hero: React.FC<Props> = (props) => {
       }}
     >
       <Box
-        css={css`
-          position: fixed;
-          width: 100vw;
-          height: 100vh;
-          background-image: url("/images/background.svg");
-          background-size: 500% 150%;
-          background-position: center;
-          z-index: -900;
-          top: 0;
-        `}
+        sx={{
+          position: "fixed",
+          width: "100vw",
+          height: "100vh",
+          backgroundImage: 'url("/images/background.svg")',
+          backgroundSize: "500% 150%",
+          backgroundPosition: "center",
+          zIndex: "-900",
+          top: "0"
+        }}
       />
       <Box
-        css={css`
-          text-align: center;
-          font-size: 1.1rem;
-          margin-top: 2rem;
-        `}
+        position="absolute"
+        right={{ base: "50%", md: "2rem" }}
+        transform={{ base: "translateX(50%)", md: "translateX(0)" }}
+        top="4rem"
+        color="black"
+        sx={{
+          "& > *": {
+            cursor: "pointer "
+          },
+          "& > *:not(:first-of-type)": {
+            marginLeft: ".5rem !important"
+          }
+        }}
+      >
+        <Image
+          src={"/images/gbflag.png"}
+          alt={"gb"}
+          height="25px"
+          width="25px"
+          onClick={() => {
+            i18n.changeLanguage("en");
+          }}
+        />
+        <Image
+          onClick={() => {
+            i18n.changeLanguage("es");
+          }}
+          src={"/images/spainflag.png"}
+          alt={"es"}
+          height="25px"
+          width="25px"
+        />
+      </Box>
+      <Box
+        css={{
+          textAlign: "center",
+          fontSize: "1.1rem",
+          marginTop: "2.5rem"
+        }}
       >
         <Text>Jesus Liang</Text>
-        <Text>Fullstack Developer</Text>
+        <Text>{t("hero.developer")}</Text>
       </Box>
       <Box
         sx={{
@@ -74,13 +117,13 @@ const Hero: React.FC<Props> = (props) => {
           }}
         >
           <Box>
-            I&apos;ll make your product scale to the{" "}
+            {t("hero.description")}{" "}
             <chakra.span
               className={styles.moon}
               sx={{
                 display: "inline-block",
                 borderRadius: "50%",
-                fontSize: { base: "2rem", md: "3rem" },
+                fontSize: { base: "2rem", md: "2rem" },
                 border: "none",
                 background: "transparent",
                 position: "relative",
@@ -99,7 +142,7 @@ const Hero: React.FC<Props> = (props) => {
               🌕
               <chakra.span />
             </chakra.span>{" "}
-            through the web
+            {t("hero.throughWeb")}
           </Box>
 
           <Link
@@ -129,10 +172,17 @@ const Hero: React.FC<Props> = (props) => {
                 }
               }}
             >
-              Contact me
+              {t("hero.buttons.contact")}
             </Button>
           </Link>
-          <Link href="/files/jesusliang_developer.pdf" target={"_blank"}>
+          <Link
+            href={
+              i18n.language === "en"
+                ? "/files/jesusliang_developer.pdf"
+                : "/files/jesusliang_desarrollador.pdf"
+            }
+            target={"_blank"}
+          >
             <Button
               display="inline-block"
               margin="auto"
@@ -153,7 +203,7 @@ const Hero: React.FC<Props> = (props) => {
                 }
               }}
             >
-              My resume
+              {t("hero.buttons.resume")}
             </Button>
           </Link>
         </Box>

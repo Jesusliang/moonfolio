@@ -1,9 +1,14 @@
-import { ChakraProvider, extendTheme, ThemeConfig } from "@chakra-ui/react";
+import {
+  Box,
+  ChakraProvider,
+  extendTheme,
+  ThemeConfig
+} from "@chakra-ui/react";
 import "../styles/globals.css";
-import "../styles/normalize.css";
 import type { AppProps } from "next/app";
-import Fonts from "../config/Fonts";
 import { ParallaxProvider } from "react-scroll-parallax";
+import "../i18n";
+import { Suspense } from "react";
 
 const config: ThemeConfig = {
   initialColorMode: "light",
@@ -20,11 +25,13 @@ export const theme = extendTheme({
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <ChakraProvider theme={theme}>
-      <ParallaxProvider>
-        <Component {...pageProps} />
-      </ParallaxProvider>
-    </ChakraProvider>
+    <ParallaxProvider>
+      <ChakraProvider theme={theme}>
+        <Suspense fallback="">
+          <Component {...pageProps} />
+        </Suspense>
+      </ChakraProvider>
+    </ParallaxProvider>
   );
 }
 export default MyApp;

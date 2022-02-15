@@ -18,11 +18,13 @@ import {
 import axios from "axios";
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
+import { useTranslation } from "react-i18next";
 import { BsPerson } from "react-icons/bs";
 import { MdEmail, MdOutlineEmail } from "react-icons/md";
 import SvgRocket from "../svgs/flyAwayRocket/FlyAwayRocket";
 interface Props {}
 const ContactMe: React.FC<Props> = (props) => {
+  const { t } = useTranslation();
   const toast = useToast();
   const { handleSubmit, register } = useForm<{
     name: string;
@@ -49,7 +51,7 @@ const ContactMe: React.FC<Props> = (props) => {
   return (
     <Box color="white" padding={"3rem 0"} id="contact">
       <Text fontSize={"5xl"} fontWeight={"semibold"} textAlign="center">
-        Send me an email 📪
+        {t("contactMe.title")} 📪
       </Text>
       <Box display={"grid"} placeItems="center" marginTop={"2rem"}>
         <Box
@@ -84,10 +86,10 @@ const ContactMe: React.FC<Props> = (props) => {
                 zIndex="100"
               />
               <Heading as="h2" size="xl" mt={6} mb={2} zIndex="100">
-                Your email has been sent
+                {t("contactMe.emailSent.title")}
               </Heading>
               <Text color={"gray.500"} zIndex="100">
-                In no time you will have my answer!
+                {t("contactMe.emailSent.description")}
               </Text>
               <SvgRocket />
             </Box>
@@ -96,36 +98,36 @@ const ContactMe: React.FC<Props> = (props) => {
               <form onSubmit={onSubmit} style={{ width: "100%" }}>
                 <VStack spacing={3}>
                   <FormControl isRequired>
-                    <FormLabel>Name</FormLabel>
+                    <FormLabel> {t("contactMe.form.name.title")}</FormLabel>
                     <InputGroup>
                       <InputLeftElement>
                         <BsPerson />
                       </InputLeftElement>
                       <Input
                         type="text"
-                        placeholder="Your Name"
+                        placeholder={t("contactMe.form.name.placeholder")}
                         {...register("name")}
                       />
                     </InputGroup>
                   </FormControl>
                   <FormControl isRequired>
-                    <FormLabel>Email</FormLabel>
+                    <FormLabel>{t("contactMe.form.email.title")}</FormLabel>
                     <InputGroup>
                       <InputLeftElement>
                         <MdOutlineEmail />
                       </InputLeftElement>
                       <Input
                         type="email"
-                        placeholder="Your Email"
+                        placeholder={t("contactMe.form.email.placeholder")}
                         {...register("email")}
                       />
                     </InputGroup>
                   </FormControl>
                   <FormControl isRequired>
-                    <FormLabel>Message</FormLabel>
+                    <FormLabel>{t("contactMe.form.message.title")}</FormLabel>
 
                     <Textarea
-                      placeholder="Your Message"
+                      placeholder={t("contactMe.form.message.placeholder")}
                       rows={6}
                       resize="none"
                       {...register("message")}
@@ -142,7 +144,7 @@ const ContactMe: React.FC<Props> = (props) => {
                     type="submit"
                     isLoading={sendEmailLoading}
                   >
-                    Send
+                    {t("contactMe.form.send")}
                   </Button>
                 </VStack>
               </form>
@@ -154,7 +156,7 @@ const ContactMe: React.FC<Props> = (props) => {
                   onClick={() => {
                     navigator.clipboard.writeText("jesusliang96@gmail.com");
                     toast({
-                      title: "Copied to clipboard!",
+                      title: t("alerts.copiedToClipboard"),
                       status: "success",
                       isClosable: true
                     });

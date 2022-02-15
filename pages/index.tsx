@@ -3,9 +3,15 @@ import Head from "next/head";
 import Navbar from "../components/navbar/Navbar";
 import {
   Box,
-  Heading,
+  Button,
   Image,
-  Link,
+  Modal,
+  ModalBody,
+  ModalCloseButton,
+  ModalContent,
+  ModalFooter,
+  ModalHeader,
+  ModalOverlay,
   Text,
   useColorModeValue
 } from "@chakra-ui/react";
@@ -14,8 +20,13 @@ import ProjectArticle from "../components/projectArticle/ProjectArticle";
 import Skills from "../components/Home/Skills/Skills";
 import AboutMe from "../components/aboutMe/AboutMe";
 import ContactMe from "../components/contactMe/ContactMe";
+import { useTranslation } from "react-i18next";
+import { useState } from "react";
 
 const Home: NextPage = () => {
+  const { t, i18n } = useTranslation();
+  const [languageModalOpen, setLanguageModalOpen] = useState(true);
+
   return (
     <Box
       sx={{
@@ -52,7 +63,7 @@ const Home: NextPage = () => {
           id="work"
         >
           <Text fontSize={"5xl"} fontWeight={"semibold"} textAlign="center">
-            My work 💼
+            {t("myWork.title")} 💼
           </Text>
           <Box
             width="80%"
@@ -68,9 +79,10 @@ const Home: NextPage = () => {
             }}
           >
             <ProjectArticle
-              title="Booking Widget"
+              title={t("articles.booking.title")}
               video="./videos/booking-demo.mp4"
-              description="Led a small frontend team to create a booking engine and compiled the application to be embeddable in clients websites, allowing them to use our product to offer their hotels and apartments to their clients"
+              poster="./images/bookingWidget.png"
+              description={t("articles.booking.description")}
               links={[
                 {
                   key: "Product Website",
@@ -80,8 +92,9 @@ const Home: NextPage = () => {
             />
             <ProjectArticle
               video="./videos/checkin-demo.mp4"
-              title="Domotic Checkin Application"
-              description="Led a small frontend team to developed a web application to allow the customer to checkin in their booking. We implemented an SDK to extract data through photos of documentation such as ID cards, passports and driver's licenses and also integrated with home automation locks so that the customer can enter their stay through the application"
+              poster="./images/checkin.png"
+              title={t("articles.checkin.title")}
+              description={t("articles.checkin.description")}
               links={[
                 {
                   key: "Product Website",
@@ -91,8 +104,9 @@ const Home: NextPage = () => {
             />
             <ProjectArticle
               video="./videos/os-demo.mp4"
-              title="PMS/Channel Manager"
-              description="Led a small frontend team to create a PMS/Channgel Manager SaaS product, a web application with a Windows like interface for hotels/apartments management, using React and Redux for state management and usage of advanced optimization tools like reselect. Created a websocket backend microservice using Nodejs/Express to provide users real time iterations for teamworking like figma"
+              poster="./images/availroomOs.png"
+              title={t("articles.pms.title")}
+              description={t("articles.pms.description")}
               links={[
                 {
                   key: "Product Website",
@@ -105,6 +119,46 @@ const Home: NextPage = () => {
         <Skills />
         <AboutMe />
         <ContactMe />
+        <Modal
+          onClose={() => {}}
+          isOpen={languageModalOpen}
+          isCentered
+          size={"xs"}
+        >
+          <ModalOverlay />
+          <ModalContent>
+            <ModalBody padding="2rem">
+              <Text textAlign={"center"} fontSize="2xl">
+                Language/Idioma
+              </Text>
+              <Box display="flex" justifyContent={"center"}>
+                <Image
+                  src={"/images/gbflag.png"}
+                  alt={"gb"}
+                  height="60px"
+                  width="60px"
+                  cursor={"pointer"}
+                  onClick={() => {
+                    setLanguageModalOpen(false);
+                    i18n.changeLanguage("en");
+                  }}
+                />
+                <Image
+                  onClick={() => {
+                    setLanguageModalOpen(false);
+                    i18n.changeLanguage("es");
+                  }}
+                  src={"/images/spainflag.png"}
+                  alt={"es"}
+                  height="60px"
+                  width="60px"
+                  ml="3rem"
+                  cursor={"pointer"}
+                />
+              </Box>
+            </ModalBody>
+          </ModalContent>
+        </Modal>
       </Box>
     </Box>
   );

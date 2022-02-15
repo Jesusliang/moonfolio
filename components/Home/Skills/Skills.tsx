@@ -1,9 +1,12 @@
 import { Box, Text } from "@chakra-ui/react";
 import React, { useEffect, useRef, useState } from "react";
+import { useTranslation } from "react-i18next";
 import { Parallax } from "react-scroll-parallax";
 import SvgReadingAstronaut from "../../svgs/readingAstronaut/ReadingAstronaut";
 interface Props {}
 const Skills: React.FC<Props> = (props) => {
+  const { t } = useTranslation();
+
   const [YoffSet, setYoffSet] = useState(0);
   const readingAstronautContainer = useRef<HTMLDivElement>(null);
   console.log();
@@ -23,7 +26,7 @@ const Skills: React.FC<Props> = (props) => {
   return (
     <Box padding="2rem" color="white" position="relative" id="skills">
       <Text fontSize={"5xl"} fontWeight={"semibold"} textAlign="center">
-        My Skills 💡
+        {t("mySkills.title")} 💡
       </Text>
       <Box mt={"4rem"} display="grid" placeItems={"center"}>
         <Box
@@ -51,7 +54,7 @@ const Skills: React.FC<Props> = (props) => {
             zIndex="-10"
           >
             <Text fontSize={"2xl"} fontWeight={"medium"}>
-              Frontend Development
+              {t("mySkills.frontend")}
             </Text>
             <Text>React, Redux, Angular, Html, Css/Sass, Graphql, etc</Text>
           </Box>
@@ -70,7 +73,7 @@ const Skills: React.FC<Props> = (props) => {
             marginTop={"1rem"}
           >
             <Text fontSize={"2xl"} fontWeight={"medium"}>
-              Backend Development
+              {t("mySkills.backend")}
             </Text>
             <Text>
               Node.js, Express.js, SQL, NoSQL, Microservices, Java, Spring, etc
@@ -92,7 +95,7 @@ const Skills: React.FC<Props> = (props) => {
             zIndex="-10"
           >
             <Text fontSize={"2xl"} fontWeight={"medium"}>
-              Others
+              {t("mySkills.others")}
             </Text>
             <Text>Git, Testing, UI/UX, English</Text>
           </Box>

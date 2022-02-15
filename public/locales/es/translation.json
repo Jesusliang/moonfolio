@@ -1,0 +1,61 @@
+{
+  "navbar": {
+    "home": "Home",
+    "myWork": "Proyectos",
+    "skills": "Habilidades",
+    "about": "Sobre mi",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "developer": "Desarrollador Fullstack",
+    "description": "Haré que tu producto escale hasta la",
+    "throughWeb": "a través de la web",
+    "buttons": {
+      "contact": "Contáctame",
+      "resume": "Mi CV"
+    }
+  },
+  "myWork": { "title": "Mis proyectos" },
+  "articles": {
+    "booking": {
+      "title": "Widget Motor de Reserva",
+      "description": "Liderado un pequeño equipo de frontend para crear un motor de reservas compilado para que la aplicación pueda ser implementado en las páginas web de los clientes, permitiéndoles utilizar nuestro producto para ofrecer sus hoteles y apartamentos a sus clientes"
+    },
+    "checkin": {
+      "title": "Aplicación de Check-in Domótico",
+      "description": "Liderado un pequeño equipo de frontend para desarrollar una aplicación web que permitiera al cliente hacer el check-in en su reserva. Implementamos un SDK para extraer datos a través de fotos de documentación como DNI, pasaportes y permisos de conducir. Integrado con cerraduras domóticas para que el cliente pueda entrar a su estancia a través de la aplicación sin necesidad de llaves"
+    },
+    "pms": {
+      "title": "PMS/Channgel Manager",
+      "description": "Liderado un pequeño equipo de frontend para crear un PMS/Channgel Manager un producto como servicio (SaaS), es una aplicación web con una interfaz similar a la de Windows para la gestión de hoteles/apartamentos, utilizando React y Redux para el manejo de estados y el uso de herramientas de optimización avanzadas como reselect. Creado un microservicio de backend de websocket usando Nodejs/Express para proporcionar a los usuarios iteraciones en tiempo real para el trabajo en equipo como figma o google docs"
+    }
+  },
+  "mySkills": {
+    "title": "Mis Habilidades",
+    "backend": "Desarrollo Backend",
+    "frontend": "Desarrollo Frontend",
+    "others": "Otros"
+  },
+  "aboutMe": {
+    "title": "Sobre mi",
+    "contact": "Contacto",
+    "description": "Soy un desarrollador fullstack Javascript/Typescript. Con especialización en React y Nodejs. ¡Me encanta el desarrollo, aprender cosas nuevas y resolver problemas!",
+    "description2": "Actualmente lidero un pequeño equipo de frontend en una startup llamada Availroom en la que me encargo principalmente de la arquitectura frontend de todos los proyectos y de su mantenimiento. Asimismo, también desarrollo algunos microservicios."
+  },
+  "contactMe": {
+    "title": "Envíame un correo",
+    "emailSent": {
+      "title": "Tu correo ha sido enviado",
+      "description": "Tendrás mi respuesta muy pronto!"
+    },
+    "form": {
+      "name": { "title": "Nombre", "placeholder": "Tu Nombre" },
+      "email": { "title": "Correo", "placeholder": "Tu Correo" },
+      "message": { "title": "Mensaje", "placeholder": "Tu mensaje" },
+      "send": "Enviar"
+    }
+  },
+  "alerts": {
+    "copiedToClipboard": "Copiado al portapapeles!"
+  }
+}

@@ -11,8 +11,10 @@ import {
 } from "@chakra-ui/react";
 import { MdEmail } from "react-icons/md";
 import { BsLinkedin } from "react-icons/bs";
+import { useTranslation } from "react-i18next";
 
 const AboutMe = () => {
+  const { t } = useTranslation();
   const toast = useToast();
   return (
     <Box
@@ -28,7 +30,7 @@ const AboutMe = () => {
       id="about"
     >
       <Text fontSize={"5xl"} fontWeight={"semibold"} textAlign="center">
-        About me 📃
+        {t("aboutMe.title")} 📃
       </Text>
       <Box
         color="black"
@@ -47,7 +49,7 @@ const AboutMe = () => {
             order={{ base: 2, md: 0 }}
             marginTop={{ base: "3rem", md: ".5rem" }}
           >
-            <Heading>Contact</Heading>
+            <Heading>{t("aboutMe.contact")}</Heading>
             <Box
               marginTop="1rem"
               sx={{
@@ -65,7 +67,7 @@ const AboutMe = () => {
                 onClick={() => {
                   navigator.clipboard.writeText("jesusliang96@gmail.com");
                   toast({
-                    title: "Copied to clipboard!",
+                    title: t("alerts.copiedToClipboard"),
                     status: "success",
                     isClosable: true
                   });
@@ -99,13 +101,10 @@ const AboutMe = () => {
               />
             </Box>
             <Text>
-              I am a fullstack Javascript/Typescript developer. With
-              specialization in React and Nodejs. I love development, learning
-              new things and solving problems! <br /> <br />I currently lead a
-              small frontend team in a startup called Availroom in which I
-              mainly take care of the frontend architecture of all projects as
-              well as maintaining them. Likewise, I have also developed
-              microservices.
+              {t("aboutMe.description")}
+              <br />
+              <br />
+              {t("aboutMe.description2")}
             </Text>
           </Box>
         </Box>
