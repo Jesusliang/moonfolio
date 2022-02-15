@@ -69,7 +69,7 @@ const Home: NextPage = () => {
           >
             <ProjectArticle
               title="Booking Widget"
-              image="./images/bookingWidget.png"
+              video="./videos/booking-demo.mp4"
               description="Led a small frontend team to create a booking engine and compiled the application to be embeddable in clients websites, allowing them to use our product to offer their hotels and apartments to their clients"
               links={[
                 {
@@ -79,7 +79,7 @@ const Home: NextPage = () => {
               ]}
             />
             <ProjectArticle
-              image="./images/checkin.png"
+              video="./videos/checkin-demo.mp4"
               title="Domotic Checkin Application"
               description="Led a small frontend team to developed a web application to allow the customer to checkin in their booking. We implemented an SDK to extract data through photos of documentation such as ID cards, passports and driver's licenses and also integrated with home automation locks so that the customer can enter their stay through the application"
               links={[
@@ -90,7 +90,7 @@ const Home: NextPage = () => {
               ]}
             />
             <ProjectArticle
-              image="./images/availroomOs.png"
+              video="./videos/os-demo.mp4"
               title="PMS/Channel Manager"
               description="Led a small frontend team to create a PMS/Channgel Manager SaaS product, a web application with a Windows like interface for hotels/apartments management, using React and Redux for state management and usage of advanced optimization tools like reselect. Created a websocket backend microservice using Nodejs/Express to provide users real time iterations for teamworking like figma"
               links={[

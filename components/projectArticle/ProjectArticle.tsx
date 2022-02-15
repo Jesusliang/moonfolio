@@ -19,7 +19,8 @@ interface Props {
   title: string;
   description: string;
   links?: { key: string; url: string }[];
-  image: string;
+  image?: string;
+  video?: string;
 }
 const ProjectArticle: React.FC<Props> = (props) => {
   const [openContentModal, setOpenContentModal] = useState(false);
@@ -43,8 +44,8 @@ const ProjectArticle: React.FC<Props> = (props) => {
           zIndex="2"
           marginLeft={{ base: "0", sm: "5%" }}
           marginTop="5%"
-          overflow={"hidden"}
           borderRadius="md"
+          position={"relative"}
         >
           {/* <Link
             textDecoration="none"
@@ -53,14 +54,30 @@ const ProjectArticle: React.FC<Props> = (props) => {
               setOpenContentModal(true);
             }}
           > */}
-          <Image
-            height="100%"
-            width="100%"
-            src={props.image}
-            alt="bookingWidget"
-            objectFit="cover"
-            objectPosition="top"
-          />
+          {props.image ? (
+            <Image
+              height="100%"
+              width="100%"
+              src={props.image}
+              alt="bookingWidget"
+              objectFit="cover"
+              objectPosition="top"
+            />
+          ) : (
+            <video
+              controls
+              width={"100%"}
+              height="300"
+              style={{
+                height: "300px",
+                objectFit: "contain",
+                background: "black",
+                zIndex: 100
+              }}
+              src={props.video}
+            />
+          )}
+
           {/* </Link> */}
         </Box>
         <Box
