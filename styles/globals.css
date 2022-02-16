@@ -31,3 +31,7 @@ ul {
   display: grid;
   place-items: center;
 }
+
+.roundedImage {
+  clip-path: circle(40% at 50% 50%);
+}

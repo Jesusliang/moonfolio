@@ -11,6 +11,8 @@ import {
 import { MdEmail } from "react-icons/md";
 import { BsLinkedin } from "react-icons/bs";
 import { useTranslation } from "next-i18next";
+import Image from "next/image";
+import mePhoto from "../../public/images/me-min.jpg";
 
 const AboutMe = () => {
   const { t } = useTranslation();
@@ -92,11 +94,20 @@ const AboutMe = () => {
           </Box>
           <Box borderRadius="lg" color="black" padding="0 3rem">
             <Box textAlign={{ base: "center", md: "initial" }}>
-              <Avatar
+              {/* <Avatar
                 size={"2xl"}
                 src={"/images/me.jpg"}
                 marginX="auto"
                 mb={"3rem"}
+              /> */}
+              <Image
+                src={mePhoto}
+                width="150"
+                height={"150"}
+                objectFit="contain"
+                alt="me"
+                placeholder="blur"
+                className="roundedImage"
               />
             </Box>
             <Text>
