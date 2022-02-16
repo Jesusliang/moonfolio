@@ -8,7 +8,7 @@ import "../styles/globals.css";
 import type { AppProps } from "next/app";
 import { ParallaxProvider } from "react-scroll-parallax";
 import "../i18n";
-import { Suspense } from "react";
+import { appWithTranslation } from "next-i18next";
 
 const config: ThemeConfig = {
   initialColorMode: "light",
@@ -32,4 +32,4 @@ function MyApp({ Component, pageProps }: AppProps) {
     </ChakraProvider>
   );
 }
-export default MyApp;
+export default appWithTranslation(MyApp);
