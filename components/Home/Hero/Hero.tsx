@@ -1,10 +1,18 @@
 import React, { useEffect, useState } from "react";
 import { isMobile } from "react-device-detect";
 import RocketHello from "../../../components/svgs/rocketHello/RocketHello";
-import { Box, Button, chakra, Link, Text } from "@chakra-ui/react";
+import {
+  Box,
+  Button,
+  chakra,
+  Text,
+  Link as ChakraLink
+} from "@chakra-ui/react";
 import styles from "./Hero.module.scss";
 import Image from "next/image";
 import { useTranslation } from "next-i18next";
+import Link from "next/link";
+import { useRouter } from "next/router";
 
 interface Props {}
 
@@ -13,7 +21,8 @@ const languages = [
   { value: "es", label: "Es", image: "/images/spainflag.png" }
 ];
 const Hero: React.FC<Props> = (props) => {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
+  const router = useRouter();
 
   const [offsetY, setOffsetY] = useState(0);
 
@@ -70,24 +79,23 @@ const Hero: React.FC<Props> = (props) => {
           }
         }}
       >
-        <Image
-          src={"/images/gbflag.png"}
-          alt={"gb"}
-          height="25px"
-          width="25px"
-          onClick={() => {
-            i18n.changeLanguage("en");
-          }}
-        />
-        <Image
-          onClick={() => {
-            i18n.changeLanguage("es");
-          }}
-          src={"/images/spainflag.png"}
-          alt={"es"}
-          height="25px"
-          width="25px"
-        />
+        <Link href="/" locale={"en"} passHref>
+          <Image
+            src={"/images/gbflag.png"}
+            alt={"gb"}
+            height="25px"
+            width="25px"
+          />
+        </Link>
+
+        <Link href="/" locale={"en"} passHref>
+          <Image
+            src={"/images/spainflag.png"}
+            alt={"es"}
+            height="25px"
+            width="25px"
+          />
+        </Link>
       </Box>
       <Box
         css={{
@@ -145,7 +153,7 @@ const Hero: React.FC<Props> = (props) => {
             {t("hero.throughWeb")}
           </Box>
 
-          <Link
+          <ChakraLink
             marginTop="5%"
             href="#contact"
             textDecor={"none"}
@@ -174,10 +182,10 @@ const Hero: React.FC<Props> = (props) => {
             >
               {t("hero.buttons.contact")}
             </Button>
-          </Link>
-          <Link
+          </ChakraLink>
+          <ChakraLink
             href={
-              i18n.language === "en"
+              router.locale === "en"
                 ? "/files/jesusliang_developer.pdf"
                 : "/files/jesusliang_desarrollador.pdf"
             }
@@ -205,7 +213,7 @@ const Hero: React.FC<Props> = (props) => {
             >
               {t("hero.buttons.resume")}
             </Button>
-          </Link>
+          </ChakraLink>
         </Box>
         <Box
           sx={{

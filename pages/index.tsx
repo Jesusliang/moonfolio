@@ -23,9 +23,10 @@ import ContactMe from "../components/contactMe/ContactMe";
 import { useTranslation } from "next-i18next";
 import { useState } from "react";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import Link from "next/link";
 
 const Home: NextPage = () => {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   const [languageModalOpen, setLanguageModalOpen] = useState(true);
 
   // if (!ready) {
@@ -136,29 +137,31 @@ const Home: NextPage = () => {
                 Language/Idioma
               </Text>
               <Box display="flex" justifyContent={"center"}>
-                <Image
-                  src={"/images/gbflag.png"}
-                  alt={"gb"}
-                  height="60px"
-                  width="60px"
-                  cursor={"pointer"}
-                  onClick={() => {
-                    setLanguageModalOpen(false);
-                    i18n.changeLanguage("en");
-                  }}
-                />
-                <Image
-                  onClick={() => {
-                    setLanguageModalOpen(false);
-                    i18n.changeLanguage("es");
-                  }}
-                  src={"/images/spainflag.png"}
-                  alt={"es"}
-                  height="60px"
-                  width="60px"
-                  ml="3rem"
-                  cursor={"pointer"}
-                />
+                <Link href="/" locale={"en"} passHref>
+                  <Image
+                    src={"/images/gbflag.png"}
+                    alt={"gb"}
+                    height="60px"
+                    width="60px"
+                    cursor={"pointer"}
+                    onClick={() => {
+                      setLanguageModalOpen(false);
+                    }}
+                  />
+                </Link>
+                <Link href="/" locale={"es"} passHref>
+                  <Image
+                    onClick={() => {
+                      setLanguageModalOpen(false);
+                    }}
+                    src={"/images/spainflag.png"}
+                    alt={"es"}
+                    height="60px"
+                    width="60px"
+                    ml="3rem"
+                    cursor={"pointer"}
+                  />
+                </Link>
               </Box>
             </ModalBody>
           </ModalContent>
