@@ -28,18 +28,18 @@ import { useRouter } from "next/router";
 
 const Home: NextPage = () => {
   const { t } = useTranslation();
-  const [languageModalOpen, setLanguageModalOpen] = useState(false);
+  // const [languageModalOpen, setLanguageModalOpen] = useState(false);
 
-  useEffect(() => {
-    if (typeof window !== undefined) {
-      const selectedLanguage = localStorage.getItem("selectedLanguage");
-      if (!selectedLanguage) {
-        setLanguageModalOpen(true);
-      } else {
-        setLanguageModalOpen(false);
-      }
-    }
-  }, []);
+  // useEffect(() => {
+  //   if (typeof window !== undefined) {
+  //     const selectedLanguage = localStorage.getItem("selectedLanguage");
+  //     if (!selectedLanguage) {
+  //       setLanguageModalOpen(true);
+  //     } else {
+  //       setLanguageModalOpen(false);
+  //     }
+  //   }
+  // }, []);
 
   return (
     <Box
@@ -133,7 +133,7 @@ const Home: NextPage = () => {
         <Skills />
         <AboutMe />
         <ContactMe />
-        <Modal
+        {/* <Modal
           onClose={() => {}}
           isOpen={languageModalOpen}
           isCentered
@@ -176,7 +176,7 @@ const Home: NextPage = () => {
               </Box>
             </ModalBody>
           </ModalContent>
-        </Modal>
+        </Modal> */}
       </Box>
     </Box>
   );
