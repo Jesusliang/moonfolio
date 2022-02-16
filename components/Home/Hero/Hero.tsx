@@ -88,7 +88,7 @@ const Hero: React.FC<Props> = (props) => {
           />
         </Link>
 
-        <Link href="/" locale={"en"} passHref>
+        <Link href="/" locale={"es"} passHref>
           <Image
             src={"/images/spainflag.png"}
             alt={"es"}

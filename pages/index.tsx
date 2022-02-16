@@ -21,17 +21,26 @@ import Skills from "../components/Home/Skills/Skills";
 import AboutMe from "../components/aboutMe/AboutMe";
 import ContactMe from "../components/contactMe/ContactMe";
 import { useTranslation } from "next-i18next";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 const Home: NextPage = () => {
   const { t } = useTranslation();
-  const [languageModalOpen, setLanguageModalOpen] = useState(true);
+  const [languageModalOpen, setLanguageModalOpen] = useState(false);
 
-  // if (!ready) {
-  //   return null;
-  // }
+  useEffect(() => {
+    if (typeof window !== undefined) {
+      const selectedLanguage = localStorage.getItem("selectedLanguage");
+      if (!selectedLanguage) {
+        setLanguageModalOpen(true);
+      } else {
+        setLanguageModalOpen(false);
+      }
+    }
+  }, []);
+
   return (
     <Box
       sx={{
@@ -146,6 +155,7 @@ const Home: NextPage = () => {
                     cursor={"pointer"}
                     onClick={() => {
                       setLanguageModalOpen(false);
+                      localStorage.setItem("selectedLanguage", "en");
                     }}
                   />
                 </Link>
@@ -153,6 +163,7 @@ const Home: NextPage = () => {
                   <Image
                     onClick={() => {
                       setLanguageModalOpen(false);
+                      localStorage.setItem("selectedLanguage", "es");
                     }}
                     src={"/images/spainflag.png"}
                     alt={"es"}
