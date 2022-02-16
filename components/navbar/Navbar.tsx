@@ -10,6 +10,8 @@ import {
 } from "@chakra-ui/react";
 import React, { useState } from "react";
 import { useTranslation } from "next-i18next";
+import { isMobile } from "react-device-detect";
+
 interface Props {}
 const Navbar: React.FC<Props> = (props) => {
   const { t } = useTranslation();
@@ -41,7 +43,7 @@ const Navbar: React.FC<Props> = (props) => {
           fontWeight="medium"
           fontSize={{ base: "sm", md: "xl" }}
         >
-          {isSmallScreen ? (
+          {isSmallScreen || isMobile ? (
             <Button
               onClick={() => {
                 setOpenNavbar(true);
