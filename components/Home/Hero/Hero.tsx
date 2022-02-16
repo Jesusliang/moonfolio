@@ -4,7 +4,7 @@ import RocketHello from "../../../components/svgs/rocketHello/RocketHello";
 import { Box, Button, chakra, Link, Text } from "@chakra-ui/react";
 import styles from "./Hero.module.scss";
 import Image from "next/image";
-import { useTranslation } from "react-i18next";
+import { useTranslation } from "next-i18next";
 
 interface Props {}
 

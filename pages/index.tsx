@@ -1,4 +1,4 @@
-import type { NextPage } from "next";
+import type { GetStaticProps, NextPage } from "next";
 import Head from "next/head";
 import Navbar from "../components/navbar/Navbar";
 import {
@@ -20,17 +20,17 @@ import ProjectArticle from "../components/projectArticle/ProjectArticle";
 import Skills from "../components/Home/Skills/Skills";
 import AboutMe from "../components/aboutMe/AboutMe";
 import ContactMe from "../components/contactMe/ContactMe";
-import { useTranslation } from "react-i18next";
+import { useTranslation } from "next-i18next";
 import { useState } from "react";
-import styles from "../components/Home/Hero/Hero.module.scss";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 const Home: NextPage = () => {
-  const { t, i18n, ready } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [languageModalOpen, setLanguageModalOpen] = useState(true);
 
-  if (!ready) {
-    return null;
-  }
+  // if (!ready) {
+  //   return null;
+  // }
   return (
     <Box
       sx={{
@@ -169,3 +169,12 @@ const Home: NextPage = () => {
 };
 
 export default Home;
+
+export const getStaticProps: GetStaticProps = async ({ locale }) => {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale!, ["common", "footer"]))
+      // Will be passed to the page component as props
+    }
+  };
+};

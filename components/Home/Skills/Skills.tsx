@@ -1,6 +1,6 @@
 import { Box, Text } from "@chakra-ui/react";
 import React, { useEffect, useRef, useState } from "react";
-import { useTranslation } from "react-i18next";
+import { useTranslation } from "next-i18next";
 import { Parallax } from "react-scroll-parallax";
 import SvgReadingAstronaut from "../../svgs/readingAstronaut/ReadingAstronaut";
 interface Props {}

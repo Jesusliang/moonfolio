@@ -9,7 +9,7 @@ import {
   useMediaQuery
 } from "@chakra-ui/react";
 import React, { useState } from "react";
-import { useTranslation } from "react-i18next";
+import { useTranslation } from "next-i18next";
 interface Props {}
 const Navbar: React.FC<Props> = (props) => {
   const { t } = useTranslation();

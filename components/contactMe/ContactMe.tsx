@@ -17,7 +17,7 @@ import {
 import axios from "axios";
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
-import { useTranslation } from "react-i18next";
+import { useTranslation } from "next-i18next";
 import { BsPerson } from "react-icons/bs";
 import { MdEmail, MdOutlineEmail } from "react-icons/md";
 import SvgRocket from "../svgs/flyAwayRocket/FlyAwayRocket";

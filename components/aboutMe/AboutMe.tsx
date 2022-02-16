@@ -10,10 +10,10 @@ import {
 } from "@chakra-ui/react";
 import { MdEmail } from "react-icons/md";
 import { BsLinkedin } from "react-icons/bs";
-import { useTranslation } from "react-i18next";
+import { useTranslation } from "next-i18next";
 
 const AboutMe = () => {
-  const { t, ready } = useTranslation();
+  const { t } = useTranslation();
   const toast = useToast();
   return (
     <Box
