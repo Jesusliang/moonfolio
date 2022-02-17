@@ -1658,6 +1658,11 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
+"@fontsource/quicksand@^4.5.4":
+  version "4.5.4"
+  resolved "https://registry.yarnpkg.com/@fontsource/quicksand/-/quicksand-4.5.4.tgz#9d8c7665f87eb394ed7f4609258f1246ba84533b"
+  integrity sha512-BJEmlSF+HH0JJK3ug3jT/Ov6TrX8gEIyuAHkBUI/0KuW/iCbO2M+bu7RX3RstlcQPKzTkIqZQ0IOeLO5zP5oag==
+
 "@humanwhocodes/config-array@^0.5.0":
   version "0.5.0"
   resolved "https://registry.yarnpkg.com/@humanwhocodes/config-array/-/config-array-0.5.0.tgz#1407967d4c6eecd7388f83acf1eaf4d0c6e58ef9"

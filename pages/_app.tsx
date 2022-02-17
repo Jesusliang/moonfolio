@@ -7,7 +7,7 @@ import {
 import "../styles/globals.css";
 import type { AppProps } from "next/app";
 import { ParallaxProvider } from "react-scroll-parallax";
-// import "../i18n";
+import "@fontsource/quicksand";
 import { appWithTranslation } from "next-i18next";
 
 const config: ThemeConfig = {

@@ -1,30 +1,14 @@
 import type { GetStaticProps, NextPage } from "next";
 import Head from "next/head";
 import Navbar from "../components/navbar/Navbar";
-import {
-  Box,
-  Button,
-  chakra,
-  Image,
-  Modal,
-  ModalBody,
-  ModalCloseButton,
-  ModalContent,
-  ModalFooter,
-  ModalHeader,
-  ModalOverlay,
-  Text
-} from "@chakra-ui/react";
+import { Box, Text } from "@chakra-ui/react";
 import Hero from "../components/Home/Hero/Hero";
 import ProjectArticle from "../components/projectArticle/ProjectArticle";
 import Skills from "../components/Home/Skills/Skills";
 import AboutMe from "../components/aboutMe/AboutMe";
 import ContactMe from "../components/contactMe/ContactMe";
 import { useTranslation } from "next-i18next";
-import { useEffect, useState } from "react";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-import Link from "next/link";
-import { useRouter } from "next/router";
 
 const Home: NextPage = () => {
   const { t } = useTranslation();
