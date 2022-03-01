@@ -53,6 +53,10 @@
       "email": { "title": "Email", "placeholder": "Your Email" },
       "message": { "title": "Message", "placeholder": "Your Message" },
       "send": "Send"
+    },
+    "error": {
+      "title": "An error has ocurred",
+      "description": "please try again later"
     }
   },
   "alerts": {
