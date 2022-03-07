@@ -31,7 +31,7 @@ const Home: NextPage = () => {
         <title>Jesus Liang</title>
         <meta
           name="description"
-          content="Jesus Liang Fullstack web developer portfolio"
+          content="Jesus Liang Fullstack Developer Portfolio"
         />
         <meta
           name="keywords"
