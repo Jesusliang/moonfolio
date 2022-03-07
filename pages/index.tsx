@@ -26,14 +26,7 @@ const Home: NextPage = () => {
   // }, []);
 
   return (
-    <Box
-      sx={{
-        overflowX: "hidden",
-        overflow: "hidden",
-        color: "black"
-      }}
-      id="home"
-    >
+    <>
       <Head>
         <title>Jesus Liang</title>
         <meta
@@ -46,78 +39,85 @@ const Home: NextPage = () => {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
-      <Navbar />
-      <Hero />
-      <Box>
-        <Box
-          sx={{
-            padding: "3rem 0",
-            backgroundColor: "gray.100",
-            "&>*:not(:first-of-type)": {
-              marginTop: "5rem"
-            }
-          }}
-          id="work"
-        >
-          <Text fontSize={"5xl"} fontWeight={"semibold"} textAlign="center">
-            {t("myWork.title")} 💼
-          </Text>
+      <Box
+        sx={{
+          overflowX: "hidden",
+          overflow: "hidden",
+          color: "black"
+        }}
+        id="home"
+      >
+        <Navbar />
+        <Hero />
+        <Box>
           <Box
-            width="80%"
-            display="flex"
-            alignItems="center"
-            flexDirection="column"
-            marginTop="6rem"
-            marginX="auto"
             sx={{
+              padding: "3rem 0",
+              backgroundColor: "gray.100",
               "&>*:not(:first-of-type)": {
                 marginTop: "5rem"
               }
             }}
+            id="work"
           >
-            <ProjectArticle
-              title={t("articles.booking.title")}
-              video="./videos/booking-demo.mp4"
-              poster="./images/bookingWidget.png"
-              description={t("articles.booking.description")}
-              links={[
-                {
-                  key: "Product Website",
-                  url: "https://www.availroom.com/productos/motor-de-reservas"
+            <Text fontSize={"5xl"} fontWeight={"semibold"} textAlign="center">
+              {t("myWork.title")} 💼
+            </Text>
+            <Box
+              width="80%"
+              display="flex"
+              alignItems="center"
+              flexDirection="column"
+              marginTop="6rem"
+              marginX="auto"
+              sx={{
+                "&>*:not(:first-of-type)": {
+                  marginTop: "5rem"
                 }
-              ]}
-            />
-            <ProjectArticle
-              video="./videos/checkin-demo.mp4"
-              poster="./images/checkin.png"
-              title={t("articles.checkin.title")}
-              description={t("articles.checkin.description")}
-              links={[
-                {
-                  key: "Product Website",
-                  url: "https://www.availroom.com/productos/app-huesped-availguest"
-                }
-              ]}
-            />
-            <ProjectArticle
-              video="./videos/os-demo.mp4"
-              poster="./images/availroomOs.png"
-              title={t("articles.pms.title")}
-              description={t("articles.pms.description")}
-              links={[
-                {
-                  key: "Product Website",
-                  url: "https://www.availroom.com/productos/pms-vrms"
-                }
-              ]}
-            />
+              }}
+            >
+              <ProjectArticle
+                title={t("articles.booking.title")}
+                video="./videos/booking-demo.mp4"
+                poster="./images/bookingWidget.png"
+                description={t("articles.booking.description")}
+                links={[
+                  {
+                    key: "Product Website",
+                    url: "https://www.availroom.com/productos/motor-de-reservas"
+                  }
+                ]}
+              />
+              <ProjectArticle
+                video="./videos/checkin-demo.mp4"
+                poster="./images/checkin.png"
+                title={t("articles.checkin.title")}
+                description={t("articles.checkin.description")}
+                links={[
+                  {
+                    key: "Product Website",
+                    url: "https://www.availroom.com/productos/app-huesped-availguest"
+                  }
+                ]}
+              />
+              <ProjectArticle
+                video="./videos/os-demo.mp4"
+                poster="./images/availroomOs.png"
+                title={t("articles.pms.title")}
+                description={t("articles.pms.description")}
+                links={[
+                  {
+                    key: "Product Website",
+                    url: "https://www.availroom.com/productos/pms-vrms"
+                  }
+                ]}
+              />
+            </Box>
           </Box>
-        </Box>
-        <Skills />
-        <AboutMe />
-        <ContactMe />
-        {/* <Modal
+          <Skills />
+          <AboutMe />
+          <ContactMe />
+          {/* <Modal
           onClose={() => {}}
           isOpen={languageModalOpen}
           isCentered
@@ -161,8 +161,9 @@ const Home: NextPage = () => {
             </ModalBody>
           </ModalContent>
         </Modal> */}
+        </Box>
       </Box>
-    </Box>
+    </>
   );
 };
 
