@@ -12,18 +12,6 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 const Home: NextPage = () => {
   const { t } = useTranslation();
-  // const [languageModalOpen, setLanguageModalOpen] = useState(false);
-
-  // useEffect(() => {
-  //   if (typeof window !== undefined) {
-  //     const selectedLanguage = localStorage.getItem("selectedLanguage");
-  //     if (!selectedLanguage) {
-  //       setLanguageModalOpen(true);
-  //     } else {
-  //       setLanguageModalOpen(false);
-  //     }
-  //   }
-  // }, []);
 
   return (
     <>
@@ -117,50 +105,6 @@ const Home: NextPage = () => {
           <Skills />
           <AboutMe />
           <ContactMe />
-          {/* <Modal
-          onClose={() => {}}
-          isOpen={languageModalOpen}
-          isCentered
-          size={"xs"}
-        >
-          <ModalOverlay />
-          <ModalContent>
-            <ModalBody padding="2rem">
-              <Text textAlign={"center"} fontSize="2xl">
-                Language/Idioma
-              </Text>
-              <Box display="flex" justifyContent={"center"}>
-                <Link href="/" locale={"en"} passHref>
-                  <Image
-                    src={"/images/gbflag.png"}
-                    alt={"gb"}
-                    height="60px"
-                    width="60px"
-                    cursor={"pointer"}
-                    onClick={() => {
-                      setLanguageModalOpen(false);
-                      localStorage.setItem("selectedLanguage", "en");
-                    }}
-                  />
-                </Link>
-                <Link href="/" locale={"es"} passHref>
-                  <Image
-                    onClick={() => {
-                      setLanguageModalOpen(false);
-                      localStorage.setItem("selectedLanguage", "es");
-                    }}
-                    src={"/images/spainflag.png"}
-                    alt={"es"}
-                    height="60px"
-                    width="60px"
-                    ml="3rem"
-                    cursor={"pointer"}
-                  />
-                </Link>
-              </Box>
-            </ModalBody>
-          </ModalContent>
-        </Modal> */}
         </Box>
       </Box>
     </>

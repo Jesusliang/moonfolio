@@ -1,14 +1,6 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import type { NextApiRequest, NextApiResponse } from "next";
 
-// export const config = {
-//   api: {
-//     bodyParser: {
-//       sizeLimit: "1mb"
-//     }
-//   }
-// };
-
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
@@ -45,7 +37,7 @@ export default async function handler(
       });
       res.status(200).send(true);
     } catch (error) {
-      res.status(500).send(false);
+      res.status(500).send(error);
     }
   }
 }

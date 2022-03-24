@@ -7,21 +7,7 @@ interface Props {}
 const Skills: React.FC<Props> = (props) => {
   const { t } = useTranslation();
 
-  const [YoffSet, setYoffSet] = useState(0);
   const readingAstronautContainer = useRef<HTMLDivElement>(null);
-  console.log();
-  // console.log(window.pageYOffset);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setYoffSet(window.pageYOffset);
-    };
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
 
   return (
     <Box padding="2rem" color="white" position="relative" id="skills">

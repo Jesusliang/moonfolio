@@ -47,13 +47,6 @@ const ProjectArticle: React.FC<Props> = (props) => {
           borderRadius="md"
           position={"relative"}
         >
-          {/* <Link
-            textDecoration="none"
-            _hover={{ textDecoration: "none" }}
-            onClick={() => {
-              setOpenContentModal(true);
-            }}
-          > */}
           {props.image ? (
             <Image
               height="100%"
@@ -79,8 +72,6 @@ const ProjectArticle: React.FC<Props> = (props) => {
               src={props.video}
             />
           )}
-
-          {/* </Link> */}
         </Box>
         <Box
           zIndex="1"
@@ -104,15 +95,7 @@ const ProjectArticle: React.FC<Props> = (props) => {
         marginTop={{ base: "1rem", md: "0" }}
       >
         <Heading marginTop="1" fontSize="3xl">
-          {/* <Link
-            textDecoration="none"
-            _hover={{ textDecoration: "none" }}
-            onClick={() => {
-              setOpenContentModal(true);
-            }}
-          > */}
           {props.title}
-          {/* </Link> */}
         </Heading>
         <Text as="p" marginTop=".25rem" color={"gray.700"} fontSize="lg">
           {props.description}

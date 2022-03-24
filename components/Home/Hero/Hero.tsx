@@ -218,7 +218,6 @@ const Hero: React.FC<Props> = (props) => {
         <Box
           sx={{
             width: { base: "200px", md: "255px" },
-            // height: "300px",
             marginTop: "2rem"
           }}
           style={{

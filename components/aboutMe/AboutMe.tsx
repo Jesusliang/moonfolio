@@ -94,12 +94,6 @@ const AboutMe = () => {
           </Box>
           <Box borderRadius="lg" color="black" padding="0 3rem">
             <Box textAlign={{ base: "center", md: "initial" }}>
-              {/* <Avatar
-                size={"2xl"}
-                src={"/images/me.jpg"}
-                marginX="auto"
-                mb={"3rem"}
-              /> */}
               <Image
                 src={mePhoto}
                 width="150"

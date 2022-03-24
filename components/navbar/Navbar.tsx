@@ -1,13 +1,5 @@
 import { HamburgerIcon } from "@chakra-ui/icons";
-import {
-  Box,
-  Button,
-  Link,
-  ListItem,
-  Slide,
-  UnorderedList,
-  useMediaQuery
-} from "@chakra-ui/react";
+import { Box, Button, Link, Slide, useMediaQuery } from "@chakra-ui/react";
 import React, { useState } from "react";
 import { useTranslation } from "next-i18next";
 import { isMobile } from "react-device-detect";
@@ -20,7 +12,6 @@ const Navbar: React.FC<Props> = (props) => {
   return (
     <>
       <Box
-        // onClick={toggleColorMode}
         sx={{
           width: "100%",
           height: "3rem",
