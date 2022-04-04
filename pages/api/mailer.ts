@@ -25,8 +25,8 @@ export default async function handler(
         port: 465,
         secure: true,
         auth: {
-          user: "no-reply@jesusliang.com",
-          pass: "S{5&VMRyt{Pe'2@W"
+          user: process.env.EMAIL_USER,
+          pass: process.env.EMAIL_PWD
         }
       });
       const info = await transporter.sendMail({
