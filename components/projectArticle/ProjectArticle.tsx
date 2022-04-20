@@ -94,7 +94,7 @@ const ProjectArticle: React.FC<Props> = (props) => {
         flexDirection="column"
         marginTop={{ base: "1rem", md: "0" }}
       >
-        <Heading marginTop="1" fontSize="3xl">
+        <Heading as={"h4"} marginTop="1" fontSize="3xl">
           {props.title}
         </Heading>
         <Text as="p" marginTop=".25rem" color={"gray.700"} fontSize="lg">

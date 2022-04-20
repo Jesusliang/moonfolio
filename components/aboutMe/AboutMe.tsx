@@ -30,9 +30,14 @@ const AboutMe = () => {
       zIndex="100"
       id="about"
     >
-      <Text fontSize={"5xl"} fontWeight={"semibold"} textAlign="center">
+      <Heading
+        as={"h3"}
+        fontSize={"5xl"}
+        fontWeight={"semibold"}
+        textAlign="center"
+      >
         {t("aboutMe.title")} 📃
-      </Text>
+      </Heading>
       <Box
         color="black"
         width={{ base: "95%", md: "1000px" }}

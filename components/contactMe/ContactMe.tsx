@@ -62,9 +62,9 @@ const ContactMe: React.FC<Props> = (props) => {
           alignItems={"center"}
         >
           <WarningIcon boxSize={"50px"} color={"red.500"} zIndex="100" />
-          <Heading as="h2" size="xl" mt={6} mb={2} zIndex="100">
+          <Text fontSize={"2xl"} fontWeight={"bold"} mt={6} mb={2} zIndex="100">
             {t("contactMe.error.title")}
-          </Heading>
+          </Text>
           <Text color={"gray.500"} zIndex="100">
             {t("contactMe.error.description")}
           </Text>
@@ -87,9 +87,9 @@ const ContactMe: React.FC<Props> = (props) => {
           alignItems={"center"}
         >
           <CheckCircleIcon boxSize={"50px"} color={"green.500"} zIndex="100" />
-          <Heading as="h2" size="xl" mt={6} mb={2} zIndex="100">
+          <Text fontSize={"2xl"} fontWeight={"bold"} mt={6} mb={2} zIndex="100">
             {t("contactMe.emailSent.title")}
-          </Heading>
+          </Text>
           <Text color={"gray.500"} zIndex="100">
             {t("contactMe.emailSent.description")}
           </Text>
@@ -175,9 +175,14 @@ const ContactMe: React.FC<Props> = (props) => {
   };
   return (
     <Box color="white" padding={"3rem 0"} id="contact">
-      <Text fontSize={"5xl"} fontWeight={"semibold"} textAlign="center">
+      <Heading
+        as={"h3"}
+        fontSize={"5xl"}
+        fontWeight={"semibold"}
+        textAlign="center"
+      >
         {t("contactMe.title")} 📪
-      </Text>
+      </Heading>
       <Box display={"grid"} placeItems="center" marginTop={"2rem"}>
         <Box
           bg={"white"}

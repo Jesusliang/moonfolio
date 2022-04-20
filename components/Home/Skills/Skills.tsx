@@ -1,4 +1,4 @@
-import { Box, Text } from "@chakra-ui/react";
+import { Box, Heading, Text } from "@chakra-ui/react";
 import React, { useEffect, useRef, useState } from "react";
 import { useTranslation } from "next-i18next";
 import { Parallax } from "react-scroll-parallax";
@@ -11,9 +11,14 @@ const Skills: React.FC<Props> = (props) => {
 
   return (
     <Box padding="2rem" color="white" position="relative" id="skills">
-      <Text fontSize={"5xl"} fontWeight={"semibold"} textAlign="center">
+      <Heading
+        as={"h3"}
+        fontSize={"5xl"}
+        fontWeight={"semibold"}
+        textAlign="center"
+      >
         {t("mySkills.title")} 💡
-      </Text>
+      </Heading>
       <Box mt={"4rem"} display="grid" placeItems={"center"}>
         <Box
           width={{ base: "80px", md: "150px" }}
