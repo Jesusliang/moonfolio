@@ -15,19 +15,21 @@
       "resume": "Mi CV"
     }
   },
-  "myWork": { "title": "Mis proyectos" },
+  "myWork": {
+    "title": "Mis proyectos"
+  },
   "articles": {
     "booking": {
       "title": "Widget Motor de Reserva",
-      "description": "Liderado un pequeño equipo de frontend para crear un motor de reservas compilado para que la aplicación pueda ser implementado en las páginas web de los clientes, permitiéndoles utilizar nuestro producto para ofrecer sus hoteles y apartamentos a sus clientes"
+      "description": "Liderado un pequeño equipo de frontend para crear un motor de reservas compilado para que la aplicación pueda ser implementado en las páginas web de los clientes, permitiéndoles utilizar nuestro producto para ofrecer sus hoteles y apartamentos a sus clientes. Se hacen +3000 reservas en la aplicación"
     },
     "checkin": {
       "title": "Aplicación de Check-in Domótico",
-      "description": "Liderado un pequeño equipo de frontend para desarrollar una aplicación web que permitiera al cliente hacer el check-in en su reserva. Implementamos un SDK para extraer datos a través de fotos de documentación como DNI, pasaportes y permisos de conducir. Integrado con cerraduras domóticas para que el cliente pueda entrar a su estancia a través de la aplicación sin necesidad de llaves"
+      "description": "Liderado un pequeño equipo de frontend para desarrollar una aplicación web que permitiera al cliente hacer el check-in en su reserva. Implementamos un SDK para extraer datos a través de fotos de documentación como DNI, pasaportes y permisos de conducir. Integrado con cerraduras domóticas para que el cliente pueda entrar a su estancia a través de la aplicación sin necesidad de llaves. La aplicación maneja +6000 apartamentos/hoteles"
     },
     "pms": {
       "title": "PMS/Channgel Manager",
-      "description": "Liderado un pequeño equipo de frontend para crear un PMS/Channgel Manager un producto como servicio (SaaS), es una aplicación web con una interfaz similar a la de Windows para la gestión de hoteles/apartamentos, utilizando React y Redux para el manejo de estados y el uso de herramientas de optimización avanzadas como reselect. Creado un microservicio de backend de websocket usando Nodejs/Express para proporcionar a los usuarios iteraciones en tiempo real para el trabajo en equipo como figma o google docs"
+      "description": "Liderado un pequeño equipo de frontend para crear un PMS/Channgel Manager un producto como servicio (SaaS), es una aplicación web con una interfaz similar a la de Windows para la gestión de hoteles/apartamentos, utilizando React y Redux para el manejo de estados y el uso de herramientas de optimización avanzadas como reselect. Creado un microservicio de backend de websocket usando Nodejs/Express para proporcionar a los usuarios iteraciones en tiempo real para el trabajo en equipo como figma o google docs. La aplicación es usada por +150 gestoras de hoteles/apartamentos"
     }
   },
   "mySkills": {
@@ -49,9 +51,18 @@
       "description": "Tendrás mi respuesta muy pronto!"
     },
     "form": {
-      "name": { "title": "Nombre", "placeholder": "Tu Nombre" },
-      "email": { "title": "Correo", "placeholder": "Tu Correo" },
-      "message": { "title": "Mensaje", "placeholder": "Tu mensaje" },
+      "name": {
+        "title": "Nombre",
+        "placeholder": "Tu Nombre"
+      },
+      "email": {
+        "title": "Correo",
+        "placeholder": "Tu Correo"
+      },
+      "message": {
+        "title": "Mensaje",
+        "placeholder": "Tu mensaje"
+      },
       "send": "Enviar"
     },
     "error": {
