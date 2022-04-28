@@ -15,11 +15,13 @@
       "resume": "My resume"
     }
   },
-  "myWork": { "title": "My Work" },
+  "myWork": {
+    "title": "My Work"
+  },
   "articles": {
     "booking": {
       "title": "Booking Widget",
-      "description": "Led a small frontend team to create a booking engine and compiled the application to be embeddable in clients websites, allowing them to use our product to offer their hotels and apartments to their clients"
+      "description": "Led a small frontend team to create a booking engine and compiled the application to be embeddable in clients websites, allowing them to use our product to offer their hotels and apartments to their clients."
     },
     "checkin": {
       "title": "Domotic Check-in Application",
@@ -40,7 +42,7 @@
     "title": "About me",
     "contact": "Contact",
     "description": "I am a fullstack Javascript/Typescript developer. With specialization in React and Nodejs. I love development, learning new things and solving problems!",
-    "description2": " I currently lead a small frontend team in a startup called Availroom in which I mainly take care of the frontend architecture of all projects as well as maintaining them. Likewise, I also develop microservices."
+    "description2": " I currently lead a small frontend team in a startup called Availroom in which I mainly take care of the frontend architecture of all projects as well as maintaining them. Likewise, I have also developed microservices and a CI/CD system with Github Actions for the projects"
   },
   "contactMe": {
     "title": "Send me an email",
@@ -49,9 +51,18 @@
       "description": "In no time you will have my answer!"
     },
     "form": {
-      "name": { "title": "Name", "placeholder": "Your Name" },
-      "email": { "title": "Email", "placeholder": "Your Email" },
-      "message": { "title": "Message", "placeholder": "Your Message" },
+      "name": {
+        "title": "Name",
+        "placeholder": "Your Name"
+      },
+      "email": {
+        "title": "Email",
+        "placeholder": "Your Email"
+      },
+      "message": {
+        "title": "Message",
+        "placeholder": "Your Message"
+      },
       "send": "Send"
     },
     "error": {

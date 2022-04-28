@@ -88,7 +88,7 @@ const Skills: React.FC<Props> = (props) => {
             <Text fontSize={"2xl"} fontWeight={"medium"}>
               {t("mySkills.others")}
             </Text>
-            <Text>Git, Testing, UI/UX, English</Text>
+            <Text>Git, Testing, CI/CD, UI/UX, English</Text>
           </Box>
         </Parallax>
       </Box>

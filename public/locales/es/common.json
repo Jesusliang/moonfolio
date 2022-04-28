@@ -40,7 +40,7 @@
     "title": "Sobre mi",
     "contact": "Contacto",
     "description": "Soy un desarrollador fullstack Javascript/Typescript. Con especialización en React y Nodejs. ¡Me encanta el desarrollo, aprender cosas nuevas y resolver problemas!",
-    "description2": "Actualmente lidero un pequeño equipo de frontend en una startup llamada Availroom en la que me encargo principalmente de la arquitectura frontend de todos los proyectos y de su mantenimiento. Asimismo, también desarrollo algunos microservicios."
+    "description2": "Actualmente lidero un pequeño equipo de frontend en una startup llamada Availroom en la que me encargo principalmente de la arquitectura frontend de todos los proyectos y de su mantenimiento. Asimismo, también he desarrollado microservicios y un sistema de CI/CD con github actions para los proyectos"
   },
   "contactMe": {
     "title": "Envíame un correo",
