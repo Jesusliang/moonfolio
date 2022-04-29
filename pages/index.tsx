@@ -20,7 +20,7 @@ const Home: NextPage = () => {
         <title>Jesus Liang</title>
         <meta
           name="description"
-          content="Jesus Liang Fullstack Developer Portfolio"
+          content="Jesus Liang Fullstack Developer Portfolio! I'll make your product scale to the moon through the web"
         />
         <meta
           name="keywords"
