@@ -18,15 +18,18 @@ const Home: NextPage = () => {
     <>
       <Head>
         <title>Jesus Liang</title>
+        <meta name="title" property="og:title" content="Jesus Liang - Portfolio" />
         <meta
           name="description"
           content="Jesus Liang Fullstack Developer Portfolio! I'll make your product scale to the moon through the web"
         />
+        <meta property="og:type" content="Website" />
         <meta
           name="keywords"
           content="Web Developer, developer, JavaScript, Typescript, fullstack developer, Jesus David Liang, Jesus Liang, Fullstack, Full-stack"
         />
-        <meta property="og:image" content="https://jesusliang.com/images/preview.png" />
+        <meta name="author" content="Jesus Liang" />
+        <meta name="image" property="og:image" content="https://jesusliang.com/images/preview.png" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Box
