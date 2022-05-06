@@ -26,6 +26,7 @@ const Home: NextPage = () => {
           name="keywords"
           content="Web Developer, developer, JavaScript, Typescript, fullstack developer, Jesus David Liang, Jesus Liang, Fullstack, Full-stack"
         />
+        <meta property="og:image" content="https://jesusliang.com/images/preview.png" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Box
