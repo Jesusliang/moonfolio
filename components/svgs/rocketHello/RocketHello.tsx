@@ -1,16 +1,16 @@
-import * as React from "react";
+import * as React from 'react'
 
-import styles from "./RocketHello.module.scss";
+import styles from './RocketHello.module.scss'
 
-function SvgComponent() {
+function SvgComponent () {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 2576.56 2897.86"
       preserveAspectRatio="none"
       style={{
-        width: "100%",
-        height: "100%"
+        width: '100%',
+        height: '100%'
       }}
       className={styles.astronaut}
     >
@@ -23,7 +23,7 @@ function SvgComponent() {
         </clipPath>
         <style>
           {
-            ".prefix__cls-2{fill:#371a45}.prefix__cls-3{fill:#fff}.prefix__cls-4{opacity:.35}.prefix__cls-6{fill:#ec1c24}.prefix__cls-7{fill:#ec1d24}.prefix__cls-8{fill:#ec1e24}.prefix__cls-9{fill:#ec1f24}.prefix__cls-10{fill:#ec2024}.prefix__cls-11{fill:#ed2124}.prefix__cls-12{fill:#ed2224}.prefix__cls-13{fill:#ed2324}.prefix__cls-14{fill:#ed2424}.prefix__cls-15{fill:#ed2524}.prefix__cls-16{fill:#ed2624}.prefix__cls-17{fill:#ed2724}.prefix__cls-18{fill:#ed2824}.prefix__cls-22{fill:#ee2b24}.prefix__cls-24{fill:#ee2d24}.prefix__cls-26{fill:#ee2f24}.prefix__cls-33{fill:#ef3525}.prefix__cls-37{fill:#ef3925}.prefix__cls-42{fill:#f03e25}.prefix__cls-149{fill:#ffca28}.prefix__cls-151{opacity:.3}.prefix__cls-153{opacity:.25}.prefix__cls-155{opacity:.6}.prefix__cls-158{opacity:.2}.prefix__cls-159{opacity:.7}.prefix__cls-161{fill:#22a7f0}"
+            '.prefix__cls-2{fill:#371a45}.prefix__cls-3{fill:#fff}.prefix__cls-4{opacity:.35}.prefix__cls-6{fill:#ec1c24}.prefix__cls-7{fill:#ec1d24}.prefix__cls-8{fill:#ec1e24}.prefix__cls-9{fill:#ec1f24}.prefix__cls-10{fill:#ec2024}.prefix__cls-11{fill:#ed2124}.prefix__cls-12{fill:#ed2224}.prefix__cls-13{fill:#ed2324}.prefix__cls-14{fill:#ed2424}.prefix__cls-15{fill:#ed2524}.prefix__cls-16{fill:#ed2624}.prefix__cls-17{fill:#ed2724}.prefix__cls-18{fill:#ed2824}.prefix__cls-22{fill:#ee2b24}.prefix__cls-24{fill:#ee2d24}.prefix__cls-26{fill:#ee2f24}.prefix__cls-33{fill:#ef3525}.prefix__cls-37{fill:#ef3925}.prefix__cls-42{fill:#f03e25}.prefix__cls-149{fill:#ffca28}.prefix__cls-151{opacity:.3}.prefix__cls-153{opacity:.25}.prefix__cls-155{opacity:.6}.prefix__cls-158{opacity:.2}.prefix__cls-159{opacity:.7}.prefix__cls-161{fill:#22a7f0}'
           }
         </style>
       </defs>
@@ -55,7 +55,7 @@ function SvgComponent() {
           </g>
           <g className={styles.fire}>
             <g clipPath="url(#prefix__clip-path)">
-              {" "}
+              {' '}
               {/* HERE */}
               <path
                 className="prefix__cls-6"
@@ -1240,7 +1240,7 @@ function SvgComponent() {
         </g>
       </g>
     </svg>
-  );
+  )
 }
 
-export default SvgComponent;
+export default SvgComponent

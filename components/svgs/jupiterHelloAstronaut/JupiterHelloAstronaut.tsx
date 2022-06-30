@@ -1,9 +1,9 @@
-import * as React from "react";
-import styles from "./JupiterHelloAstronaut.module.scss";
+import * as React from 'react'
+import styles from './JupiterHelloAstronaut.module.scss'
 
 interface Props {}
 
-function SvgComponent(props: Props) {
+function SvgComponent (props: Props) {
   return (
     <svg
       className={styles.astronaut}
@@ -12,14 +12,14 @@ function SvgComponent(props: Props) {
       viewBox="0 0 2531 3247.3"
       preserveAspectRatio="none"
       style={{
-        width: "100%",
-        height: "100%"
+        width: '100%',
+        height: '100%'
       }}
       {...props}
     >
       <style>
         {
-          ".prefix__st0{fill:#ffb200}.prefix__st1{fill:#d66b09}.prefix__st2{fill:#371a45}.prefix__st4{fill:#ff9100}.prefix__st5{fill:#ffec90}.prefix__st7{fill:#fff}.prefix__st8{opacity:.3}.prefix__st10{opacity:.35}.prefix__st13{opacity:.5}"
+          '.prefix__st0{fill:#ffb200}.prefix__st1{fill:#d66b09}.prefix__st2{fill:#371a45}.prefix__st4{fill:#ff9100}.prefix__st5{fill:#ffec90}.prefix__st7{fill:#fff}.prefix__st8{opacity:.3}.prefix__st10{opacity:.35}.prefix__st13{opacity:.5}'
         }
       </style>
       <g id="prefix__Capa_2_1_">
@@ -340,7 +340,7 @@ function SvgComponent(props: Props) {
         </g>
       </g>
     </svg>
-  );
+  )
 }
 
-export default SvgComponent;
+export default SvgComponent

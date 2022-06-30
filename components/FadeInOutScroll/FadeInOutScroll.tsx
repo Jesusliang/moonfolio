@@ -1,21 +1,21 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from 'react'
 interface Props {}
 const FadeInOutScroll: React.FC<Props> = (props) => {
-  const [offsetY, setOffsetY] = useState(0);
-  const fadeInOutEl = useRef<HTMLDivElement>(null);
-  const windowInnerHeight = useRef(0);
+  const [offsetY, setOffsetY] = useState(0)
+  const fadeInOutEl = useRef<HTMLDivElement>(null)
+  const windowInnerHeight = useRef(0)
 
   const handleScroll = () => {
-    setOffsetY(window.pageYOffset);
-  };
+    setOffsetY(window.pageYOffset)
+  }
 
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    windowInnerHeight.current = window.innerHeight;
+    window.addEventListener('scroll', handleScroll)
+    windowInnerHeight.current = window.innerHeight
     return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [])
 
   return (
     <div
@@ -30,6 +30,6 @@ const FadeInOutScroll: React.FC<Props> = (props) => {
     >
       {props.children}
     </div>
-  );
-};
-export default FadeInOutScroll;
+  )
+}
+export default FadeInOutScroll

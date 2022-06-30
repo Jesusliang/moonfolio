@@ -1,13 +1,13 @@
-import * as React from "react";
-import styles from "./ReadingAstronaut.module.scss";
+import * as React from 'react'
+import styles from './ReadingAstronaut.module.scss'
 
-function SvgReadingAstronaut() {
+function SvgReadingAstronaut () {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2103.92 2757.21">
       <defs>
         <style>
           {
-            ".readingAstronaut_svg__cls-1{fill:#ffb200}.readingAstronaut_svg__cls-2{fill:#d66b09}.readingAstronaut_svg__cls-3{fill:#371a45}.readingAstronaut_svg__cls-5{fill:#ffec90}.readingAstronaut_svg__cls-6{opacity:.35}.readingAstronaut_svg__cls-8{fill:#fff}.readingAstronaut_svg__cls-9{fill:#73befd}.readingAstronaut_svg__cls-10{fill:#1f9fff}.readingAstronaut_svg__cls-11{opacity:.7}"
+            '.readingAstronaut_svg__cls-1{fill:#ffb200}.readingAstronaut_svg__cls-2{fill:#d66b09}.readingAstronaut_svg__cls-3{fill:#371a45}.readingAstronaut_svg__cls-5{fill:#ffec90}.readingAstronaut_svg__cls-6{opacity:.35}.readingAstronaut_svg__cls-8{fill:#fff}.readingAstronaut_svg__cls-9{fill:#73befd}.readingAstronaut_svg__cls-10{fill:#1f9fff}.readingAstronaut_svg__cls-11{opacity:.7}'
           }
         </style>
       </defs>
@@ -381,7 +381,7 @@ function SvgReadingAstronaut() {
         </g>
       </g>
     </svg>
-  );
+  )
 }
 
-export default SvgReadingAstronaut;
+export default SvgReadingAstronaut

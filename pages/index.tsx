@@ -1,23 +1,21 @@
-import type { GetStaticProps, NextPage } from "next";
-import Head from "next/head";
-import Navbar from "../components/navbar/Navbar";
-import { Box, Heading, Text } from "@chakra-ui/react";
-import Hero from "../components/Home/Hero/Hero";
-import ProjectArticle from "../components/projectArticle/ProjectArticle";
-import Skills from "../components/Home/Skills/Skills";
-import AboutMe from "../components/aboutMe/AboutMe";
-import ContactMe from "../components/contactMe/ContactMe";
-import { useTranslation } from "next-i18next";
-import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-import MyWork from "../components/myWork/MyWork";
+import type { GetStaticProps, NextPage } from 'next'
+import Head from 'next/head'
+import Navbar from '../components/navbar/Navbar'
+import { Box } from '@chakra-ui/react'
+import Hero from '../components/Home/Hero/Hero'
+import Skills from '../components/Home/Skills/Skills'
+import AboutMe from '../components/aboutMe/AboutMe'
+import ContactMe from '../components/contactMe/ContactMe'
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+import MyWork from '../components/myWork/MyWork'
 
 const Home: NextPage = () => {
-  const { t } = useTranslation();
-
   return (
     <>
       <Head>
-        <title>Jesus Liang</title>
+        <title>
+          Jesus Liang
+          </title>
         <meta name="title" property="og:title" content="Jesus Liang - Portfolio" />
         <meta
           name="description"
@@ -34,9 +32,9 @@ const Home: NextPage = () => {
       </Head>
       <Box
         sx={{
-          overflowX: "hidden",
-          overflow: "hidden",
-          color: "black"
+          overflowX: 'hidden',
+          overflow: 'hidden',
+          color: 'black'
         }}
         id="home"
       >
@@ -48,16 +46,16 @@ const Home: NextPage = () => {
         <ContactMe />
       </Box>
     </>
-  );
-};
+  )
+}
 
-export default Home;
+export default Home
 
 export const getStaticProps: GetStaticProps = async ({ locale }) => {
   return {
     props: {
-      ...(await serverSideTranslations(locale!, ["common", "footer"]))
+      ...(await serverSideTranslations(locale!, ['common', 'footer']))
       // Will be passed to the page component as props
     }
-  };
-};
+  }
+}

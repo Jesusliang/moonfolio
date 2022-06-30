@@ -1,7 +1,7 @@
-import * as React from "react";
-import styles from "./FlyAwayRocket.module.scss";
+import * as React from 'react'
+import styles from './FlyAwayRocket.module.scss'
 
-function SvgRocket() {
+function SvgRocket () {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -17,7 +17,7 @@ function SvgRocket() {
         </clipPath>
         <style>
           {
-            ".rocket_svg__cls-3{fill:#ec1c24}.rocket_svg__cls-4{fill:#ec1d24}.rocket_svg__cls-5{fill:#ec1e24}.rocket_svg__cls-6{fill:#ec1f24}.rocket_svg__cls-7{fill:#ec2024}.rocket_svg__cls-8{fill:#ed2124}.rocket_svg__cls-9{fill:#ed2224}.rocket_svg__cls-10{fill:#ed2324}.rocket_svg__cls-11{fill:#ed2424}.rocket_svg__cls-12{fill:#ed2524}.rocket_svg__cls-13{fill:#ed2624}.rocket_svg__cls-14{fill:#ed2724}.rocket_svg__cls-15{fill:#ed2824}.rocket_svg__cls-19{fill:#ee2b24}.rocket_svg__cls-21{fill:#ee2d24}.rocket_svg__cls-23{fill:#ee2f24}.rocket_svg__cls-30{fill:#ef3525}.rocket_svg__cls-34{fill:#ef3925}.rocket_svg__cls-39{fill:#f03e25}.rocket_svg__cls-146{fill:#ffca28}.rocket_svg__cls-148{opacity:.6}.rocket_svg__cls-149{fill:#fff}.rocket_svg__cls-151{fill:#371a45}.rocket_svg__cls-152{opacity:.35}.rocket_svg__cls-153{fill:#00abfc}.rocket_svg__cls-154{fill:#ed1b24}.rocket_svg__cls-155{opacity:.3}"
+            '.rocket_svg__cls-3{fill:#ec1c24}.rocket_svg__cls-4{fill:#ec1d24}.rocket_svg__cls-5{fill:#ec1e24}.rocket_svg__cls-6{fill:#ec1f24}.rocket_svg__cls-7{fill:#ec2024}.rocket_svg__cls-8{fill:#ed2124}.rocket_svg__cls-9{fill:#ed2224}.rocket_svg__cls-10{fill:#ed2324}.rocket_svg__cls-11{fill:#ed2424}.rocket_svg__cls-12{fill:#ed2524}.rocket_svg__cls-13{fill:#ed2624}.rocket_svg__cls-14{fill:#ed2724}.rocket_svg__cls-15{fill:#ed2824}.rocket_svg__cls-19{fill:#ee2b24}.rocket_svg__cls-21{fill:#ee2d24}.rocket_svg__cls-23{fill:#ee2f24}.rocket_svg__cls-30{fill:#ef3525}.rocket_svg__cls-34{fill:#ef3925}.rocket_svg__cls-39{fill:#f03e25}.rocket_svg__cls-146{fill:#ffca28}.rocket_svg__cls-148{opacity:.6}.rocket_svg__cls-149{fill:#fff}.rocket_svg__cls-151{fill:#371a45}.rocket_svg__cls-152{opacity:.35}.rocket_svg__cls-153{fill:#00abfc}.rocket_svg__cls-154{fill:#ed1b24}.rocket_svg__cls-155{opacity:.3}'
           }
         </style>
       </defs>
@@ -1096,7 +1096,7 @@ function SvgRocket() {
         </g>
       </g>
     </svg>
-  );
+  )
 }
 
-export default SvgRocket;
+export default SvgRocket
