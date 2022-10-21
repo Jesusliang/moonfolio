@@ -31,7 +31,6 @@ const Skills: React.FC<Props> = (props) => {
             <SvgReadingAstronaut />
           </Parallax>
         </Box>
-        <Parallax speed={4}>
           <Box
             maxW={{ base: '200px', md: '350px' }}
             w={'full'}
@@ -41,7 +40,7 @@ const Skills: React.FC<Props> = (props) => {
             p={6}
             textAlign={'center'}
             color="black"
-            transform={{ base: 'translateX(-30%)', lg: 'translateX(-80%)' }}
+            transform={{ base: 'translateX(-30%)', lg: 'translateX(-90%)' }}
             zIndex="-10"
           >
             <Text fontSize={'2xl'} fontWeight={'medium'}>
@@ -49,8 +48,6 @@ const Skills: React.FC<Props> = (props) => {
             </Text>
             <Text>React, Redux, Angular, Html, Css/Sass, Graphql, etc</Text>
           </Box>
-        </Parallax>
-        <Parallax speed={0}>
           <Box
             maxW={{ base: '200px', md: '350px' }}
             w={'full'}
@@ -61,7 +58,7 @@ const Skills: React.FC<Props> = (props) => {
             textAlign={'center'}
             color="black"
             zIndex="-10"
-            marginTop={'1rem'}
+            marginTop={'1.5rem'}
           >
             <Text fontSize={'2xl'} fontWeight={'medium'}>
               {t('mySkills.backend')}
@@ -70,8 +67,6 @@ const Skills: React.FC<Props> = (props) => {
               Node.js, Express.js, SQL, NoSQL, Microservices, Java, Spring, etc
             </Text>
           </Box>
-        </Parallax>
-        <Parallax speed={-4}>
           <Box
             maxW={{ base: '200px', md: '350px' }}
             w={'full'}
@@ -81,8 +76,8 @@ const Skills: React.FC<Props> = (props) => {
             p={6}
             textAlign={'center'}
             color="black"
-            transform={{ base: 'translateX(30%)', lg: 'translateX(120%)' }}
-            mt="2.8rem"
+            transform={{ base: 'translateX(30%)', lg: 'translateX(90%)' }}
+            mt="1.5rem"
             zIndex="-10"
           >
             <Text fontSize={'2xl'} fontWeight={'medium'}>
@@ -90,7 +85,6 @@ const Skills: React.FC<Props> = (props) => {
             </Text>
             <Text>Git, Testing, CI/CD, UI/UX, English</Text>
           </Box>
-        </Parallax>
       </Box>
     </Box>
   )
