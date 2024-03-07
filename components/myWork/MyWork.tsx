@@ -16,12 +16,7 @@ const MyWork: React.FC<Props> = (props) => {
       }}
       id="work"
     >
-      <Heading
-        as={'h3'}
-        fontSize={'5xl'}
-        fontWeight={'semibold'}
-        textAlign="center"
-      >
+      <Heading as={'h3'} fontSize={'5xl'} fontWeight={'semibold'} textAlign="center">
         {t('myWork.title')} 💼
       </Heading>
       <Box
