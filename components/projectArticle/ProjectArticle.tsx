@@ -15,12 +15,12 @@ import {
   ModalOverlay
 } from '@chakra-ui/react'
 interface Props {
-  title: string;
-  description: string;
-  links?: { key: string; url: string }[];
-  image?: string;
-  video?: string;
-  poster?: string;
+  title: string
+  description: string
+  links?: { key: string; url: string }[]
+  image?: string
+  video?: string
+  poster?: string
 }
 const ProjectArticle: React.FC<Props> = (props) => {
   const [openContentModal, setOpenContentModal] = useState(false)
@@ -29,14 +29,9 @@ const ProjectArticle: React.FC<Props> = (props) => {
       display="flex"
       flexDirection={{ base: 'column', md: 'row' }}
       justifyContent="space-between"
+      width="100%"
     >
-      <Box
-        display="flex"
-        flex="1"
-        marginRight="3"
-        position="relative"
-        alignItems="center"
-      >
+      <Box display="flex" flex="1" marginRight="3" position="relative" alignItems="center">
         <Box
           width={{ base: '100%', sm: '85%' }}
           height="100%"
@@ -47,8 +42,7 @@ const ProjectArticle: React.FC<Props> = (props) => {
           borderRadius="md"
           position={'relative'}
         >
-          {props.image
-            ? (
+          {props.image ? (
             <Image
               height="100%"
               width="100%"
@@ -57,8 +51,7 @@ const ProjectArticle: React.FC<Props> = (props) => {
               objectFit="cover"
               objectPosition="top"
             />
-              )
-            : (
+          ) : (
             <video
               poster={props.poster}
               preload="none"
@@ -73,7 +66,7 @@ const ProjectArticle: React.FC<Props> = (props) => {
               }}
               src={props.video}
             />
-              )}
+          )}
         </Box>
         <Box
           zIndex="1"
@@ -90,12 +83,7 @@ const ProjectArticle: React.FC<Props> = (props) => {
           />
         </Box>
       </Box>
-      <Box
-        flex="1"
-        display="flex"
-        flexDirection="column"
-        marginTop={{ base: '1rem', md: '0' }}
-      >
+      <Box flex="1" display="flex" flexDirection="column" marginTop={{ base: '1rem', md: '0' }}>
         <Heading as={'h4'} marginTop="1" fontSize="3xl">
           {props.title}
         </Heading>

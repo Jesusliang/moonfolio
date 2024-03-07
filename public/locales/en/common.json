@@ -1,4 +1,7 @@
 {
+  "labels": {
+    "now": "Now"
+  },
   "navbar": {
     "home": "Home",
     "myWork": "My Work",
@@ -21,15 +24,19 @@
   "articles": {
     "booking": {
       "title": "Booking Widget",
-      "description": "Led a small frontend team to create a booking engine and compiled the application to be embeddable in clients websites, allowing them to use our product to offer their hotels and apartments to their clients. The app makes +3000 bookings per month"
+      "description": "Embeddable booking widget compiled with bundlers so that the application can be deployed on clients websites, from web applications to WordPress, enabling them to use our product to showcase their hotels and apartments in a format similar to Booking and Airbnb. Over 3000 reservations are made through the application."
     },
     "checkin": {
       "title": "Domotic Check-in Application",
-      "description": "Led a small frontend team to developed a web application to allow the customer to checkin in their booking. We implemented an SDK to extract data through photos of documentation such as ID cards, passports and driver's licenses and also integrated with home automation locks so that the customer can enter their stay through the application. The app manages +6000 apartments/hotels"
+      "description": "A web application that enables customers to check in for their reservations. We implemented an SDK to extract data from photos of identification documents such as ID cards, passports, and driver's licenses. Integrated with smart locks, allowing customers to access their accommodations through the application without the need for keys. The application manages over 6000 apartments/hotels."
     },
     "pms": {
       "title": "PMS/Channel Manager",
-      "description": "Led a small frontend team to create a PMS/Channgel Manager SaaS product, a web application with a Windows like interface for hotels/apartments management, using React and Redux for state management and usage of advanced optimization tools like reselect. Created a websocket backend microservice using Nodejs/Express to provide users real time iterations for teamworking like figma. The app is used by +150 hotels/apartments"
+      "description": "A web application with a Windows-like interface for hotel/apartment management, utilizing React and Redux for state management and advanced optimization tools such as reselect. We created a WebSocket backend microservice using Node.js/Express to provide users with real-time collaboration features similar to Figma or Google Docs. The application is used by over 150 hotel/apartment managers."
+    },
+    "leaderslinked": {
+      "title": "Leaders Linked",
+      "description": "Development and migration of a private professional social network for the company previously developed in a monolithic PHP project to the React ecosystem. Using bundlers to achieve a gradual integration to the monolithic architecture to finally separate the frontend from the PHP backend."
     }
   },
   "mySkills": {

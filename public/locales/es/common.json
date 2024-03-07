@@ -1,4 +1,7 @@
 {
+  "labels": {
+    "now": "Actual"
+  },
   "navbar": {
     "home": "Home",
     "myWork": "Proyectos",
@@ -21,15 +24,23 @@
   "articles": {
     "booking": {
       "title": "Widget Motor de Reserva",
-      "description": "Liderado un pequeño equipo de frontend para crear un motor de reservas compilado para que la aplicación pueda ser implementado en las páginas web de los clientes, permitiéndoles utilizar nuestro producto para ofrecer sus hoteles y apartamentos a sus clientes. Se hacen +3000 reservas en la aplicación"
+      "description": "Widget embebible de reservas, compilado con bundlers para facilitar la implementación en las páginas web de los clientes, desde aplicaciones web hasta WordPress. Esto les permite utilizar nuestro producto para mostrar sus hoteles y apartamentos en un formato similar a Booking y Airbnb. Actualmente, se realizan más de 3000 reservas a través de la aplicación."
     },
     "checkin": {
       "title": "Aplicación de Check-in Domótico",
-      "description": "Liderado un pequeño equipo de frontend para desarrollar una aplicación web que permitiera al cliente hacer el check-in en su reserva. Implementamos un SDK para extraer datos a través de fotos de documentación como DNI, pasaportes y permisos de conducir. Integrado con cerraduras domóticas para que el cliente pueda entrar a su estancia a través de la aplicación sin necesidad de llaves. La aplicación maneja +6000 apartamentos/hoteles"
+      "description": "Una aplicación web que facilita el check-in al cliente para su reserva. Hemos incorporado un SDK que extrae datos a través de fotos de documentos como el DNI, pasaportes y permisos de conducir. También está integrada con cerraduras domóticas, permitiendo a los clientes acceder a su alojamiento a través de la aplicación sin necesidad de llaves. La aplicación gestiona más de 6000 apartamentos y hoteles."
     },
     "pms": {
       "title": "PMS/Channgel Manager",
-      "description": "Liderado un pequeño equipo de frontend para crear un PMS/Channgel Manager un producto como servicio (SaaS), es una aplicación web con una interfaz similar a la de Windows para la gestión de hoteles/apartamentos, utilizando React y Redux para el manejo de estados y el uso de herramientas de optimización avanzadas como reselect. Creado un microservicio de backend de websocket usando Nodejs/Express para proporcionar a los usuarios iteraciones en tiempo real para el trabajo en equipo como figma o google docs. La aplicación es usada por +150 gestoras de hoteles/apartamentos"
+      "description": "Una aplicación web con interfaz estilo Windows para gestionar hoteles y apartamentos. Incluye un microservicio de backend basado en WebSockets con Node.js/Express para colaboración en tiempo real, similar a Figma o Google Docs. Utilizada por más de 150 gestores de hoteles y apartamentos."
+    },
+    "crm": {
+      "title": "CRM",
+      "description": "CRM para uso interno de la empresa. Además de las funciones genéricas, integra una API de terceros para predecir precios de reservas turísticas, generando contratos y optimizando decisiones para el equipo de captación de clientes."
+    },
+    "leaderslinked": {
+      "title": "Leaders Linked",
+      "description": "Desarrollo y migración de una red social de trabajo profesional privada de un proyecto monolítico en PHP al ecosistema de React. Utilizando bundlers para una integración progresiva con la arquitectura monolítica y, finalmente, separando el frontend del backend de PHP."
     }
   },
   "mySkills": {
