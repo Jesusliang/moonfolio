@@ -2,8 +2,8 @@ import { Box, Heading, Container, Stack } from '@chakra-ui/react'
 import React from 'react'
 import { useTranslation } from 'react-i18next'
 import ProjectArticle from '../projectArticle/ProjectArticle'
-interface Props {}
-const MyWork: React.FC<Props> = (props) => {
+
+const MyWork: React.FC = () => {
   const { t } = useTranslation()
   return (
     <Box

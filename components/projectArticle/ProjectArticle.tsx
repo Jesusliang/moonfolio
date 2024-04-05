@@ -41,6 +41,7 @@ const ProjectArticle: React.FC<Props> = (props) => {
           marginTop="5%"
           borderRadius="md"
           position={'relative'}
+          overflow={'hidden'}
         >
           {props.image ? (
             <Image
