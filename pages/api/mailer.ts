@@ -1,10 +1,7 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import type { NextApiRequest, NextApiResponse } from 'next'
 
-export default async function handler (
-  req: NextApiRequest,
-  res: NextApiResponse
-) {
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'POST') {
     if (!req.body.name) {
       return res.status(422).json({
@@ -21,8 +18,8 @@ export default async function handler (
     try {
       const nodemailer = require('nodemailer')
       const transporter = nodemailer.createTransport({
-        host: 'smtp.hostinger.com',
-        port: 465,
+        host: process.env.EMAIL_HOST,
+        port: process.env.EMAIL_PORT,
         secure: true,
         auth: {
           user: process.env.EMAIL_USER,
@@ -30,7 +27,7 @@ export default async function handler (
         }
       })
       await transporter.sendMail({
-        from: 'no-reply@jesusliang.com',
+        from: 'contact@jesusliang.com',
         to: 'jesusliang96@gmail.com, contact@jesusliang.com',
         subject: 'portfolio contact email',
         text: `from: ${req.body.name} - ${req.body.email} \n ${req.body.message}`
