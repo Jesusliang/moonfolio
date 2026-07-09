@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 918.02 543.79">
+  <defs>
+    <style>.cls-1{fill:none;}.cls-2{isolation:isolate;}.cls-3{mix-blend-mode:multiply;}.cls-4{clip-path:url(#clip-path);}.cls-5{fill:#282259;}.cls-6{fill:#803884;opacity:0.21;}.cls-7{fill:#aa5ba5;opacity:0.19;}.cls-8{fill:#34b8d6;opacity:0.11;}.cls-9{fill:#2f2b6d;opacity:0.45;}</style>
+    <clipPath id="clip-path" transform="translate(97.22 15.2)">
+      <rect class="cls-1" width="750" height="500" />
+    </clipPath>
+  </defs>
+  <g class="cls-2">
+    <g id="Capa_2" data-name="Capa 2">
+      <g id="BACKGROUND" class="cls-3">
+        <g class="cls-4">
+          <rect class="cls-5" x="97.22" y="15.2" width="750" height="500" />
+          <path class="cls-6" d="M-6.81,143.67s34.75-14.35,39.16,25.39-8.83,59.6,7.73,72.85S154,302,135.45,471.61L-3,478.66l-1-133Z" transform="translate(97.22 15.2)" />
+          <path class="cls-6" d="M-26.3,40.53s39.22,69.59,140.11,36,130.9-47.93,203.72-24.89S489,41.45,501-9.24H-21.69Z" transform="translate(97.22 15.2)" />
+          <path class="cls-7" d="M600.67,509.59s12.24-51.94,59.3-63.23,108.35-.88,118.18-63.24V509.59Z" transform="translate(97.22 15.2)" />
+          <path class="cls-7" d="M-6.81,314.16s17.39-24.57,49.54-14.29,34.71,92.58,85.82,90S185.44,433,216.3,433s34.07-47.58,64.93-43.08S305,436.8,330.08,433s71.36-36.65,120.86-5.79,42.43,82.43,42.43,82.43H237.51L-4,456.73Z" transform="translate(97.22 15.2)" />
+          <path class="cls-8" d="M325.78,506.28s43.54-39.22,90.82-33.55,65.45,36.86,65.45,36.86Z" transform="translate(97.22 15.2)" />
+          <path class="cls-7" d="M498.87,21S551,143.91,630.5,123.66,733.2,73,780.93,99.07V-15.2H501Z" transform="translate(97.22 15.2)" />
+          <path class="cls-6" d="M781.67,312.74S687.58,290.15,650.23,372s31.6,156.57,31.6,156.57H802.49Z" transform="translate(97.22 15.2)" />
+          <path class="cls-9" d="M268.29,144.91c-170-17-357,199.75-365.51,201.88l25.5,78.63c465.39,123.25,575.89-55.25,694.9-95.63s197.63,6.37,197.63,6.37V219.29C557.3,338.29,438.3,161.91,268.29,144.91Zm-74.57,37c29.37-7.69,87.64-16.18,155.22,10.21a6.94,6.94,0,0,1-1.52,13.34c-31.09,4.44-90.56,8.56-153.92-10.21A6.93,6.93,0,0,1,193.72,181.94Z" transform="translate(97.22 15.2)" />
+          <path class="cls-9" d="M804.66,231.09s-217.28,23.27-371.15-70.38a3.88,3.88,0,0,1,2.94-7.1c59.07,14.88,216.06,42.14,361.81-39.25Z" transform="translate(97.22 15.2)" />
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
