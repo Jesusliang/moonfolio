@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
-import { useTranslation } from 'next-i18next'
+import { useTranslation } from 'next-i18next/pages'
 import { FiArrowRight } from 'react-icons/fi'
 import Reveal from '../ui/Reveal'
 import ChatMock from '../project/ChatMock'
@@ -75,24 +75,22 @@ const Sky: React.FC = () => {
         <div className={styles.grid}>
           {featured.map((project, i) => (
             <Reveal key={project.id} delay={(i % 2) * 100}>
-              <Link href={`/proyectos/${project.slug}`}>
-                <a className={styles.card}>
-                  <div className={styles.media}>
-                    <Thumb project={project} alt={t(`projects.${project.id}.title`)} />
-                  </div>
-                  <div className={styles.body}>
-                    <p className={`mono ${styles.category}`}>
-                      {t(`projects.${project.id}.category`)}
-                    </p>
-                    <h3 className={`display ${styles.cardTitle}`}>
-                      {t(`projects.${project.id}.title`)}
-                    </h3>
-                    <p className={styles.summary}>{t(`projects.${project.id}.summary`)}</p>
-                    <span className={styles.open}>
-                      {t('sky.open')} <FiArrowRight aria-hidden />
-                    </span>
-                  </div>
-                </a>
+              <Link href={`/proyectos/${project.slug}`} className={styles.card}>
+                <div className={styles.media}>
+                  <Thumb project={project} alt={t(`projects.${project.id}.title`)} />
+                </div>
+                <div className={styles.body}>
+                  <p className={`mono ${styles.category}`}>
+                    {t(`projects.${project.id}.category`)}
+                  </p>
+                  <h3 className={`display ${styles.cardTitle}`}>
+                    {t(`projects.${project.id}.title`)}
+                  </h3>
+                  <p className={styles.summary}>{t(`projects.${project.id}.summary`)}</p>
+                  <span className={styles.open}>
+                    {t('sky.open')} <FiArrowRight aria-hidden />
+                  </span>
+                </div>
               </Link>
             </Reveal>
           ))}
@@ -104,14 +102,12 @@ const Sky: React.FC = () => {
             {others.map((project) => (
               <li key={project.id}>
                 <Link href={`/proyectos/${project.slug}`}>
-                  <a>
-                    <span className={`display ${styles.moreTitle}`}>
-                      {t(`projects.${project.id}.title`)}
-                    </span>
-                    <span className={`mono ${styles.moreMeta}`}>
-                      {project.company} <FiArrowRight aria-hidden />
-                    </span>
-                  </a>
+                  <span className={`display ${styles.moreTitle}`}>
+                    {t(`projects.${project.id}.title`)}
+                  </span>
+                  <span className={`mono ${styles.moreMeta}`}>
+                    {project.company} <FiArrowRight aria-hidden />
+                  </span>
                 </Link>
               </li>
             ))}

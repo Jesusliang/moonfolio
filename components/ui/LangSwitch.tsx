@@ -13,10 +13,15 @@ const LangSwitch: React.FC<{ className?: string }> = ({ className }) => {
       aria-label="Language"
     >
       {['es', 'en'].map((lng) => (
-        <Link key={lng} href={path} locale={lng} scroll={false}>
-          <a className={lng === locale ? styles.active : undefined} hrefLang={lng}>
-            {lng.toUpperCase()}
-          </a>
+        <Link
+          key={lng}
+          href={path}
+          locale={lng}
+          scroll={false}
+          className={lng === locale ? styles.active : undefined}
+          hrefLang={lng}
+        >
+          {lng.toUpperCase()}
         </Link>
       ))}
     </div>

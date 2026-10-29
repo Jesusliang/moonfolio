@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { useRouter } from 'next/router'
-import { useTranslation } from 'next-i18next'
+import { useTranslation } from 'next-i18next/pages'
 import { FiAlertCircle, FiCheck, FiCheckCircle, FiCopy } from 'react-icons/fi'
 import Reveal from '../ui/Reveal'
 import { resumeFor, site } from '../../data/site'

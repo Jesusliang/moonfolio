@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { useTranslation } from 'next-i18next'
+import { useTranslation } from 'next-i18next/pages'
 import { FiPlay } from 'react-icons/fi'
 import ChatMock from './ChatMock'
 import { ProjectMedia } from '../../data/projects'

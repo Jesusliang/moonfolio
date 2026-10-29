@@ -1,6 +1,6 @@
 import React from 'react'
 import { useRouter } from 'next/router'
-import { useTranslation } from 'next-i18next'
+import { useTranslation } from 'next-i18next/pages'
 import { FiArrowDown, FiDownload } from 'react-icons/fi'
 import Reveal from '../ui/Reveal'
 import LangSwitch from '../ui/LangSwitch'

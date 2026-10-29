@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 
 interface Props {
-  as?: keyof React.ReactHTML
+  as?: keyof React.JSX.IntrinsicElements
   className?: string
   delay?: number
   children: React.ReactNode

@@ -1,8 +1,8 @@
 import type { GetStaticPaths, GetStaticProps, NextPage } from 'next'
 import Head from 'next/head'
 import Link from 'next/link'
-import { useTranslation } from 'next-i18next'
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+import { useTranslation } from 'next-i18next/pages'
+import { serverSideTranslations } from 'next-i18next/pages/serverSideTranslations'
 import { FiArrowLeft, FiArrowRight, FiArrowUpRight } from 'react-icons/fi'
 import Reveal from '../../components/ui/Reveal'
 import TagList from '../../components/ui/TagList'
@@ -39,13 +39,11 @@ const ProjectPage: NextPage<Props> = ({ slug }: Props) => {
 
       <header className={styles.top}>
         <div className={`container ${styles.topInner}`}>
-          <Link href="/#sky">
-            <a className={styles.back}>
-              <FiArrowLeft aria-hidden /> {t('nav.back')}
-            </a>
+          <Link href="/#sky" className={styles.back}>
+            <FiArrowLeft aria-hidden /> {t('nav.back')}
           </Link>
-          <Link href="/">
-            <a className="display">JESUS LIANG</a>
+          <Link href="/" className="display">
+            JESUS LIANG
           </Link>
           <LangSwitch />
         </div>
@@ -131,16 +129,14 @@ const ProjectPage: NextPage<Props> = ({ slug }: Props) => {
           </div>
         </section>
 
-        <Link href={`/proyectos/${next.slug}`}>
-          <a className={styles.next}>
-            <div className={`container ${styles.nextInner}`}>
-              <div>
-                <p className={`mono ${styles.nextLabel}`}>{t('project.next')}</p>
-                <p className={`display ${styles.nextTitle}`}>{t(`projects.${next.id}.title`)}</p>
-              </div>
-              <FiArrowRight className={styles.nextArrow} aria-hidden />
+        <Link href={`/proyectos/${next.slug}`} className={styles.next}>
+          <div className={`container ${styles.nextInner}`}>
+            <div>
+              <p className={`mono ${styles.nextLabel}`}>{t('project.next')}</p>
+              <p className={`display ${styles.nextTitle}`}>{t(`projects.${next.id}.title`)}</p>
             </div>
-          </a>
+            <FiArrowRight className={styles.nextArrow} aria-hidden />
+          </div>
         </Link>
       </main>
     </>

@@ -1,0 +1,5 @@
+allowBuilds:
+  "@parcel/watcher": false
+  unrs-resolver: false
+overrides:
+  postcss: ^8.5.32

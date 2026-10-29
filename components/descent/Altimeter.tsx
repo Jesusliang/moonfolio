@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react'
-import { useTranslation } from 'next-i18next'
+import { useTranslation } from 'next-i18next/pages'
 import styles from './Altimeter.module.scss'
 
 export const layers = ['space', 'sky', 'city', 'underground', 'core'] as const

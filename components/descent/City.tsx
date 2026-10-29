@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-import { useTranslation } from 'next-i18next'
+import { useTranslation } from 'next-i18next/pages'
 import Reveal from '../ui/Reveal'
 import photo from '../../public/images/me.jpg'
 import styles from './City.module.scss'
@@ -223,9 +223,8 @@ const City: React.FC = () => {
             <Image
               src={photo}
               alt="Jesus Liang"
-              layout="fill"
-              objectFit="cover"
-              objectPosition="50% 25%"
+              fill
+              style={{ objectFit: 'cover', objectPosition: '50% 25%' }}
               placeholder="blur"
               sizes="260px"
             />

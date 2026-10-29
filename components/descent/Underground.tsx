@@ -1,5 +1,5 @@
 import React from 'react'
-import { useTranslation } from 'next-i18next'
+import { useTranslation } from 'next-i18next/pages'
 import Reveal from '../ui/Reveal'
 import styles from './Underground.module.scss'
 
