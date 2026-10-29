@@ -1,0 +1,250 @@
+// Starts on the deepest stratum (#24150B)
+.core {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(#24150b, #160c06 40%);
+  color: var(--earth-text);
+}
+
+.glow {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.pulse {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: pulse 3.2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.12);
+  }
+}
+
+.layout {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 56px;
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+.intro {
+  flex: 1 1 420px;
+  min-width: 0;
+}
+
+.label {
+  font-size: 13px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--magma-soft);
+}
+
+.title {
+  margin-top: 16px;
+  font-size: clamp(32px, 4.2vw, 58px);
+  line-height: 1.06;
+  font-weight: 800;
+  overflow-wrap: break-word;
+}
+
+.email {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 16px;
+  margin-top: 32px;
+
+  a {
+    font-size: clamp(20px, 2.4vw, 28px);
+    font-weight: 700;
+    border-bottom: 1px solid rgba(252, 235, 221, 0.35);
+    overflow-wrap: anywhere;
+
+    &:hover {
+      border-color: var(--magma);
+    }
+  }
+
+  button {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    border: 1px solid rgba(252, 235, 221, 0.25);
+    border-radius: 999px;
+    background: transparent;
+    font-size: 13px;
+    cursor: pointer;
+
+    &:hover {
+      border-color: var(--magma);
+    }
+  }
+}
+
+.links {
+  display: flex;
+  gap: 24px;
+  margin-top: 18px;
+  font-size: 13px;
+  text-transform: uppercase;
+
+  a:hover {
+    color: var(--magma-soft);
+  }
+}
+
+.back {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  height: 56px;
+  margin-top: 56px;
+  padding: 0 24px;
+  border-radius: 999px;
+  border: 1px solid rgba(252, 235, 221, 0.35);
+  font-weight: 700;
+  transition:
+    border-color 0.2s ease,
+    transform 0.2s ease;
+
+  &:hover {
+    border-color: var(--magma);
+    transform: translateY(-3px);
+  }
+}
+
+.flame {
+  transform-box: fill-box;
+  transform-origin: top center;
+  animation: flame 0.16s ease-in-out infinite alternate;
+}
+
+@keyframes flame {
+  from {
+    transform: scaleY(0.7);
+  }
+  to {
+    transform: scaleY(1.2);
+  }
+}
+
+.card {
+  flex: 1 1 380px;
+  min-width: 0;
+  min-height: 440px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 32px;
+  border-radius: 24px;
+  background: rgba(36, 21, 11, 0.85);
+  border: 1px solid rgba(252, 235, 221, 0.14);
+
+  @media (max-width: 520px) {
+    padding: 20px;
+  }
+}
+
+.form {
+  display: grid;
+  gap: 16px;
+}
+
+.field {
+  display: grid;
+  gap: 8px;
+  font-size: 14px;
+
+  input,
+  textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border-radius: 12px;
+    border: 1px solid rgba(252, 235, 221, 0.2);
+    background: #160c06;
+    font-size: 15px;
+
+    &::placeholder {
+      color: #b49580;
+    }
+
+    &:focus {
+      outline: none;
+      border-color: var(--magma);
+      box-shadow: 0 0 0 3px rgba(255, 122, 47, 0.2);
+    }
+  }
+
+  textarea {
+    resize: vertical;
+    min-height: 130px;
+  }
+}
+
+.submit {
+  height: 54px;
+  border: 0;
+  border-radius: 999px;
+  background: var(--magma);
+  color: #160c06;
+  font-weight: 700;
+  font-size: 15px;
+  cursor: pointer;
+
+  &:hover {
+    background: var(--magma-soft);
+  }
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: progress;
+  }
+}
+
+.result {
+  text-align: center;
+
+  svg {
+    font-size: 40px;
+  }
+
+  h3 {
+    margin-top: 16px;
+    font-size: 22px;
+  }
+
+  p {
+    margin-top: 8px;
+    color: var(--earth-muted);
+  }
+}
+
+.ok {
+  color: #5bd48a;
+}
+
+.ko {
+  color: #ff8a7a;
+}
+
+// Left-aligned so it stays clear of the glowing core on the right
+.footer {
+  position: relative;
+  padding-bottom: 28px;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #b49580;
+}

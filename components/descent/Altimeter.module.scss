@@ -1,0 +1,57 @@
+.gauge {
+  position: fixed;
+  left: 24px;
+  top: 20vh;
+  height: 60vh;
+  z-index: 50;
+  display: flex;
+  gap: 12px;
+  color: #fff;
+  // Stays legible over every layer, from black space to pale sky
+  mix-blend-mode: difference;
+
+  // Only where the side margin is wide enough to keep it clear of the content column
+  @media (max-width: 1400px) {
+    display: none;
+  }
+}
+
+.track {
+  position: relative;
+  width: 2px;
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.needle {
+  position: absolute;
+  left: -5px;
+  top: 0;
+  width: 12px;
+  height: 12px;
+  margin-top: -6px;
+  border-radius: 50%;
+  background: #fff;
+}
+
+.labels {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+
+  a {
+    opacity: 0.45;
+    transition: opacity 0.3s ease;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  .active {
+    opacity: 1;
+  }
+}

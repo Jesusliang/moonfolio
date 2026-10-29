@@ -1,0 +1,102 @@
+.underground {
+  color: var(--earth-text);
+
+  // Same sub-pixel seam guard as between sections
+  > * + * {
+    margin-top: -1px;
+  }
+}
+
+.base {
+  position: relative;
+  height: 260px;
+  // From the asphalt slab (#4F545C) down to the first stratum (#6B4A33)
+  background: linear-gradient(#46494e 0%, #4a4642 30%, #554536 62%, #6b4a33 100%);
+
+  svg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.header {
+  padding-top: 24px;
+  padding-bottom: 56px;
+}
+
+.label {
+  font-size: 13px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--sand);
+}
+
+.title {
+  margin-top: 16px;
+  max-width: 820px;
+  font-size: clamp(32px, 4.8vw, 64px);
+  line-height: 1.04;
+  font-weight: 800;
+}
+
+.lead {
+  margin-top: 20px;
+  max-width: 560px;
+  font-size: 18px;
+  color: var(--earth-muted);
+}
+
+.stratum {
+  position: relative;
+}
+
+.fossil {
+  position: absolute;
+  right: 12%;
+  top: 12px;
+}
+
+.row {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 40px;
+  padding-top: 32px;
+  padding-bottom: 48px;
+}
+
+.deepest {
+  padding-bottom: 80px;
+
+  .depth,
+  .name {
+    color: var(--magma-soft);
+  }
+}
+
+.depth {
+  flex: 0 0 120px;
+  font-size: 13px;
+  color: var(--sand);
+  padding-top: 6px;
+}
+
+.name {
+  flex: 0 0 240px;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.items {
+  flex: 1 1 360px;
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+.edge {
+  display: block;
+  width: 100%;
+  height: 40px;
+}

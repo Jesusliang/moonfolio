@@ -1,9 +1,72 @@
-html,
-head,
-body {
-  padding: 0;
-  margin: 0;
+:root {
+  --space: #04050d;
+  --space-2: #0a1030;
+  --sky-light: #bfddf2;
+  --ink: #1f2630;
+  --ink-muted: #3e4652;
+  --star: #eef0ff;
+  --star-muted: #c5cbea;
+  --moonlight: #9fb4ff;
+  --magma: #ff7a2f;
+  --magma-soft: #ff9a5c;
+  --earth-text: #fcebdd;
+  --earth-muted: #f0d7c2;
+  --sand: #f6ddb0;
+
+  --font-display: 'Unbounded', ui-sans-serif, system-ui, sans-serif;
+  --font-sans: 'DM Sans', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-mono: 'DM Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+
+  --container: 1120px;
+  --gutter: 24px;
+}
+
+@media (max-width: 640px) {
+  :root {
+    --gutter: 16px;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
   scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--space);
+  color: var(--star);
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+dl,
+dd,
+figure {
+  margin: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+  padding: 0;
 }
 
 a {
@@ -11,25 +74,78 @@ a {
   text-decoration: none;
 }
 
-* {
-  box-sizing: border-box;
+img,
+video {
+  display: block;
+  max-width: 100%;
 }
 
-ul {
-  list-style: none;
-  padding: 0;
+button,
+input,
+textarea {
+  font: inherit;
+  color: inherit;
 }
 
-.language_selector__single-value {
-  display: grid;
-  place-items: center;
+::selection {
+  background: var(--magma);
+  color: var(--space);
 }
 
-.react-selector__option {
-  display: grid;
-  place-items: center;
+:focus-visible {
+  outline: 2px solid var(--magma);
+  outline-offset: 3px;
+  border-radius: 6px;
 }
 
-.roundedImage {
-  clip-path: circle(40% at 50% 50%);
+.container {
+  width: 100%;
+  max-width: calc(var(--container) + var(--gutter) * 2);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+}
+
+/* Layers share their boundary colour; overlapping by 1px hides sub-pixel seams where the dark body shows through */
+main > section + section {
+  margin-top: -1px;
+}
+
+.display {
+  font-family: var(--font-display);
+}
+
+.mono {
+  font-family: var(--font-mono);
+}
+
+/* Scroll reveal: only hidden once JS has flagged the document, so content never stays invisible */
+.js .reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 0.8s cubic-bezier(0.2, 0.7, 0.2, 1),
+    transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.js .reveal.isVisible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  .js .reveal {
+    opacity: 1;
+    transform: none;
+  }
 }

@@ -1,0 +1,26 @@
+// Used on dark grounds only (space header and project pages)
+.lang {
+  display: inline-flex;
+  gap: 2px;
+  padding: 3px;
+  border: 1px solid rgba(238, 240, 255, 0.25);
+  border-radius: 999px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+
+  a {
+    padding: 3px 9px;
+    border-radius: 999px;
+    color: var(--star-muted);
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: var(--star);
+    }
+  }
+
+  .active {
+    background: rgba(238, 240, 255, 0.16);
+    color: var(--star);
+  }
+}

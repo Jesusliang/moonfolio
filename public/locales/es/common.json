@@ -1,87 +1,206 @@
 {
-  "labels": {
-    "now": "Actual"
+  "meta": {
+    "title": "Jesus Liang — Fullstack Lead",
+    "description": "Construyo software desde la base hasta la órbita. Fullstack Lead en Availroom: React, Node.js, AWS y agentes de IA."
   },
-  "navbar": {
-    "home": "Home",
-    "myWork": "Proyectos",
-    "skills": "Habilidades",
-    "about": "Sobre mi",
-    "contact": "Contacto"
+  "nav": {
+    "resume": "CV",
+    "back": "Volver a los proyectos",
+    "home": "Inicio"
   },
-  "hero": {
-    "developer": "Desarrollador Fullstack",
-    "description": "Haré que tu producto escale hasta la",
-    "throughWeb": "a través de la web",
-    "buttons": {
-      "contact": "Contáctame",
-      "resume": "Mi CV"
-    }
+  "altimeter": {
+    "label": "Altímetro",
+    "space": "Espacio",
+    "sky": "Cielo",
+    "city": "Ciudad",
+    "underground": "Subsuelo",
+    "core": "Núcleo"
   },
-  "myWork": {
-    "title": "Mis proyectos"
+  "space": {
+    "eyebrow": "Fullstack Lead · Cádiz · Altitud 400 km",
+    "titleA": "Construyo software desde la base",
+    "titleB": "hasta la órbita.",
+    "lead": "Esta web es el viaje al revés: empieza en lo que ya está en órbita y baja, capa a capa, hasta los cimientos que lo sostienen.",
+    "scroll": "Desciende",
+    "orbit": "En órbita ahora",
+    "stats": [
+      { "value": "150+", "label": "gestoras usando la plataforma" },
+      { "value": "6.000+", "label": "propiedades con check-in digital" },
+      { "value": "3.000+", "label": "reservas por el widget" }
+    ]
   },
-  "articles": {
-    "booking": {
-      "title": "Widget Motor de Reserva",
-      "description": "Widget embebible de reservas, compilado con bundlers para facilitar la implementación en las páginas web de los clientes, desde aplicaciones web hasta WordPress. Esto les permite utilizar nuestro producto para mostrar sus hoteles y apartamentos en un formato similar a Booking y Airbnb. Actualmente, se realizan más de 3000 reservas a través de la aplicación."
-    },
-    "checkin": {
-      "title": "Aplicación de Check-in Domótico",
-      "description": "Una aplicación web que facilita el check-in al cliente para su reserva. Hemos incorporado un SDK que extrae datos a través de fotos de documentos como el DNI, pasaportes y permisos de conducir. También está integrada con cerraduras domóticas, permitiendo a los clientes acceder a su alojamiento a través de la aplicación sin necesidad de llaves. La aplicación gestiona más de 6000 apartamentos y hoteles."
-    },
-    "pms": {
-      "title": "PMS/Channgel Manager",
-      "description": "Una aplicación web con interfaz estilo Windows para gestionar hoteles y apartamentos. Incluye un microservicio de backend basado en WebSockets con Node.js/Express para colaboración en tiempo real, similar a Figma o Google Docs. Utilizada por más de 150 gestores de hoteles y apartamentos."
-    },
-    "crm": {
-      "title": "CRM",
-      "description": "CRM para uso interno de la empresa. Además de las funciones genéricas, integra una API de terceros para predecir precios de reservas turísticas, generando contratos y optimizando decisiones para el equipo de captación de clientes."
-    },
-    "leaderslinked": {
-      "title": "Leaders Linked",
-      "description": "Desarrollo y migración de una red social de trabajo profesional privada de un proyecto monolítico en PHP al ecosistema de React. Utilizando bundlers para una integración progresiva con la arquitectura monolítica y, finalmente, separando el frontend del backend de PHP."
-    }
+  "sky": {
+    "label": "02 · Cielo · 10 km",
+    "title": "Lo que la gente ve y usa cada día.",
+    "lead": "Productos en producción, con usuarios reales. Cada uno abre su propia página con capturas, demo y cómo se construyó.",
+    "more": "También construí",
+    "open": "Ver proyecto"
   },
-  "mySkills": {
-    "title": "Mis Habilidades",
-    "backend": "Desarrollo Backend",
-    "frontend": "Desarrollo Frontend",
-    "others": "Otros"
+  "city": {
+    "label": "03 · Ciudad · 0 m",
+    "title": "Aterrizo en la calle: el camino recorrido.",
+    "current": "En verde",
+    "milestones": [
+      {
+        "period": "Dic 2020 — May 2021",
+        "role": "Web Developer · CESA",
+        "text": "Migré una red social monolítica en jQuery a una SPA en React, poco a poco y sin romper el backend en PHP."
+      },
+      {
+        "period": "Jun 2021 — Abr 2022",
+        "role": "Frontend Developer · Availroom",
+        "text": "PMS en tiempo real, la app de check-in con domótica y el motor de reservas de marca blanca."
+      },
+      {
+        "period": "Abr 2022 — Hoy",
+        "role": "Fullstack Lead · Availroom",
+        "text": "Dirijo el equipo: arquitectura, CI/CD y AWS. Plataforma omnicanal con IA, CRM predictivo y migración a microservicios."
+      }
+    ],
+    "aboutLabel": "Con los pies en la tierra",
+    "aboutTitle": "Ingeniero electrónico de formación. Constructor de producto desde 2020.",
+    "aboutText": "Estudié Ingeniería Electrónica en Computación (Universidad Yacambú) y Desarrollo de Aplicaciones Multiplataforma (Master D). Hoy vivo en Cádiz y lidero el equipo de desarrollo de Availroom. Lo que más disfruto es el ciclo completo: decidir cómo se construye algo, construirlo y verlo funcionar con gente real usándolo."
   },
-  "aboutMe": {
-    "title": "Sobre mi",
-    "contact": "Contacto",
-    "description": "Soy un desarrollador fullstack Javascript/Typescript. Con especialización en React y Nodejs. ¡Me encanta el desarrollo, aprender cosas nuevas y resolver problemas!",
-    "description2": "Actualmente lidero un pequeño equipo de frontend en una startup llamada Availroom en la que me encargo principalmente de la arquitectura frontend de todos los proyectos y de su mantenimiento. Asimismo, también he desarrollado microservicios y un sistema de CI/CD con github actions para los proyectos"
+  "underground": {
+    "label": "04 · Subsuelo",
+    "title": "Lo que no se ve es lo que sostiene todo.",
+    "lead": "Cada producto de arriba se apoya en estas capas. Aquí es donde paso la mayor parte del tiempo.",
+    "layers": [
+      { "depth": "−10 m", "name": "Interfaz", "items": "TypeScript · React · Next.js · Zustand · Redux · Vite" },
+      { "depth": "−20 m", "name": "Servicios", "items": "Node.js · Express · GraphQL · REST · WebSockets · Microservicios" },
+      { "depth": "−30 m", "name": "Datos", "items": "PostgreSQL · MongoDB · SQL / NoSQL" },
+      { "depth": "−40 m", "name": "Infraestructura", "items": "AWS · Docker · CI/CD · GitHub Actions" },
+      { "depth": "−50 m", "name": "Inteligencia", "items": "OpenAI API · Agentes de IA · Automatización de flujos" }
+    ]
   },
-  "contactMe": {
-    "title": "Envíame un correo",
-    "emailSent": {
-      "title": "Tu correo ha sido enviado",
-      "description": "Tendrás mi respuesta muy pronto!"
-    },
+  "core": {
+    "label": "05 · Núcleo",
+    "title": "Todo empieza aquí. ¿Construimos algo?",
+    "copy": "Copiar",
+    "copied": "Copiado",
+    "backToOrbit": "Volver a la órbita",
+    "footer": "Hecho en Cádiz, desde la base",
     "form": {
-      "name": {
-        "title": "Nombre",
-        "placeholder": "Tu Nombre"
-      },
-      "email": {
-        "title": "Correo",
-        "placeholder": "Tu Correo"
-      },
-      "message": {
-        "title": "Mensaje",
-        "placeholder": "Tu mensaje"
-      },
-      "send": "Enviar"
+      "name": "Nombre",
+      "namePlaceholder": "Tu nombre",
+      "email": "Email",
+      "emailPlaceholder": "tu@empresa.com",
+      "message": "Mensaje",
+      "messagePlaceholder": "¿Qué quieres construir?",
+      "send": "Enviar mensaje",
+      "sending": "Enviando…"
+    },
+    "sent": {
+      "title": "Mensaje enviado",
+      "description": "Gracias por escribir. Te responderé lo antes posible."
     },
     "error": {
-      "title": "Ha ocurrido un error",
-      "description": "por favor intente de nuevo más tarde"
+      "title": "No se pudo enviar el mensaje",
+      "description": "Inténtalo de nuevo o escríbeme directamente por email."
     }
   },
-  "alerts": {
-    "copiedToClipboard": "Copiado al portapapeles!"
+  "aiChat": {
+    "guest": "Hallo! Können wir später einchecken?",
+    "reply": "Claro, he movido la limpieza a las 16:00. ¡Os esperamos a las 18:00!",
+    "meta": "Agente IA · traducido del alemán · reserva actualizada"
+  },
+  "project": {
+    "role": "Rol",
+    "company": "Empresa",
+    "period": "Periodo",
+    "stack": "Stack",
+    "impact": "Impacto",
+    "challenge": "El reto",
+    "built": "Qué construí",
+    "demo": "Demo",
+    "play": "Reproducir demo",
+    "next": "Siguiente proyecto",
+    "links": {
+      "product": "Producto",
+      "client": "Cliente"
+    }
+  },
+  "projects": {
+    "ai": {
+      "category": "IA · Tiempo real",
+      "title": "Plataforma omnicanal con agentes de IA",
+      "summary": "Todos los mensajes de los huéspedes en una sola bandeja en tiempo real, con agentes de IA conectados al PMS que traducen, consultan reservas y actúan.",
+      "role": "Diseño end-to-end y liderazgo técnico",
+      "period": "2022 — hoy",
+      "challenge": "Las gestoras atienden a huéspedes de todo el mundo por WhatsApp, email y las OTAs, y cada respuesta suele requerir consultar o cambiar algo en el PMS: tarifas, limpiezas, horarios de llegada.",
+      "built": [
+        "Diseñé de punta a punta una plataforma omnicanal en tiempo real que unifica todas las conversaciones.",
+        "Integré agentes de IA conectados al PMS que automatizan flujos operativos como tarifas y limpiezas.",
+        "Traducción instantánea y respuestas contextuales con los datos de cada reserva."
+      ]
+    },
+    "pms": {
+      "category": "SaaS · Colaboración en tiempo real",
+      "title": "PMS / Channel Manager",
+      "summary": "La plataforma con la que más de 150 gestoras operan cada día: un escritorio dentro del navegador con colaboración multiusuario en tiempo real.",
+      "metric": "150+ gestoras",
+      "role": "Frontend → Fullstack Lead",
+      "period": "2021 — hoy",
+      "challenge": "Las gestoras trabajan con decenas de alojamientos y varios canales a la vez, y sus equipos tocan las mismas reservas al mismo tiempo. Necesitaban una herramienta tan ágil como una app de escritorio y en la que nadie pisara el trabajo de otro.",
+      "built": [
+        "Interfaz tipo escritorio con ventanas y apps, en React y Redux con selectores memorizados (Reselect) para evitar renders innecesarios.",
+        "Microservicio de WebSockets en Node.js y Express para colaboración en tiempo real, al estilo Figma o Google Docs.",
+        "Como Lead, coordiné la migración progresiva del core a microservicios."
+      ]
+    },
+    "booking": {
+      "category": "Widget embebible",
+      "title": "Motor de reservas de marca blanca",
+      "summary": "Un widget que cualquier hotel o gestora integra en su web para vender directo, con su marca y una experiencia a la altura de Booking o Airbnb.",
+      "metric": "3.000+ reservas",
+      "role": "Arquitectura y desarrollo",
+      "period": "2021 — 2022",
+      "challenge": "Cada cliente tiene una web distinta: WordPress, plantillas o desarrollos a medida. Había que ofrecer una reserva completa que encajara en todas, con la marca de cada uno y sin que tuvieran que programar.",
+      "built": [
+        "Motor modular de alto rendimiento en React y TypeScript.",
+        "Empaquetado con Webpack para inyectarse en cualquier web de terceros, desde apps hasta WordPress.",
+        "Búsqueda, filtros, mapa, precios y reserva conectados a la disponibilidad del PMS."
+      ]
+    },
+    "checkin": {
+      "category": "Web app · IoT",
+      "title": "Check-in digital con domótica",
+      "summary": "El huésped hace el check-in desde el móvil, se identifica con una foto de su documento y abre la puerta sin llaves.",
+      "metric": "6.000+ propiedades",
+      "role": "Frontend",
+      "period": "2021 — 2022",
+      "challenge": "Entregar llaves y recoger documentos en persona no escala cuando gestionas miles de alojamientos. El proceso tenía que poder hacerse entero desde el móvil del huésped.",
+      "built": [
+        "Flujo de check-in web con los datos de la reserva y la información útil del alojamiento.",
+        "Integración de un SDK de OCR que extrae los datos del DNI, el pasaporte o el carnet de conducir a partir de una foto.",
+        "Integración con cerraduras inteligentes para abrir el portal y la puerta desde la app."
+      ]
+    },
+    "crm": {
+      "category": "Herramienta interna",
+      "title": "CRM con APIs predictivas",
+      "summary": "Un CRM construido desde cero que integra APIs de mercado para predecir el rendimiento de alquileres turísticos y acelerar al equipo de captación.",
+      "role": "Liderazgo técnico",
+      "period": "2022 — hoy",
+      "challenge": "El equipo de captación necesitaba decidir rápido qué propiedades incorporar y con qué condiciones, sin depender de hojas de cálculo.",
+      "built": [
+        "Lideré el desarrollo del CRM desde cero.",
+        "Integración con APIs de terceros que predicen el rendimiento de los alquileres turísticos.",
+        "Generación de contratos para el equipo de captación."
+      ]
+    },
+    "leaderslinked": {
+      "category": "Migración",
+      "title": "Leaders Linked",
+      "summary": "Migración de una red social profesional monolítica en jQuery y PHP a una SPA en React, sin parar el servicio.",
+      "role": "Web Developer",
+      "period": "2020 — 2021",
+      "challenge": "La red social era un monolito en PHP con jQuery. Había que modernizar el frontend sin una reescritura de golpe que detuviera el producto.",
+      "built": [
+        "Refactoricé la interfaz hacia una SPA en React.",
+        "Configuré Webpack para una transición gradual conectada al backend en PHP.",
+        "Desacoplé finalmente el frontend del backend."
+      ]
+    }
   }
 }

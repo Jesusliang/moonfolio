@@ -1,0 +1,147 @@
+.space {
+  position: relative;
+  min-height: 100vh;
+  background: linear-gradient(var(--space), var(--space-2));
+  overflow: hidden;
+}
+
+.scene {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.star {
+  fill: #fff;
+  animation: twinkle 3s ease-in-out infinite;
+}
+
+@keyframes twinkle {
+  0%,
+  100% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.inner {
+  position: relative;
+  padding-top: 32px;
+  padding-bottom: 120px;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  height: 56px;
+}
+
+.brand {
+  font-weight: 800;
+  font-size: 16px;
+  letter-spacing: 0.02em;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.cv {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+
+  &:hover {
+    color: var(--moonlight);
+  }
+}
+
+.eyebrow {
+  margin-top: clamp(64px, 14vh, 140px);
+  font-size: 13px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--moonlight);
+}
+
+.title {
+  margin-top: 24px;
+  max-width: 980px;
+  font-size: clamp(38px, 6.4vw, 92px);
+  line-height: 1.02;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+
+  span {
+    color: var(--moonlight);
+  }
+}
+
+.lead {
+  margin-top: 32px;
+  max-width: 560px;
+  font-size: clamp(17px, 2vw, 19px);
+  line-height: 1.6;
+  color: var(--star-muted);
+}
+
+.scroll {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 56px;
+  font-size: 13px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  animation: bob 2.4s ease-in-out infinite;
+}
+
+@keyframes bob {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(6px);
+  }
+}
+
+.stats {
+  margin-top: 96px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.stat {
+  padding: 20px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.statLabel {
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--moonlight);
+}
+
+.statValue {
+  margin-top: 8px;
+  font-size: 34px;
+  font-weight: 800;
+}
+
+.statText {
+  margin-top: 4px;
+  color: var(--star-muted);
+}

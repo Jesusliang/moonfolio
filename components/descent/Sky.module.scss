@@ -1,0 +1,238 @@
+// Starts where space ends (#0A1030) and fades into the pale day sky the city begins with (#BFDDF2)
+.sky {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(
+    #0a1030 0%,
+    #1b3676 16%,
+    #3c77c2 38%,
+    #86bdea 70%,
+    var(--sky-light) 100%
+  );
+  color: #0e1a33;
+}
+
+.clouds {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.cloud {
+  fill: #fff;
+  opacity: 0.7;
+  animation: drift 38s linear infinite;
+}
+
+.slow {
+  opacity: 0.55;
+  animation-duration: 60s;
+}
+
+@keyframes drift {
+  from {
+    translate: -15% 0;
+  }
+  to {
+    translate: 110% 0;
+  }
+}
+
+.inner {
+  position: relative;
+  padding-top: 80px;
+  padding-bottom: 160px;
+}
+
+.capsuleWrap {
+  display: flex;
+  justify-content: flex-end;
+  animation: float 5s ease-in-out infinite;
+}
+
+.capsule {
+  transform-origin: top center;
+  animation: sway 4s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+@keyframes sway {
+  0%,
+  100% {
+    transform: rotate(-4deg);
+  }
+  50% {
+    transform: rotate(4deg);
+  }
+}
+
+.label {
+  font-size: 13px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #c5d7ff;
+}
+
+.title {
+  margin-top: 16px;
+  max-width: 760px;
+  font-size: clamp(32px, 4.8vw, 64px);
+  line-height: 1.04;
+  font-weight: 800;
+  color: #fff;
+}
+
+.lead {
+  margin-top: 20px;
+  max-width: 520px;
+  font-size: 18px;
+  color: #dce7ff;
+}
+
+.grid {
+  margin-top: 72px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 32px;
+
+  @media (max-width: 760px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card {
+  display: block;
+  height: 100%;
+  padding: 14px;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 30px 60px -30px rgba(14, 26, 51, 0.45);
+  transition:
+    transform 0.4s cubic-bezier(0.2, 0.7, 0.2, 1),
+    box-shadow 0.4s ease;
+
+  &:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 40px 70px -30px rgba(14, 26, 51, 0.55);
+  }
+}
+
+.media {
+  aspect-ratio: 16 / 10;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #dce7f7;
+}
+
+.shot {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top left;
+}
+
+.phoneThumb {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 18px;
+
+  img {
+    width: 38%;
+    height: auto;
+    align-self: flex-start;
+    border: 7px solid #0e1a33;
+    border-bottom: 0;
+    border-radius: 24px 24px 0 0;
+  }
+}
+
+.body {
+  padding: 18px 8px 8px;
+}
+
+.category {
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #4a5a80;
+}
+
+.cardTitle {
+  margin-top: 8px;
+  font-size: 21px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.summary {
+  margin-top: 8px;
+  font-size: 15px;
+  color: #3a4766;
+}
+
+.open {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 14px;
+  font-weight: 700;
+  font-size: 14px;
+  color: #1d3a7c;
+}
+
+.more {
+  margin-top: 64px;
+}
+
+.moreLabel {
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #2b3f63;
+}
+
+.more ul {
+  margin-top: 16px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
+  gap: 16px;
+
+  a {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 20px 22px;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.55);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    transition: background-color 0.2s ease;
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.85);
+    }
+  }
+}
+
+.moreTitle {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.moreMeta {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: #3a4766;
+}

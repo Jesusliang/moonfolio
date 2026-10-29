@@ -1,0 +1,256 @@
+// Continues the pale sky (#BFDDF2) down to the street; the earth starts right under the asphalt
+.city {
+  position: relative;
+  padding-top: 40px;
+  background: linear-gradient(var(--sky-light), #e3eef6);
+  color: var(--ink);
+}
+
+.label {
+  font-size: 13px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #3b5470;
+}
+
+.title {
+  margin-top: 16px;
+  max-width: 760px;
+  font-size: clamp(32px, 4.8vw, 64px);
+  line-height: 1.04;
+  font-weight: 800;
+}
+
+.milestones {
+  margin-top: 56px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+  gap: 40px;
+}
+
+.milestone {
+  display: flex;
+  gap: 20px;
+}
+
+.light {
+  flex: 0 0 auto;
+}
+
+.red {
+  animation: red 6s steps(1) infinite;
+}
+.amber {
+  animation: amber 6s steps(1) infinite;
+}
+.green {
+  animation: green 6s steps(1) infinite;
+}
+
+@keyframes red {
+  0% {
+    opacity: 1;
+  }
+  45% {
+    opacity: 0.18;
+  }
+  90% {
+    opacity: 1;
+  }
+}
+@keyframes amber {
+  0% {
+    opacity: 0.18;
+  }
+  40% {
+    opacity: 1;
+  }
+  45% {
+    opacity: 0.18;
+  }
+  85% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 0.18;
+  }
+}
+@keyframes green {
+  0% {
+    opacity: 0.18;
+  }
+  45% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 0.18;
+  }
+}
+
+.period {
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #4a5361;
+}
+
+.now {
+  color: #23683f;
+}
+
+.role {
+  margin-top: 6px;
+  font-size: 19px;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.text {
+  margin-top: 10px;
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--ink-muted);
+}
+
+.about {
+  margin-top: 96px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 48px;
+}
+
+.photo {
+  position: relative;
+  flex: 0 0 260px;
+  height: 300px;
+  border-radius: 130px 130px 20px 20px;
+  overflow: hidden;
+}
+
+.aboutText {
+  flex: 1 1 420px;
+  min-width: 0;
+
+  .text {
+    font-size: 17px;
+  }
+}
+
+.aboutTitle {
+  margin-top: 12px;
+  font-size: clamp(24px, 3vw, 36px);
+  line-height: 1.12;
+  font-weight: 600;
+}
+
+.skyline {
+  display: block;
+  width: 100%;
+  height: clamp(220px, 28vw, 360px);
+  margin-top: 40px;
+}
+
+.window {
+  animation: flicker 8s ease-in-out infinite;
+}
+
+@keyframes flicker {
+  0%,
+  50%,
+  100% {
+    opacity: 0.95;
+  }
+  65%,
+  80% {
+    opacity: 0.25;
+  }
+}
+
+/* Street */
+
+.street {
+  background: #3a3f47;
+}
+
+.curb {
+  height: 16px;
+  background: #a7afb9;
+}
+
+.slab {
+  height: 14px;
+  background: #4f545c;
+}
+
+.lanes {
+  position: relative;
+  height: 150px;
+  overflow: hidden;
+}
+
+.median {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 70px;
+  height: 10px;
+  border-top: 3px solid rgba(242, 201, 76, 0.85);
+  border-bottom: 3px solid rgba(242, 201, 76, 0.85);
+}
+
+.lane {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 46px;
+}
+
+.top {
+  top: 16px;
+}
+
+.bottom {
+  top: 88px;
+}
+
+.car {
+  position: absolute;
+  bottom: 0;
+  animation: drive 11s linear infinite;
+}
+
+.slow {
+  animation-duration: 15s;
+  animation-delay: -6s;
+}
+
+.reverse {
+  transform: scaleX(-1);
+  animation-name: driveBack;
+  animation-duration: 9s;
+  animation-delay: -3s;
+}
+
+.late {
+  animation-duration: 13s;
+  animation-delay: -9s;
+}
+
+@keyframes drive {
+  from {
+    left: -140px;
+  }
+  to {
+    left: 100%;
+  }
+}
+
+@keyframes driveBack {
+  from {
+    left: 100%;
+  }
+  to {
+    left: -140px;
+  }
+}

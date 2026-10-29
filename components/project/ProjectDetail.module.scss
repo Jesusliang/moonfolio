@@ -1,0 +1,232 @@
+.top {
+  position: absolute;
+  inset: 0 0 auto 0;
+  z-index: 10;
+  color: var(--star);
+}
+
+.topInner {
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  font-size: 14px;
+
+  > a:nth-child(2) {
+    font-weight: 800;
+    letter-spacing: 0.02em;
+
+    @media (max-width: 640px) {
+      display: none;
+    }
+  }
+}
+
+.back {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--star-muted);
+
+  &:hover {
+    color: var(--star);
+  }
+}
+
+/* Hero: same space-to-sky descent as the landing */
+.hero {
+  padding: 152px 0 220px;
+  background: linear-gradient(var(--space) 0%, #0a1030 30%, #1b3676 70%, #3c77c2 100%);
+}
+
+.category {
+  font-size: 13px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--moonlight);
+}
+
+.title {
+  margin-top: 18px;
+  max-width: 900px;
+  font-size: clamp(34px, 5.6vw, 76px);
+  line-height: 1.04;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.summary {
+  margin-top: 24px;
+  max-width: 640px;
+  font-size: clamp(17px, 2vw, 20px);
+  line-height: 1.6;
+  color: #dce7ff;
+}
+
+.meta {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));
+  gap: 1px;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid rgba(238, 240, 255, 0.18);
+  background: rgba(238, 240, 255, 0.18);
+
+  > div {
+    padding: 18px 20px;
+    background: rgba(10, 16, 48, 0.55);
+  }
+
+  dt {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--moonlight);
+  }
+
+  dd {
+    margin-top: 6px;
+    font-size: 16px;
+  }
+}
+
+.metric {
+  color: var(--magma-soft);
+  font-weight: 700;
+}
+
+/* Body: the mockup hangs from the hero into the pale sky */
+.body {
+  background: linear-gradient(#86bdea 0%, var(--sky-light) 30%, #e3eef6 100%);
+  color: var(--ink);
+  padding-bottom: 120px;
+}
+
+.mockup {
+  position: relative;
+  top: -160px;
+  margin-bottom: -80px;
+}
+
+.content {
+  display: grid;
+  gap: 72px;
+  max-width: 880px;
+}
+
+.blockLabel {
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #3b5470;
+}
+
+.challenge {
+  margin-top: 16px;
+  font-size: clamp(19px, 2.2vw, 24px);
+  line-height: 1.55;
+}
+
+.built {
+  margin-top: 24px;
+  display: grid;
+  gap: 20px;
+
+  li {
+    display: flex;
+    gap: 20px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(31, 38, 48, 0.15);
+  }
+
+  p {
+    font-size: 17px;
+    line-height: 1.65;
+    color: var(--ink-muted);
+  }
+}
+
+.index {
+  flex: 0 0 auto;
+  font-size: 22px;
+  font-weight: 800;
+  color: #1d3a7c;
+}
+
+.tags {
+  margin-top: 18px;
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 24px;
+  margin-top: 28px;
+  font-size: 15px;
+
+  a {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding-bottom: 2px;
+    border-bottom: 1px solid rgba(31, 38, 48, 0.3);
+
+    &:hover {
+      border-color: var(--magma);
+    }
+  }
+
+  span {
+    color: #4a5361;
+  }
+}
+
+/* Next project: back on the street */
+.next {
+  display: block;
+  background: #3a3f47;
+  border-top: 16px solid #a7afb9;
+  color: var(--star);
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background: #30353c;
+
+    .nextArrow {
+      transform: translateX(8px);
+    }
+  }
+}
+
+.nextInner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding-top: 64px;
+  padding-bottom: 64px;
+}
+
+.nextLabel {
+  font-size: 13px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #f2c94c;
+}
+
+.nextTitle {
+  margin-top: 10px;
+  font-size: clamp(26px, 4vw, 52px);
+  font-weight: 800;
+  line-height: 1.08;
+}
+
+.nextArrow {
+  flex: 0 0 auto;
+  font-size: 48px;
+  transition: transform 0.3s ease;
+}
