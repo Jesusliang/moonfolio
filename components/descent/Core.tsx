@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import axios from 'axios'
 import { useForm } from 'react-hook-form'
 import { useRouter } from 'next/router'
 import { useTranslation } from 'next-i18next'
@@ -12,6 +11,8 @@ interface FormValues {
   name: string
   email: string
   message: string
+  /** Honeypot: hidden from people, filled in by bots */
+  website: string
 }
 
 type Status = 'idle' | 'sending' | 'sent' | 'error'
@@ -26,7 +27,12 @@ const Core: React.FC = () => {
   const onSubmit = handleSubmit(async (data) => {
     setStatus('sending')
     try {
-      await axios.post('/api/mailer', data)
+      const response = await fetch('/api/mailer', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+      })
+      if (!response.ok) throw new Error(`mailer responded ${response.status}`)
       setStatus('sent')
     } catch (error) {
       setStatus('error')
@@ -66,6 +72,7 @@ const Core: React.FC = () => {
             type="text"
             autoComplete="name"
             required
+            maxLength={100}
             placeholder={t('core.form.namePlaceholder')}
             {...register('name', { required: true })}
           />
@@ -76,6 +83,7 @@ const Core: React.FC = () => {
             type="email"
             autoComplete="email"
             required
+            maxLength={254}
             placeholder={t('core.form.emailPlaceholder')}
             {...register('email', { required: true })}
           />
@@ -85,9 +93,14 @@ const Core: React.FC = () => {
           <textarea
             rows={5}
             required
+            maxLength={5000}
             placeholder={t('core.form.messagePlaceholder')}
             {...register('message', { required: true })}
           />
+        </label>
+        <label className={styles.honeypot} aria-hidden>
+          Website
+          <input type="text" tabIndex={-1} autoComplete="off" {...register('website')} />
         </label>
         <button type="submit" className={styles.submit} disabled={status === 'sending'}>
           {status === 'sending' ? t('core.form.sending') : t('core.form.send')}
