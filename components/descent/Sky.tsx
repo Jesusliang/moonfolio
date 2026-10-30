@@ -10,6 +10,15 @@ import styles from './Sky.module.scss'
 const cloud =
   'M100,0 a40,40 0 0,1 72,-24 a48,48 0 0,1 88,8 a32,32 0 0,1 32,48 h-184 a32,32 0 0,1 -8,-32 Z'
 
+// Each cloud is its own SVG so it keeps its shape at any section size; top is a share of the
+// section height, size scales with the viewport width.
+const clouds = [
+  { top: '34%', size: 'clamp(120px, 16vw, 230px)', slow: false, delay: 0 },
+  { top: '54%', size: 'clamp(150px, 21vw, 300px)', slow: true, delay: -20 },
+  { top: '73%', size: 'clamp(120px, 16vw, 230px)', slow: false, delay: -12 },
+  { top: '89%', size: 'clamp(140px, 19vw, 280px)', slow: true, delay: -40 }
+]
+
 const Thumb: React.FC<{ project: Project; alt: string }> = ({ project, alt }) => {
   const { media } = project
   if (media.type === 'chat') return <ChatMock />
@@ -30,26 +39,18 @@ const Sky: React.FC = () => {
 
   return (
     <section id="sky" className={styles.sky}>
-      <svg className={styles.clouds} viewBox="0 0 1440 1800" preserveAspectRatio="none" aria-hidden>
-        <path className={styles.cloud} d={cloud} transform="translate(0 620)" />
-        <path
-          className={`${styles.cloud} ${styles.slow}`}
-          d={cloud}
-          transform="translate(200 980) scale(1.3)"
-        />
-        <path
-          className={styles.cloud}
-          d={cloud}
-          transform="translate(-80 1320)"
-          style={{ animationDelay: '-12s' }}
-        />
-        <path
-          className={`${styles.cloud} ${styles.slow}`}
-          d={cloud}
-          transform="translate(120 1600) scale(1.2)"
-          style={{ animationDelay: '-40s' }}
-        />
-      </svg>
+      <div className={styles.clouds} aria-hidden>
+        {clouds.map(({ top, size, slow, delay }) => (
+          <svg
+            key={top}
+            className={[styles.cloud, slow ? styles.slow : ''].join(' ')}
+            viewBox="90 -64 212 98"
+            style={{ top, width: size, animationDelay: `${delay}s` }}
+          >
+            <path d={cloud} />
+          </svg>
+        ))}
+      </div>
 
       <div className={`container ${styles.inner}`}>
         <div className={styles.capsuleWrap} aria-hidden>
