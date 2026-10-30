@@ -103,7 +103,7 @@ const litWindows: [number, number, number][] = [
 const Skyline: React.FC = () => (
   <svg
     className={styles.skyline}
-    viewBox="0 0 1440 360"
+    viewBox="0 0 1440 310"
     preserveAspectRatio="xMidYMax slice"
     aria-hidden
   >
