@@ -69,8 +69,8 @@
       }
     ],
     "aboutLabel": "Feet on the ground",
-    "aboutTitle": "Electronics engineer by training. Product builder since 2020.",
-    "aboutText": "I studied Computer Electronics Engineering (Universidad Yacambú) and Cross-Platform Application Development (Master D). Today I live in Cádiz and lead the development team at Availroom. What I enjoy most is the whole cycle: deciding how something gets built, building it and watching real people use it."
+    "aboutTitle": "Over five years building products people actually use.",
+    "aboutText": "I started in 2020 migrating a social network from jQuery to React, and since 2021 I've grown with Availroom, from Frontend Developer to Fullstack Lead. Today, from Cádiz, I lead the development team and own the whole cycle: deciding how something gets built, building it and watching real people use it."
   },
   "underground": {
     "label": "04 · Underground",
