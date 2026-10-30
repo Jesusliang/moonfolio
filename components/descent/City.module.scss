@@ -114,15 +114,14 @@
 
 .about {
   margin-top: 200px;
-  margin-bottom: 200px;
+  margin-bottom: 100px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   gap: 48px;
 
   @media (max-width: 760px) {
-      margin-top: 100px;
-      margin-bottom: 100px;
+    margin-top: 100px;
   }
 }
 
