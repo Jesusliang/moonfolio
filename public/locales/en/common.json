@@ -69,8 +69,8 @@
       }
     ],
     "aboutLabel": "Feet on the ground",
-    "aboutTitle": "Over five years building products people actually use.",
-    "aboutText": "I started in 2020 migrating a social network from jQuery to React, and since 2021 I've grown with Availroom, from Frontend Developer to Fullstack Lead. Today, from Cádiz, I lead the development team and own the whole cycle: deciding how something gets built, building it and watching real people use it."
+    "aboutTitle": "Over five years turning ideas into products.",
+    "aboutText": "Since 2020 I've been building software real people use every day: real-time interfaces, hardware integrations, widgets that run inside other people's websites and AI agents in production. I've gone from writing components to leading a team, and what I enjoy most is the whole cycle: deciding how something gets built, building it, shipping it and seeing how it behaves in the real world. I work remotely."
   },
   "underground": {
     "label": "04 · Underground",
@@ -110,7 +110,7 @@
     "copy": "Copy",
     "copied": "Copied",
     "backToOrbit": "Back to orbit",
-    "footer": "Made in Cádiz, from the ground up",
+    "footer": "Built from the ground up",
     "form": {
       "name": "Name",
       "namePlaceholder": "Your name",
