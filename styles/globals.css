@@ -110,6 +110,17 @@ main > section + section {
   margin-top: -1px;
 }
 
+/* Grows a small link's tap area to roughly 44px without changing how it looks */
+.hit {
+  position: relative;
+}
+
+.hit::after {
+  content: '';
+  position: absolute;
+  inset: -12px -6px;
+}
+
 .display {
   font-family: var(--font-display);
 }

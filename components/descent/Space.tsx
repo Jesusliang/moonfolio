@@ -1,7 +1,7 @@
 import React from 'react'
 import { useRouter } from 'next/router'
 import { useTranslation } from 'next-i18next/pages'
-import { FiArrowDown, FiDownload } from 'react-icons/fi'
+import { FiArrowDown, FiArrowRight, FiDownload } from 'react-icons/fi'
 import Reveal from '../ui/Reveal'
 import LangSwitch from '../ui/LangSwitch'
 import { resumeFor } from '../../data/site'
@@ -92,7 +92,7 @@ const Space: React.FC = () => {
               href={resumeFor(locale)}
               target="_blank"
               rel="noreferrer"
-              className={`mono ${styles.cv}`}
+              className={`mono hit ${styles.cv}`}
             >
               {t('nav.resume')} <FiDownload aria-hidden />
             </a>
@@ -110,14 +110,20 @@ const Space: React.FC = () => {
         <Reveal delay={160}>
           <p className={styles.lead}>{t('space.lead')}</p>
         </Reveal>
-        <a href="#sky" className={`mono ${styles.scroll}`}>
-          {t('space.scroll')} <FiArrowDown aria-hidden />
-        </a>
+        <Reveal delay={240} className={styles.ctas}>
+          <a href="#core" className={styles.primary}>
+            {t('space.ctaContact')} <FiArrowRight aria-hidden />
+          </a>
+          <a href="#sky" className={styles.secondary}>
+            {t('space.ctaWork')} <FiArrowDown aria-hidden />
+          </a>
+        </Reveal>
+        <p className={styles.concept}>{t('space.concept')}</p>
 
+        <p className={`mono ${styles.statsLabel}`}>{t('space.orbit')}</p>
         <ul className={styles.stats}>
           {stats.map((stat, i) => (
             <Reveal as="li" key={stat.label} delay={i * 80} className={styles.stat}>
-              <p className={`mono ${styles.statLabel}`}>{t('space.orbit')}</p>
               <p className={`display ${styles.statValue}`}>{stat.value}</p>
               <p className={styles.statText}>{stat.label}</p>
             </Reveal>

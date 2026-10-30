@@ -142,10 +142,10 @@ const Core: React.FC = () => {
             </button>
           </div>
           <p className={`mono ${styles.links}`}>
-            <a href={site.linkedin} target="_blank" rel="noreferrer">
+            <a href={site.linkedin} target="_blank" rel="noreferrer" className="hit">
               LinkedIn ↗
             </a>
-            <a href={resumeFor(locale)} target="_blank" rel="noreferrer">
+            <a href={resumeFor(locale)} target="_blank" rel="noreferrer" className="hit">
               {t('nav.resume')} ↓
             </a>
           </p>

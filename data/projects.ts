@@ -35,7 +35,7 @@ export const projects: Project[] = [
     slug: 'pms-channel-manager',
     company: 'Availroom',
     tags: ['React', 'Redux', 'Reselect', 'Node.js', 'WebSockets', 'Microservices'],
-    media: { type: 'browser', poster: '/images/availroomOs.png', video: '/videos/os-demo.mp4' },
+    media: { type: 'browser', poster: '/images/availroomOs.webp', video: '/videos/os-demo.mp4' },
     links: [{ kind: 'product', url: 'https://www.availroom.com/productos/pms-vrms' }],
     featured: true
   },
@@ -46,7 +46,7 @@ export const projects: Project[] = [
     tags: ['React', 'TypeScript', 'Webpack', 'GraphQL'],
     media: {
       type: 'browser',
-      poster: '/images/bookingWidget.png',
+      poster: '/images/bookingWidget.webp',
       video: '/videos/booking-demo.mp4'
     },
     links: [
@@ -62,7 +62,7 @@ export const projects: Project[] = [
     slug: 'check-in-domotica',
     company: 'Availroom',
     tags: ['Next.js', 'React', 'TypeScript', 'REST', 'OCR', 'IoT'],
-    media: { type: 'phone', poster: '/images/checkin.png', video: '/videos/checkin-demo.mp4' },
+    media: { type: 'phone', poster: '/images/checkin.webp', video: '/videos/checkin-demo.mp4' },
     links: [{ kind: 'product', url: 'https://www.availroom.com/productos/app-huesped-availguest' }],
     featured: true
   },
@@ -71,7 +71,7 @@ export const projects: Project[] = [
     slug: 'crm-predictivo',
     company: 'Availroom',
     tags: ['React', 'Node.js', 'PostgreSQL', 'GraphQL'],
-    media: { type: 'browser', poster: '/images/crm.png' },
+    media: { type: 'browser', poster: '/images/crm.webp' },
     featured: false
   },
   {
@@ -79,7 +79,7 @@ export const projects: Project[] = [
     slug: 'leaders-linked',
     company: 'CESA Management Solutions',
     tags: ['React', 'Webpack', 'jQuery', 'PHP'],
-    media: { type: 'browser', poster: '/images/leaderslinked.png' },
+    media: { type: 'browser', poster: '/images/leaderslinked.webp' },
     links: [
       { kind: 'product', url: 'https://cesams.com/lms-plataformas-de-gestion-de-la-capacitacion/' }
     ],

@@ -60,7 +60,7 @@ const Altimeter: React.FC = () => {
               className={id === active ? styles.active : undefined}
               aria-current={id === active ? 'location' : undefined}
             >
-              {t(`altimeter.${id}`)}
+              <span className={styles.text}>{t(`altimeter.${id}`)}</span>
             </a>
           </li>
         ))}

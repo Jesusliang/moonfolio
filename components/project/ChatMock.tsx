@@ -9,7 +9,10 @@ const ChatMock: React.FC<{ large?: boolean }> = ({ large }) => {
     <div className={[styles.chat, large ? styles.large : ''].join(' ')}>
       <p className={styles.guest}>{t('aiChat.guest')}</p>
       <p className={styles.agent}>{t('aiChat.reply')}</p>
-      <p className={`mono ${styles.meta}`}>{t('aiChat.meta')}</p>
+      <p className={`mono ${styles.meta}`}>
+        <span className={styles.badge}>{t('aiChat.badge')}</span>
+        {t('aiChat.meta')}
+      </p>
     </div>
   )
 }

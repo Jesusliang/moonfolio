@@ -1,6 +1,7 @@
 import type { GetStaticPaths, GetStaticProps, NextPage } from 'next'
 import Head from 'next/head'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 import { useTranslation } from 'next-i18next/pages'
 import { serverSideTranslations } from 'next-i18next/pages/serverSideTranslations'
 import { FiArrowLeft, FiArrowRight, FiArrowUpRight } from 'react-icons/fi'
@@ -9,6 +10,7 @@ import TagList from '../../components/ui/TagList'
 import LangSwitch from '../../components/ui/LangSwitch'
 import DeviceMockup from '../../components/project/DeviceMockup'
 import { nextProject, projectBySlug, projects } from '../../data/projects'
+import { ogImageFor } from '../../data/site'
 import styles from '../../components/project/ProjectDetail.module.scss'
 
 interface Props {
@@ -19,6 +21,7 @@ const hostOf = (url: string) => new URL(url).hostname.replace(/^www\./, '')
 
 const ProjectPage: NextPage<Props> = ({ slug }: Props) => {
   const { t } = useTranslation()
+  const { locale } = useRouter()
   const project = projectBySlug(slug)!
   const next = nextProject(project)
   const key = (field: string) => `projects.${project.id}.${field}`
@@ -33,6 +36,8 @@ const ProjectPage: NextPage<Props> = ({ slug }: Props) => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="description" content={t(key('summary'))} />
         <meta property="og:title" content={`${title} — Jesus Liang`} />
+        <meta property="og:image" content={ogImageFor(locale)} />
+        <meta name="twitter:card" content="summary_large_image" />
         <meta property="og:description" content={t(key('summary'))} />
         <link rel="icon" href="/favicon.ico" />
       </Head>

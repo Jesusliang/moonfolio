@@ -9,3 +9,6 @@ export const site = {
 }
 
 export const resumeFor = (locale?: string) => site.resume[locale ?? 'es'] ?? site.resume.es
+
+export const ogImageFor = (locale?: string) =>
+  `https://jesusliang.com/images/og-${locale === 'en' ? 'en' : 'es'}.png`

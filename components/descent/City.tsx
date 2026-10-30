@@ -2,7 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 import { useTranslation } from 'next-i18next/pages'
 import Reveal from '../ui/Reveal'
-import photo from '../../public/images/me.jpg'
+import photo from '../../public/images/me.webp'
 import styles from './City.module.scss'
 
 interface Milestone {

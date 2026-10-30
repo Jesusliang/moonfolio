@@ -65,18 +65,19 @@
 }
 
 .eyebrow {
-  margin-top: clamp(64px, 14vh, 140px);
+  margin-top: clamp(40px, 9vh, 104px);
   font-size: 13px;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--moonlight);
 }
 
+// Sized so the headline fits in 2-3 lines on a 1366px laptop and the stats stay near the fold
 .title {
-  margin-top: 24px;
-  max-width: 980px;
-  font-size: clamp(38px, 6.4vw, 92px);
-  line-height: 1.02;
+  margin-top: 20px;
+  max-width: 900px;
+  font-size: clamp(34px, 5vw, 72px);
+  line-height: 1.04;
   font-weight: 800;
   letter-spacing: -0.02em;
 
@@ -86,22 +87,60 @@
 }
 
 .lead {
-  margin-top: 32px;
-  max-width: 560px;
-  font-size: clamp(17px, 2vw, 19px);
+  margin-top: 24px;
+  max-width: 600px;
+  font-size: clamp(17px, 2vw, 20px);
   line-height: 1.6;
-  color: var(--star-muted);
+  color: var(--star);
 }
 
-.scroll {
+.ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 32px;
+}
+
+%button {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  margin-top: 56px;
-  font-size: 13px;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  animation: bob 2.4s ease-in-out infinite;
+  height: 52px;
+  padding: 0 24px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 15px;
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease,
+    border-color 0.2s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+  }
+}
+
+.primary {
+  @extend %button;
+  background: var(--magma);
+  color: #160c06;
+
+  &:hover {
+    background: var(--magma-soft);
+  }
+}
+
+.secondary {
+  @extend %button;
+  border: 1px solid rgba(238, 240, 255, 0.35);
+
+  &:hover {
+    border-color: var(--star);
+  }
+
+  svg {
+    animation: bob 2.4s ease-in-out infinite;
+  }
 }
 
 @keyframes bob {
@@ -110,12 +149,28 @@
     transform: translateY(0);
   }
   50% {
-    transform: translateY(6px);
+    transform: translateY(4px);
   }
 }
 
+.concept {
+  margin-top: 28px;
+  max-width: 520px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--star-muted);
+}
+
+.statsLabel {
+  margin-top: 64px;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--moonlight);
+}
+
 .stats {
-  margin-top: 96px;
+  margin-top: 14px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 16px;
@@ -128,15 +183,7 @@
   border: 1px solid rgba(255, 255, 255, 0.12);
 }
 
-.statLabel {
-  font-size: 11px;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--moonlight);
-}
-
 .statValue {
-  margin-top: 8px;
   font-size: 34px;
   font-weight: 800;
 }

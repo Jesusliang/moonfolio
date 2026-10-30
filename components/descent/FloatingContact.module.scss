@@ -1,0 +1,39 @@
+.button {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 60;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  height: 52px;
+  padding: 0 22px;
+  border-radius: 999px;
+  background: var(--magma);
+  color: #160c06;
+  font-weight: 700;
+  font-size: 15px;
+  box-shadow: 0 16px 40px -12px rgba(4, 5, 13, 0.6);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(16px);
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease,
+    background-color 0.2s ease;
+
+  &:hover {
+    background: var(--magma-soft);
+  }
+
+  @media (max-width: 640px) {
+    right: 16px;
+    bottom: 16px;
+  }
+}
+
+.visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: none;
+}

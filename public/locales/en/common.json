@@ -17,29 +17,40 @@
     "core": "Core"
   },
   "space": {
-    "eyebrow": "Fullstack Lead · Cádiz · Altitude 400 km",
+    "eyebrow": "01 · Space · Altitude 400 km",
     "titleA": "I build software from the ground up",
     "titleB": "all the way to orbit.",
-    "lead": "This site is the journey in reverse: it starts with what is already in orbit and goes down, layer by layer, to the foundations that hold it up.",
-    "scroll": "Descend",
+    "lead": "I'm Jesus Liang, Fullstack Lead at Availroom. I design, build and ship SaaS products with TypeScript, React, Node.js, AWS and AI.",
+    "ctaContact": "Let's talk",
+    "ctaWork": "View projects",
+    "concept": "This site is the journey in reverse: it goes down layer by layer, from what is already in orbit to the foundations that hold it up.",
     "orbit": "In orbit right now",
     "stats": [
-      { "value": "150+", "label": "property managers on the platform" },
-      { "value": "6,000+", "label": "properties with digital check-in" },
-      { "value": "3,000+", "label": "bookings through the widget" }
+      {
+        "value": "150+",
+        "label": "property managers on the platform"
+      },
+      {
+        "value": "6,000+",
+        "label": "properties with digital check-in"
+      },
+      {
+        "value": "3,000+",
+        "label": "bookings through the widget"
+      }
     ]
   },
   "sky": {
     "label": "02 · Sky · 10 km",
     "title": "What people see and use every day.",
-    "lead": "Products in production, with real users. Each one opens its own page with screenshots, a demo and how it was built.",
+    "lead": "Products in production, with real users. Each one has its own page with screenshots, how it was built and, where available, a video demo.",
     "more": "I also built",
     "open": "View project"
   },
   "city": {
     "label": "03 · City · 0 m",
     "title": "Landing on the street: the road so far.",
-    "current": "Green light",
+    "current": "Present",
     "milestones": [
       {
         "period": "Dec 2020 — May 2021",
@@ -66,11 +77,31 @@
     "title": "What you don't see is what holds everything up.",
     "lead": "Every product above rests on these layers. This is where I spend most of my time.",
     "layers": [
-      { "depth": "−10 m", "name": "Interface", "items": "TypeScript · React · Next.js · Zustand · Redux · Vite" },
-      { "depth": "−20 m", "name": "Services", "items": "Node.js · Express · GraphQL · REST · WebSockets · Microservices" },
-      { "depth": "−30 m", "name": "Data", "items": "PostgreSQL · MongoDB · SQL / NoSQL" },
-      { "depth": "−40 m", "name": "Infrastructure", "items": "AWS · Docker · CI/CD · GitHub Actions" },
-      { "depth": "−50 m", "name": "Intelligence", "items": "OpenAI API · AI agents · Workflow automation" }
+      {
+        "depth": "−10 m",
+        "name": "Interface",
+        "items": "TypeScript · React · Next.js · Zustand · Redux · Vite"
+      },
+      {
+        "depth": "−20 m",
+        "name": "Services",
+        "items": "Node.js · Express · GraphQL · REST · WebSockets · Microservices"
+      },
+      {
+        "depth": "−30 m",
+        "name": "Data",
+        "items": "PostgreSQL · MongoDB · SQL / NoSQL"
+      },
+      {
+        "depth": "−40 m",
+        "name": "Infrastructure",
+        "items": "AWS · Docker · CI/CD · GitHub Actions"
+      },
+      {
+        "depth": "−50 m",
+        "name": "Intelligence",
+        "items": "OpenAI API · AI agents · Workflow automation"
+      }
     ]
   },
   "core": {
@@ -100,6 +131,7 @@
     }
   },
   "aiChat": {
+    "badge": "Illustration",
     "guest": "Hallo! Können wir später einchecken?",
     "reply": "Sure, I've moved the cleaning to 4 pm. See you at 6!",
     "meta": "AI agent · translated from German · booking updated"

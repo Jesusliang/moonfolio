@@ -1,3 +1,5 @@
+// Full gauge with labels on wide screens, a slim dotted track inside the side gutter on laptops
+// and tablets, hidden on phones (the floating contact button covers navigation there).
 .gauge {
   position: fixed;
   left: 24px;
@@ -10,8 +12,7 @@
   // Stays legible over every layer, from black space to pale sky
   mix-blend-mode: difference;
 
-  // Only where the side margin is wide enough to keep it clear of the content column
-  @media (max-width: 1400px) {
+  @media (max-width: 767px) {
     display: none;
   }
 }
@@ -53,5 +54,51 @@
 
   .active {
     opacity: 1;
+  }
+}
+
+@media (max-width: 1400px) {
+  .gauge {
+    left: 8px;
+    gap: 0;
+  }
+
+  .labels {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -11px;
+
+    a {
+      display: block;
+      width: 24px;
+      height: 24px;
+      margin: -12px 0;
+      opacity: 1;
+
+      // The visible dot sits on the track; the link itself is a larger hit area around it
+      &::before {
+        content: '';
+        display: block;
+        width: 6px;
+        height: 6px;
+        margin: 9px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.45);
+      }
+    }
+
+    .active::before {
+      background: #fff;
+    }
+  }
+
+  .text {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
   }
 }

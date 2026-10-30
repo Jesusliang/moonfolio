@@ -18,7 +18,7 @@ const LangSwitch: React.FC<{ className?: string }> = ({ className }) => {
           href={path}
           locale={lng}
           scroll={false}
-          className={lng === locale ? styles.active : undefined}
+          className={['hit', lng === locale ? styles.active : ''].join(' ')}
           hrefLang={lng}
         >
           {lng.toUpperCase()}
