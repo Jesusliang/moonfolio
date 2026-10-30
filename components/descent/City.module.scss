@@ -150,10 +150,12 @@
   font-weight: 600;
 }
 
+// The viewBox is 4:1 and sliced from the bottom. Never letting the box get wider than 4:1
+// (height >= 25vw) means extra width can't crop the rooftops; narrow screens only lose the sides.
 .skyline {
   display: block;
   width: 100%;
-  height: clamp(220px, 28vw, 360px);
+  height: max(220px, 25vw);
   margin-top: 40px;
 }
 
