@@ -1,10 +1,7 @@
 import React from 'react'
-import { useRouter } from 'next/router'
 import { useTranslation } from 'next-i18next/pages'
-import { FiArrowDown, FiArrowRight, FiDownload } from 'react-icons/fi'
+import { FiArrowDown, FiArrowRight } from 'react-icons/fi'
 import Reveal from '../ui/Reveal'
-import LangSwitch from '../ui/LangSwitch'
-import { resumeFor } from '../../data/site'
 import styles from './Space.module.scss'
 
 // x, y, radius, twinkle delay (s)
@@ -36,7 +33,6 @@ interface Stat {
 
 const Space: React.FC = () => {
   const { t } = useTranslation()
-  const { locale } = useRouter()
   const stats = t('space.stats', { returnObjects: true }) as Stat[]
 
   return (
@@ -48,9 +44,19 @@ const Space: React.FC = () => {
         aria-hidden
       >
         <defs>
+          <radialGradient id="sun-halo" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stopColor="#FFD97D" stopOpacity="0.48" />
+            <stop offset="48%" stopColor="#FF9E44" stopOpacity="0.16" />
+            <stop offset="100%" stopColor="#FF9E44" stopOpacity="0" />
+          </radialGradient>
+          <radialGradient id="sun-body" cx="38%" cy="35%" r="65%">
+            <stop offset="0%" stopColor="#FFFBE0" />
+            <stop offset="55%" stopColor="#FFD15C" />
+            <stop offset="100%" stopColor="#FF8E3C" />
+          </radialGradient>
           <radialGradient id="moon-halo" cx="50%" cy="50%" r="50%">
-            <stop offset="0%" stopColor="#B8C8FF" stopOpacity="0.28" />
-            <stop offset="55%" stopColor="#9FB4FF" stopOpacity="0.08" />
+            <stop offset="0%" stopColor="#B8C8FF" stopOpacity="0.32" />
+            <stop offset="55%" stopColor="#9FB4FF" stopOpacity="0.1" />
             <stop offset="100%" stopColor="#9FB4FF" stopOpacity="0" />
           </radialGradient>
           <radialGradient id="moon-body" cx="35%" cy="32%" r="68%">
@@ -83,11 +89,17 @@ const Space: React.FC = () => {
           strokeWidth="1.8"
           strokeLinecap="round"
         />
-        <circle cx="1240" cy="150" r="120" fill="url(#moon-halo)" />
-        <circle cx="1240" cy="150" r="46" fill="url(#moon-body)" />
-        <circle cx="1225" cy="138" r="8" fill="#C9C1AD" opacity=".65" />
-        <circle cx="1256" cy="166" r="11" fill="#C9C1AD" opacity=".55" />
-        <circle cx="1244" cy="132" r="4.5" fill="#C9C1AD" opacity=".45" />
+        <g className={styles.sunGroup}>
+          <circle cx="1240" cy="160" r="150" fill="url(#sun-halo)" />
+          <circle cx="1240" cy="160" r="48" fill="url(#sun-body)" />
+        </g>
+        <g className={styles.moonGroup}>
+          <circle cx="1240" cy="160" r="130" fill="url(#moon-halo)" />
+          <circle cx="1240" cy="160" r="46" fill="url(#moon-body)" />
+          <circle cx="1225" cy="148" r="8" fill="#C9C1AD" opacity=".65" />
+          <circle cx="1256" cy="176" r="11" fill="#C9C1AD" opacity=".55" />
+          <circle cx="1244" cy="142" r="4.5" fill="#C9C1AD" opacity=".45" />
+        </g>
         <ellipse
           cx="720"
           cy="900"
@@ -110,23 +122,6 @@ const Space: React.FC = () => {
       </svg>
 
       <div className={`container ${styles.inner}`}>
-        <header className={styles.nav}>
-          <a href="#space" className={`display ${styles.brand}`}>
-            JESUS LIANG
-          </a>
-          <div className={styles.actions}>
-            <LangSwitch />
-            <a
-              href={resumeFor(locale)}
-              target="_blank"
-              rel="noreferrer"
-              className={`mono hit ${styles.cv}`}
-            >
-              {t('nav.resume')} <FiDownload aria-hidden />
-            </a>
-          </div>
-        </header>
-
         <Reveal>
           <p className={`mono ${styles.eyebrow}`}>{t('space.eyebrow')}</p>
         </Reveal>

@@ -1,15 +1,98 @@
-// Starts where space ends (#0A1030) and fades into the pale day sky the city begins with (#BFDDF2)
+// Light mode: bright clear daytime sky; Dark mode: deep starry night sky
 .sky {
   position: relative;
   overflow: hidden;
   background: linear-gradient(
-    #0a1030 0%,
-    #1b3676 16%,
-    #3c77c2 38%,
-    #86bdea 70%,
-    var(--sky-light) 100%
+    #122756 0%,
+    #2969c2 18%,
+    #62aceb 44%,
+    #a3d5f7 74%,
+    #d4ebfb 100%
   );
   color: #0e1a33;
+  transition: background 0.5s ease, color 0.3s ease;
+}
+
+.nightSky {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+:global([data-theme='dark']) {
+  .sky {
+    background: linear-gradient(
+      #080f28 0%,
+      #0d1a3d 24%,
+      #12234d 58%,
+      #172a52 100%
+    );
+    color: var(--star);
+  }
+
+  .nightSky {
+    opacity: 1;
+  }
+
+  .cloud {
+    fill: #8ea6e6;
+    opacity: 0.14;
+  }
+
+  .slow {
+    opacity: 0.1;
+  }
+
+  .card {
+    background: rgba(13, 22, 46, 0.88);
+    border-color: rgba(159, 180, 255, 0.2);
+    box-shadow: 0 30px 60px -30px rgba(0, 0, 0, 0.65);
+  }
+
+  .category {
+    color: var(--moonlight);
+  }
+
+  .metricPill {
+    background: rgba(159, 180, 255, 0.14);
+    color: #cddaff;
+  }
+
+  .cardTitle {
+    color: var(--star);
+  }
+
+  .summary {
+    color: var(--star-muted);
+  }
+
+  .open {
+    color: var(--magma-soft);
+  }
+
+  .moreLabel {
+    color: var(--moonlight);
+  }
+
+  .more ul a {
+    background: rgba(13, 22, 46, 0.72);
+    border-color: rgba(159, 180, 255, 0.2);
+
+    &:hover {
+      background: rgba(20, 34, 68, 0.9);
+    }
+  }
+
+  .moreTitle {
+    color: var(--star);
+  }
+
+  .moreMeta {
+    color: var(--star-muted);
+  }
 }
 
 .clouds {

@@ -42,6 +42,18 @@ const Sky: React.FC = () => {
   return (
     <section id="sky" className={styles.sky}>
       <div className={styles.clouds} aria-hidden>
+        <svg className={styles.nightSky} viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice">
+          <circle cx="140" cy="110" r="1.4" fill="#fff" opacity=".65" />
+          <circle cx="340" cy="190" r="1.1" fill="#fff" opacity=".45" />
+          <circle cx="580" cy="95" r="1.5" fill="#fff" opacity=".7" />
+          <circle cx="820" cy="160" r="1.2" fill="#fff" opacity=".5" />
+          <circle cx="1060" cy="120" r="1.4" fill="#fff" opacity=".6" />
+          <circle cx="1310" cy="210" r="1.2" fill="#fff" opacity=".55" />
+          <circle cx="220" cy="420" r="1.1" fill="#fff" opacity=".4" />
+          <circle cx="960" cy="380" r="1.3" fill="#fff" opacity=".45" />
+          <circle cx="1220" cy="480" r="1.1" fill="#fff" opacity=".35" />
+          <circle cx="480" cy="560" r="1.2" fill="#fff" opacity=".35" />
+        </svg>
         {clouds.map(({ top, size, slow, delay }) => (
           <svg
             key={top}

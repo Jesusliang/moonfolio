@@ -1,9 +1,47 @@
-// Continues the pale sky (#BFDDF2) down to the street; the earth starts right under the asphalt
+// Continues the daytime sky (#D4EBFB) or night sky (#172A52) down to the street
 .city {
   position: relative;
   padding-top: 40px;
-  background: linear-gradient(var(--sky-light), #e3eef6);
+  background: linear-gradient(#d4ebfb, #ebf5fc);
   color: var(--ink);
+  transition: background 0.5s ease, color 0.3s ease;
+}
+
+:global([data-theme='dark']) {
+  .city {
+    background: linear-gradient(#172a52, #101b33);
+    color: var(--star);
+  }
+
+  .label {
+    color: var(--moonlight);
+  }
+
+  .milestone {
+    background: rgba(15, 25, 48, 0.72);
+    border-color: rgba(159, 180, 255, 0.18);
+    box-shadow: 0 24px 48px -28px rgba(0, 0, 0, 0.55);
+  }
+
+  .period {
+    color: var(--moonlight);
+  }
+
+  .now {
+    color: #5bd48a;
+  }
+
+  .text {
+    color: var(--star-muted);
+  }
+
+  .photo {
+    border-color: rgba(159, 180, 255, 0.3);
+  }
+
+  .skyline {
+    filter: brightness(0.55) contrast(1.15);
+  }
 }
 
 .label {

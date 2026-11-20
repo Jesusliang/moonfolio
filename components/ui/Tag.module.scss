@@ -14,3 +14,9 @@
   color: var(--ink);
   white-space: nowrap;
 }
+
+:global([data-theme='dark']) .tag {
+  border-color: rgba(159, 180, 255, 0.24);
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--star);
+}

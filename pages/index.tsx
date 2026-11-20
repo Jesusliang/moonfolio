@@ -4,6 +4,7 @@ import { useRouter } from 'next/router'
 import { useTranslation } from 'next-i18next/pages'
 import { serverSideTranslations } from 'next-i18next/pages/serverSideTranslations'
 import Altimeter from '../components/descent/Altimeter'
+import TopNav from '../components/descent/TopNav'
 import Space from '../components/descent/Space'
 import Sky from '../components/descent/Sky'
 import City from '../components/descent/City'
@@ -32,6 +33,7 @@ const Home: NextPage = () => {
         <meta name="author" content="Jesus Liang" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <TopNav />
       <Altimeter />
       <FloatingContact />
       <main>

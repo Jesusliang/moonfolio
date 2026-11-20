@@ -14,9 +14,11 @@ class MyDocument extends Document {
         })(window,document,'script','dataLayer','GTM-5CD36VV');`
             }}
           ></script>
-          {/* Flags the document so scroll-reveal styles only hide content when JS is running */}
+          {/* Flags the document for scroll-reveal and sets saved theme before first paint */}
           <script
-            dangerouslySetInnerHTML={{ __html: "document.documentElement.classList.add('js')" }}
+            dangerouslySetInnerHTML={{
+              __html: `(function(){var d=document.documentElement;d.classList.add('js');try{var t=localStorage.getItem('theme');if(t==='dark'||t==='light'){d.dataset.theme=t;return}}catch(e){}d.dataset.theme='light'})()`
+            }}
           />
           <meta name="theme-color" content="#04050d" />
           <link rel="preconnect" href="https://fonts.googleapis.com" />

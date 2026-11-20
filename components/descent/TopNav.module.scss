@@ -1,0 +1,76 @@
+.wrap {
+  position: fixed;
+  top: 14px;
+  left: 0;
+  right: 0;
+  z-index: 60;
+  pointer-events: none;
+}
+
+.bar {
+  pointer-events: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  height: 54px;
+  padding: 0 18px 0 22px;
+  border-radius: 999px;
+  background: rgba(10, 16, 48, 0.72);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(159, 180, 255, 0.22);
+  box-shadow: 0 14px 34px -16px rgba(4, 5, 13, 0.7);
+  color: var(--star);
+  transition:
+    background-color 0.3s ease,
+    border-color 0.3s ease;
+
+  @media (max-width: 520px) {
+    height: 50px;
+    padding: 0 12px 0 16px;
+    gap: 10px;
+  }
+}
+
+.brand {
+  font-weight: 800;
+  font-size: 15px;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+
+  @media (max-width: 420px) {
+    font-size: 13px;
+  }
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  @media (max-width: 520px) {
+    gap: 8px;
+  }
+}
+
+.cv {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.09);
+  border: 1px solid rgba(238, 240, 255, 0.18);
+  font-size: 12px;
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.16);
+    border-color: var(--moonlight);
+    color: var(--moonlight);
+  }
+}

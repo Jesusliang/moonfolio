@@ -1,8 +1,18 @@
 .top {
-  position: absolute;
+  position: fixed;
   inset: 0 0 auto 0;
-  z-index: 10;
+  z-index: 60;
   color: var(--star);
+  background: rgba(10, 16, 48, 0.72);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(159, 180, 255, 0.16);
+}
+
+.topActions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .topInner {
@@ -98,11 +108,43 @@
   font-weight: 700;
 }
 
-/* Body: the mockup hangs from the hero into the pale sky */
+/* Body: the mockup hangs from the hero into the sky */
 .body {
   background: linear-gradient(#86bdea 0%, var(--sky-light) 30%, #e3eef6 100%);
   color: var(--ink);
   padding-bottom: 120px;
+  transition: background 0.4s ease, color 0.3s ease;
+}
+
+:global([data-theme='dark']) {
+  .body {
+    background: linear-gradient(#122040 0%, #0e1830 45%, #0b1326 100%);
+    color: var(--star);
+  }
+
+  .blockLabel {
+    color: var(--moonlight);
+  }
+
+  .built li {
+    border-top-color: rgba(159, 180, 255, 0.18);
+  }
+
+  .built p {
+    color: var(--star-muted);
+  }
+
+  .index {
+    color: var(--magma-soft);
+  }
+
+  .links a {
+    border-bottom-color: rgba(159, 180, 255, 0.35);
+  }
+
+  .links span {
+    color: var(--moonlight);
+  }
 }
 
 .mockup {

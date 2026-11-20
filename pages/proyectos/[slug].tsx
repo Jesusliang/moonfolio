@@ -8,6 +8,7 @@ import { FiArrowLeft, FiArrowRight, FiArrowUpRight } from 'react-icons/fi'
 import Reveal from '../../components/ui/Reveal'
 import TagList from '../../components/ui/TagList'
 import LangSwitch from '../../components/ui/LangSwitch'
+import ThemeToggle from '../../components/ui/ThemeToggle'
 import DeviceMockup from '../../components/project/DeviceMockup'
 import { nextProject, projectBySlug, projects } from '../../data/projects'
 import { ogImageFor } from '../../data/site'
@@ -50,7 +51,10 @@ const ProjectPage: NextPage<Props> = ({ slug }: Props) => {
           <Link href="/" className="display">
             JESUS LIANG
           </Link>
-          <LangSwitch />
+          <div className={styles.topActions}>
+            <ThemeToggle />
+            <LangSwitch />
+          </div>
         </div>
       </header>
 
