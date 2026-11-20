@@ -117,17 +117,27 @@ const Core: React.FC = () => {
         preserveAspectRatio="xMidYMid slice"
         aria-hidden
       >
-        <circle className={styles.pulse} cx="1180" cy="780" r="320" fill="#FF7A2F" opacity=".22" />
+        <defs>
+          <radialGradient id="core-aura" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stopColor="#FF9A5C" stopOpacity="0.48" />
+            <stop offset="45%" stopColor="#FF7A2F" stopOpacity="0.22" />
+            <stop offset="100%" stopColor="#FF7A2F" stopOpacity="0" />
+          </radialGradient>
+          <radialGradient id="core-heart" cx="45%" cy="45%" r="55%">
+            <stop offset="0%" stopColor="#FFE1A8" />
+            <stop offset="55%" stopColor="#FF9A5C" />
+            <stop offset="100%" stopColor="#FF7A2F" stopOpacity="0" />
+          </radialGradient>
+        </defs>
+        <circle className={styles.pulse} cx="1180" cy="780" r="460" fill="url(#core-aura)" />
         <circle
           className={styles.pulse}
           cx="1180"
           cy="780"
-          r="200"
-          fill="#FF7A2F"
-          opacity=".4"
-          style={{ animationDelay: '-1.2s' }}
+          r="240"
+          fill="url(#core-heart)"
+          style={{ animationDelay: '-1.6s' }}
         />
-        <circle cx="1180" cy="780" r="110" fill="#FFB066" />
       </svg>
 
       <div className={`container ${styles.layout}`}>

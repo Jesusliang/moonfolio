@@ -30,6 +30,30 @@
   }
 }
 
+.shootingStar {
+  opacity: 0;
+  animation: shoot 10s ease-out infinite;
+}
+
+@keyframes shoot {
+  0%,
+  78% {
+    opacity: 0;
+    transform: translate(0, 0);
+  }
+  82% {
+    opacity: 0.9;
+  }
+  92% {
+    opacity: 0;
+    transform: translate(260px, 92px);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(260px, 92px);
+  }
+}
+
 .inner {
   position: relative;
   padding-top: 32px;
@@ -131,13 +155,18 @@
 
 .primary {
   @extend %button;
-  background: linear-gradient(135deg, var(--magma-soft), var(--magma));
+  background-color: var(--magma);
+  background-image: linear-gradient(135deg, var(--magma-soft), var(--magma));
   color: #160c06;
-  box-shadow: 0 12px 32px -10px rgba(255, 122, 47, 0.55);
+  box-shadow: 0 0 28px -6px rgba(255, 122, 47, 0.55);
+  transition:
+    transform 0.2s ease,
+    filter 0.2s ease,
+    box-shadow 0.2s ease;
 
   &:hover {
-    background: var(--magma-soft);
-    box-shadow: 0 16px 36px -10px rgba(255, 122, 47, 0.7);
+    filter: brightness(1.08);
+    box-shadow: 0 0 38px -2px rgba(255, 122, 47, 0.75);
   }
 }
 

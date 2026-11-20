@@ -209,20 +209,22 @@
   height: 54px;
   border: 0;
   border-radius: 999px;
-  background: linear-gradient(135deg, var(--magma-soft), var(--magma));
+  background-color: var(--magma);
+  background-image: linear-gradient(135deg, var(--magma-soft), var(--magma));
   color: #160c06;
   font-weight: 700;
   font-size: 15px;
   cursor: pointer;
-  box-shadow: 0 12px 28px -10px rgba(255, 122, 47, 0.5);
+  box-shadow: 0 0 26px -6px rgba(255, 122, 47, 0.5);
   transition:
     transform 0.2s ease,
+    filter 0.2s ease,
     box-shadow 0.2s ease;
 
   &:hover {
-    background: var(--magma-soft);
+    filter: brightness(1.08);
     transform: translateY(-2px);
-    box-shadow: 0 16px 32px -10px rgba(255, 122, 47, 0.65);
+    box-shadow: 0 0 36px -2px rgba(255, 122, 47, 0.72);
   }
 
   &:disabled {

@@ -47,6 +47,22 @@ const Space: React.FC = () => {
         preserveAspectRatio="xMidYMid slice"
         aria-hidden
       >
+        <defs>
+          <radialGradient id="moon-halo" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stopColor="#B8C8FF" stopOpacity="0.28" />
+            <stop offset="55%" stopColor="#9FB4FF" stopOpacity="0.08" />
+            <stop offset="100%" stopColor="#9FB4FF" stopOpacity="0" />
+          </radialGradient>
+          <radialGradient id="moon-body" cx="35%" cy="32%" r="68%">
+            <stop offset="0%" stopColor="#FFFDF5" />
+            <stop offset="65%" stopColor="#E9E4D4" />
+            <stop offset="100%" stopColor="#BFB7A2" />
+          </radialGradient>
+          <linearGradient id="shoot-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stopColor="#FFFFFF" stopOpacity="0" />
+            <stop offset="100%" stopColor="#EEF0FF" stopOpacity="0.95" />
+          </linearGradient>
+        </defs>
         {stars.map(([cx, cy, r, delay]) => (
           <circle
             key={`${cx}-${cy}`}
@@ -57,9 +73,21 @@ const Space: React.FC = () => {
             style={{ animationDelay: `${delay}s` }}
           />
         ))}
-        <circle cx="1240" cy="150" r="46" fill="#E9E4D4" />
-        <circle cx="1225" cy="138" r="8" fill="#D6D0BD" />
-        <circle cx="1256" cy="166" r="11" fill="#D6D0BD" />
+        <line
+          className={styles.shootingStar}
+          x1="240"
+          y1="110"
+          x2="340"
+          y2="145"
+          stroke="url(#shoot-grad)"
+          strokeWidth="1.8"
+          strokeLinecap="round"
+        />
+        <circle cx="1240" cy="150" r="120" fill="url(#moon-halo)" />
+        <circle cx="1240" cy="150" r="46" fill="url(#moon-body)" />
+        <circle cx="1225" cy="138" r="8" fill="#C9C1AD" opacity=".65" />
+        <circle cx="1256" cy="166" r="11" fill="#C9C1AD" opacity=".55" />
+        <circle cx="1244" cy="132" r="4.5" fill="#C9C1AD" opacity=".45" />
         <ellipse
           cx="720"
           cy="900"

@@ -41,15 +41,23 @@
 
 .light {
   flex: 0 0 auto;
+  overflow: visible;
+}
+
+.currentLight {
+  filter: drop-shadow(0 0 6px rgba(91, 212, 138, 0.85));
 }
 
 .red {
+  filter: drop-shadow(0 0 5px rgba(255, 90, 78, 0.75));
   animation: red 6s steps(1) infinite;
 }
 .amber {
+  filter: drop-shadow(0 0 5px rgba(255, 193, 77, 0.75));
   animation: amber 6s steps(1) infinite;
 }
 .green {
+  filter: drop-shadow(0 0 5px rgba(91, 212, 138, 0.75));
   animation: green 6s steps(1) infinite;
 }
 

@@ -22,7 +22,7 @@ const TrafficLight: React.FC<{ current?: boolean; offset?: number }> = ({
       <>
         <circle cx="18" cy="14" r="8" fill="#FF5A4E" opacity=".18" />
         <circle cx="18" cy="34" r="8" fill="#FFC14D" opacity=".18" />
-        <circle cx="18" cy="54" r="8" fill="#5BD48A" />
+        <circle className={styles.currentLight} cx="18" cy="54" r="8" fill="#5BD48A" />
       </>
     ) : (
       <>
