@@ -39,8 +39,31 @@
     border-color: rgba(159, 180, 255, 0.3);
   }
 
-  .skyline {
-    filter: brightness(0.55) contrast(1.15);
+  .backBuildings {
+    fill: #1b2842;
+  }
+
+  .frontBuildings {
+    fill: #0f192d;
+  }
+
+  .crownAccent {
+    fill: #1f2e4d;
+  }
+
+  .winRect {
+    fill: #ffd87a;
+    opacity: 0.45;
+  }
+
+  .winRectFar {
+    fill: #e8c26e;
+    opacity: 0.28;
+  }
+
+  .window {
+    fill: #fff3b0;
+    filter: drop-shadow(0 0 6px rgba(255, 224, 112, 0.95));
   }
 }
 

@@ -93,11 +93,21 @@ const back: [number, number, number, number][] = [
 ]
 const litWindows: [number, number, number][] = [
   [47, 238, 0],
+  [171, 198, -4],
+  [215, 240, -1.5],
   [311, 184, -3],
+  [339, 220, -6.5],
+  [447, 236, -2.5],
   [549, 166, -5],
+  [577, 210, -0.8],
+  [665, 254, -4.2],
   [801, 202, -1],
+  [905, 224, -3.6],
   [1031, 130, -6],
-  [1283, 220, -2]
+  [1059, 184, -2.2],
+  [1145, 242, -5.4],
+  [1283, 220, -2],
+  [1391, 248, -4.8]
 ]
 
 const Skyline: React.FC = () => (
@@ -109,13 +119,13 @@ const Skyline: React.FC = () => (
   >
     <defs>
       <pattern id="city-wins" width="14" height="18" patternUnits="userSpaceOnUse">
-        <rect x="3" y="4" width="6" height="8" fill="#DCE5EE" opacity=".55" />
+        <rect className={styles.winRect} x="3" y="4" width="6" height="8" fill="#DCE5EE" opacity=".55" />
       </pattern>
       <pattern id="city-wins-far" width="14" height="18" patternUnits="userSpaceOnUse">
-        <rect x="3" y="4" width="6" height="8" fill="#C9D3DE" opacity=".35" />
+        <rect className={styles.winRectFar} x="3" y="4" width="6" height="8" fill="#C9D3DE" opacity=".35" />
       </pattern>
     </defs>
-    <g fill="#AEB8C4">
+    <g className={styles.backBuildings} fill="#AEB8C4">
       {back.map(([x, y, w, h]) => (
         <rect key={x} x={x} y={y} width={w} height={h} />
       ))}
@@ -125,7 +135,7 @@ const Skyline: React.FC = () => (
         <rect key={x} x={x} y={y} width={w} height={h} />
       ))}
     </g>
-    <g fill="#6E7885">
+    <g className={styles.frontBuildings} fill="#6E7885">
       {front.map(([x, y, w, h]) => (
         <rect key={x} x={x} y={y} width={w} height={h} />
       ))}
@@ -142,7 +152,7 @@ const Skyline: React.FC = () => (
       <WaterTower x={52} y={186} />
       <WaterTower x={896} y={166} />
     </g>
-    <path d="M544,120 L568,70 L592,120 Z" fill="#8A94A1" />
+    <path className={styles.crownAccent} d="M544,120 L568,70 L592,120 Z" fill="#8A94A1" />
     <g fill="url(#city-wins)">
       {front.map(([x, y, w, h]) => (
         <rect key={x} x={x} y={y} width={w} height={h} />
