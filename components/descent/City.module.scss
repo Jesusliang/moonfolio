@@ -40,30 +40,57 @@
   }
 
   .backBuildings {
-    fill: #1b2842;
+    fill: #1c2b47;
   }
 
   .frontBuildings {
-    fill: #0f192d;
+    fill: #101a2e;
+    stroke: rgba(159, 180, 255, 0.14);
+    stroke-width: 1;
   }
 
   .crownAccent {
-    fill: #1f2e4d;
+    fill: #203152;
   }
 
   .winRect {
-    fill: #ffd87a;
-    opacity: 0.45;
+    fill: #324a78;
+    opacity: 0.36;
   }
 
   .winRectFar {
-    fill: #e8c26e;
-    opacity: 0.28;
+    fill: #2a3e66;
+    opacity: 0.22;
   }
 
   .window {
-    fill: #fff3b0;
-    filter: drop-shadow(0 0 6px rgba(255, 224, 112, 0.95));
+    fill: #ffe89e;
+    filter: drop-shadow(0 0 5px rgba(255, 214, 92, 0.95));
+  }
+
+  .beacons {
+    opacity: 1;
+  }
+}
+
+.beacons {
+  opacity: 0;
+  transition: opacity 0.4s ease;
+
+  circle {
+    fill: #ff5a4e;
+    filter: drop-shadow(0 0 6px rgba(255, 90, 78, 0.95));
+    animation: beacon 2.8s ease-in-out infinite;
+  }
+}
+
+@keyframes beacon {
+  0%,
+  100% {
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 1;
   }
 }
 
