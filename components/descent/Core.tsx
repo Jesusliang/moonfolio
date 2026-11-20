@@ -145,7 +145,13 @@ const Core: React.FC = () => {
           <p className={`mono ${styles.label}`}>{t('core.label')}</p>
           <h2 className={`display ${styles.title}`}>{t('core.title')}</h2>
           <div className={styles.email}>
-            <a href={`mailto:${site.email}`}>{site.email}</a>
+            <a
+              href={`mailto:${site.email}?subject=${encodeURIComponent(
+                locale === 'en' ? 'Hello from jesusliang.com' : 'Contacto desde jesusliang.com'
+              )}`}
+            >
+              {site.email}
+            </a>
             <button type="button" onClick={copyEmail} aria-live="polite">
               {copied ? <FiCheck aria-hidden /> : <FiCopy aria-hidden />}
               {copied ? t('core.copied') : t('core.copy')}
