@@ -1,16 +1,50 @@
-// Continues the daytime sky (#D4EBFB) or night sky (#172A52) down to the street
+// Continues the daytime sky (#D4EBFB) or night sky (#172A52) down to the street via cross-fade
 .city {
   position: relative;
   padding-top: 40px;
   background: linear-gradient(#d4ebfb, #ebf5fc);
   color: var(--ink);
-  transition: background 0.5s ease, color 0.3s ease;
+  transition: color 0.85s ease;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(#172a52, #101b33);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 1.15s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  > * {
+    position: relative;
+  }
+}
+
+.backBuildings,
+.frontBuildings,
+.crownAccent,
+.winRect,
+.winRectFar {
+  transition:
+    fill 1s ease,
+    stroke 1s ease,
+    opacity 1s ease;
+}
+
+.window {
+  transition:
+    fill 0.9s ease 0.2s,
+    filter 0.9s ease 0.2s;
 }
 
 :global([data-theme='dark']) {
   .city {
-    background: linear-gradient(#172a52, #101b33);
     color: var(--star);
+
+    &::before {
+      opacity: 1;
+    }
   }
 
   .label {
@@ -294,16 +328,19 @@
 
 .street {
   background: #3a3f47;
+  transition: background-color 1s ease;
 }
 
 .curb {
   height: 16px;
   background: #a7afb9;
+  transition: background-color 1s ease;
 }
 
 .slab {
   height: 14px;
   background: #4f545c;
+  transition: background-color 1s ease;
 }
 
 .lanes {

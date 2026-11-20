@@ -159,6 +159,48 @@ main > section + section {
   transform: none;
 }
 
+/* Cinematic dusk / dawn atmospheric veil during day-night transitions */
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 45;
+  opacity: 0;
+}
+
+[data-transition='to-night'] body::after {
+  background: radial-gradient(
+    ellipse 120% 70% at 50% 25%,
+    rgba(255, 122, 47, 0.36) 0%,
+    rgba(196, 78, 122, 0.22) 45%,
+    rgba(14, 24, 58, 0.2) 100%
+  );
+  animation: twilightWash 1.15s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+[data-transition='to-day'] body::after {
+  background: radial-gradient(
+    ellipse 120% 70% at 50% 20%,
+    rgba(255, 224, 130, 0.42) 0%,
+    rgba(255, 168, 92, 0.2) 45%,
+    rgba(140, 200, 255, 0.12) 100%
+  );
+  animation: twilightWash 1.15s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes twilightWash {
+  0% {
+    opacity: 0;
+  }
+  35% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;

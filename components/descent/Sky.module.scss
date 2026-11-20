@@ -1,4 +1,4 @@
-// Light mode: bright clear daytime sky; Dark mode: deep starry night sky
+// Light mode: bright clear daytime sky; Dark mode: deep starry night sky via cross-fade overlay
 .sky {
   position: relative;
   overflow: hidden;
@@ -10,7 +10,22 @@
     #d4ebfb 100%
   );
   color: #0e1a33;
-  transition: background 0.5s ease, color 0.3s ease;
+  transition: color 0.85s ease;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      #080f28 0%,
+      #0d1a3d 24%,
+      #12234d 58%,
+      #172a52 100%
+    );
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 1.15s cubic-bezier(0.4, 0, 0.2, 1);
+  }
 }
 
 .nightSky {
@@ -19,18 +34,16 @@
   width: 100%;
   height: 100%;
   opacity: 0;
-  transition: opacity 0.5s ease;
+  transition: opacity 1.1s ease 0.15s;
 }
 
 :global([data-theme='dark']) {
   .sky {
-    background: linear-gradient(
-      #080f28 0%,
-      #0d1a3d 24%,
-      #12234d 58%,
-      #172a52 100%
-    );
     color: var(--star);
+
+    &::before {
+      opacity: 1;
+    }
   }
 
   .nightSky {
@@ -108,6 +121,9 @@
   fill: #fff;
   opacity: 0.7;
   animation: drift 38s linear infinite;
+  transition:
+    fill 1.1s ease,
+    opacity 1.1s ease;
 }
 
 .slow {
@@ -207,7 +223,9 @@
   box-shadow: 0 30px 60px -30px rgba(14, 26, 51, 0.42);
   transition:
     transform 0.35s cubic-bezier(0.2, 0.7, 0.2, 1),
-    box-shadow 0.35s ease;
+    box-shadow 0.35s ease,
+    background-color 0.85s ease,
+    border-color 0.85s ease;
 
   &:hover {
     transform: translateY(-6px);

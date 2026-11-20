@@ -12,7 +12,16 @@
   height: 260px;
   // From the asphalt slab down to the first stratum
   background: linear-gradient(#46494e 0%, #4d4742 30%, #614c3b 62%, var(--stratum-0) 100%);
-  transition: background 0.5s ease;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(#232833 0%, #252429 35%, #282322 68%, var(--stratum-0) 100%);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 1.1s cubic-bezier(0.4, 0, 0.2, 1);
+  }
 
   svg {
     position: absolute;
@@ -22,9 +31,22 @@
   }
 }
 
+.stratum {
+  position: relative;
+  transition: background-color 1.05s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.edge {
+  transition: background-color 1.05s cubic-bezier(0.4, 0, 0.2, 1);
+
+  path {
+    transition: fill 1.05s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
 :global([data-theme='dark']) {
-  .base {
-    background: linear-gradient(#232833 0%, #252429 35%, #282322 68%, var(--stratum-0) 100%);
+  .base::before {
+    opacity: 1;
   }
 
   .pill {

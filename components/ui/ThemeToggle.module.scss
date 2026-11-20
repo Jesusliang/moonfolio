@@ -12,10 +12,10 @@
   font-size: 15px;
   cursor: pointer;
   transition:
-    background-color 0.2s ease,
-    border-color 0.2s ease,
-    color 0.2s ease,
-    transform 0.2s ease;
+    background-color 0.25s ease,
+    border-color 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease;
 
   &:hover {
     background: rgba(255, 255, 255, 0.16);
@@ -23,4 +23,19 @@
     color: #ffe184;
     transform: translateY(-1px);
   }
+
+  &:active {
+    transform: scale(0.92);
+  }
+}
+
+.icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.isDark {
+  transform: rotate(180deg);
 }
