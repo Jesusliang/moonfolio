@@ -1,7 +1,10 @@
 .space {
   position: relative;
   min-height: 100vh;
-  background: linear-gradient(var(--space), var(--space-2));
+  background:
+    radial-gradient(circle at 84% 16%, rgba(159, 180, 255, 0.14), transparent 36%),
+    radial-gradient(circle at 18% 42%, rgba(255, 122, 47, 0.08), transparent 40%),
+    linear-gradient(var(--space), var(--space-2));
   overflow: hidden;
 }
 
@@ -65,8 +68,14 @@
 }
 
 .eyebrow {
-  margin-top: clamp(40px, 9vh, 104px);
-  font-size: 13px;
+  display: inline-flex;
+  align-items: center;
+  margin-top: clamp(36px, 8vh, 92px);
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: rgba(159, 180, 255, 0.09);
+  border: 1px solid rgba(159, 180, 255, 0.24);
+  font-size: 12px;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--moonlight);
@@ -122,19 +131,24 @@
 
 .primary {
   @extend %button;
-  background: var(--magma);
+  background: linear-gradient(135deg, var(--magma-soft), var(--magma));
   color: #160c06;
+  box-shadow: 0 12px 32px -10px rgba(255, 122, 47, 0.55);
 
   &:hover {
     background: var(--magma-soft);
+    box-shadow: 0 16px 36px -10px rgba(255, 122, 47, 0.7);
   }
 }
 
 .secondary {
   @extend %button;
-  border: 1px solid rgba(238, 240, 255, 0.35);
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(238, 240, 255, 0.28);
 
   &:hover {
+    background: rgba(255, 255, 255, 0.09);
     border-color: var(--star);
   }
 
@@ -177,10 +191,21 @@
 }
 
 .stat {
-  padding: 20px;
-  border-radius: 16px;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  position: relative;
+  padding: 22px;
+  border-radius: 18px;
+  background: rgba(10, 16, 48, 0.74);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(159, 180, 255, 0.18);
+  border-top-color: rgba(255, 255, 255, 0.26);
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease;
+
+  &:hover {
+    transform: translateY(-3px);
+    border-color: rgba(159, 180, 255, 0.36);
+  }
 }
 
 .statValue {

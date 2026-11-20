@@ -76,27 +76,34 @@ const Sky: React.FC = () => {
         </Reveal>
 
         <div className={styles.grid}>
-          {featured.map((project, i) => (
-            <Reveal key={project.id} delay={(i % 2) * 100}>
-              <Link href={`/proyectos/${project.slug}`} className={styles.card}>
-                <div className={styles.media}>
-                  <Thumb project={project} alt={t(`projects.${project.id}.title`)} />
-                </div>
-                <div className={styles.body}>
-                  <p className={`mono ${styles.category}`}>
-                    {t(`projects.${project.id}.category`)}
-                  </p>
-                  <h3 className={`display ${styles.cardTitle}`}>
-                    {t(`projects.${project.id}.title`)}
-                  </h3>
-                  <p className={styles.summary}>{t(`projects.${project.id}.summary`)}</p>
-                  <span className={styles.open}>
-                    {t('sky.open')} <FiArrowRight aria-hidden />
-                  </span>
-                </div>
-              </Link>
-            </Reveal>
-          ))}
+          {featured.map((project, i) => {
+            const isMock = project.media.type === 'rms' || project.media.type === 'chat'
+            const metric = t(`projects.${project.id}.metric`, { defaultValue: '' })
+            return (
+              <Reveal key={project.id} delay={(i % 2) * 100}>
+                <Link href={`/proyectos/${project.slug}`} className={styles.card}>
+                  <div className={[styles.media, isMock ? styles.mediaMock : ''].join(' ')}>
+                    <Thumb project={project} alt={t(`projects.${project.id}.title`)} />
+                  </div>
+                  <div className={styles.body}>
+                    <div className={styles.metaRow}>
+                      <p className={`mono ${styles.category}`}>
+                        {t(`projects.${project.id}.category`)}
+                      </p>
+                      {metric && <span className={`mono ${styles.metricPill}`}>{metric}</span>}
+                    </div>
+                    <h3 className={`display ${styles.cardTitle}`}>
+                      {t(`projects.${project.id}.title`)}
+                    </h3>
+                    <p className={styles.summary}>{t(`projects.${project.id}.summary`)}</p>
+                    <span className={styles.open}>
+                      {t('sky.open')} <FiArrowRight aria-hidden />
+                    </span>
+                  </div>
+                </Link>
+              </Reveal>
+            )
+          })}
         </div>
 
         <Reveal className={styles.more}>

@@ -24,7 +24,7 @@ const DeviceMockup: React.FC<Props> = ({ media, title }) => {
           <span />
           <span />
         </div>
-        <div className={styles.screen}>
+        <div className={`${styles.screen} ${styles.compact}`}>
           {media.type === 'rms' ? <RmsMock large /> : <ChatMock large />}
         </div>
       </div>

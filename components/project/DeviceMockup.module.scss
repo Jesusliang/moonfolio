@@ -41,6 +41,11 @@
   background: #0e1a33;
 }
 
+.compact {
+  aspect-ratio: auto;
+  min-height: 320px;
+}
+
 .shot {
   width: 100%;
   height: 100%;

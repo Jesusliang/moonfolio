@@ -95,10 +95,27 @@
 
   .text {
     position: absolute;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    clip: rect(0 0 0 0);
+    left: 28px;
+    top: 50%;
+    transform: translateY(-50%) translateX(-4px);
+    padding: 3px 9px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.16);
     white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition:
+      opacity 0.2s ease,
+      transform 0.2s ease;
+  }
+
+  .labels a {
+    position: relative;
+
+    &:hover .text,
+    &:focus-visible .text {
+      opacity: 1;
+      transform: translateY(-50%) translateX(0);
+    }
   }
 }

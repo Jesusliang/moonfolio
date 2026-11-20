@@ -130,7 +130,13 @@ const Underground: React.FC = () => {
             >
               <span className={`mono ${styles.depth}`}>{layer.depth}</span>
               <span className={`display ${styles.name}`}>{layer.name}</span>
-              <span className={styles.items}>{layer.items}</span>
+              <ul className={styles.items}>
+                {layer.items.split('·').map((item) => (
+                  <li key={item.trim()} className={styles.pill}>
+                    {item.trim()}
+                  </li>
+                ))}
+              </ul>
             </Reveal>
           </div>
           {i < layers.length - 1 && (

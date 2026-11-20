@@ -5,20 +5,48 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 12px;
-  padding: 22px;
-  background: #0e1a33;
-  font-size: 14px;
+  gap: 11px;
+  padding: 20px;
+  background:
+    radial-gradient(circle at 18% 20%, rgba(127, 168, 255, 0.16), transparent 50%),
+    radial-gradient(circle at 86% 85%, rgba(255, 122, 47, 0.14), transparent 52%),
+    #0c162c;
+  font-size: 13.5px;
+
+  @media (max-width: 760px) {
+    padding: 18px 16px;
+    gap: 9px;
+    font-size: 13px;
+  }
 }
 
 .large {
-  gap: 18px;
-  padding: clamp(24px, 5vw, 56px);
-  font-size: clamp(14px, 1.6vw, 18px);
+  gap: 16px;
+  padding: clamp(22px, 4vw, 44px);
+  font-size: clamp(14px, 1.5vw, 17px);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(159, 180, 255, 0.16);
+  font-size: 0.75em;
+  letter-spacing: 0.06em;
+  color: #b7c8ff;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #5bd48a;
+  box-shadow: 0 0 10px rgba(91, 212, 138, 0.7);
 }
 
 %bubble {
-  max-width: 80%;
+  max-width: 82%;
   padding: 0.75em 1em;
   line-height: 1.45;
 }
@@ -28,6 +56,7 @@
   align-self: flex-start;
   border-radius: 14px 14px 14px 4px;
   background: #1d3a7c;
+  border: 1px solid rgba(159, 180, 255, 0.22);
   color: var(--star);
 }
 
@@ -35,24 +64,29 @@
   @extend %bubble;
   align-self: flex-end;
   border-radius: 14px 14px 4px 14px;
-  background: var(--magma);
+  background: linear-gradient(135deg, var(--magma-soft), var(--magma));
   color: #1a0f06;
+  font-weight: 500;
 }
 
 // Makes clear the conversation is a mock-up, not a screenshot of the real product
 .badge {
   display: inline-block;
   margin-right: 8px;
-  padding: 1px 8px;
+  padding: 2px 8px;
   border-radius: 999px;
-  border: 1px solid rgba(159, 180, 255, 0.4);
+  border: 1px solid rgba(159, 180, 255, 0.45);
   font-size: 10px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--moonlight);
+  color: #c5d4ff;
 }
 
 .meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 0;
   font-size: 0.78em;
-  color: var(--moonlight);
+  color: #b7c8ff;
 }

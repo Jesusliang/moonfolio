@@ -113,19 +113,26 @@
 }
 
 .card {
-  display: block;
+  display: flex;
+  flex-direction: column;
   height: 100%;
   padding: 14px;
   border-radius: 24px;
   background: rgba(255, 255, 255, 0.92);
-  box-shadow: 0 30px 60px -30px rgba(14, 26, 51, 0.45);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 0 30px 60px -30px rgba(14, 26, 51, 0.42);
   transition:
-    transform 0.4s cubic-bezier(0.2, 0.7, 0.2, 1),
-    box-shadow 0.4s ease;
+    transform 0.35s cubic-bezier(0.2, 0.7, 0.2, 1),
+    box-shadow 0.35s ease;
 
   &:hover {
     transform: translateY(-6px);
-    box-shadow: 0 40px 70px -30px rgba(14, 26, 51, 0.55);
+    box-shadow: 0 42px 76px -30px rgba(14, 26, 51, 0.55);
+
+    .open svg {
+      transform: translateX(4px);
+    }
   }
 }
 
@@ -134,6 +141,15 @@
   border-radius: 14px;
   overflow: hidden;
   background: #dce7f7;
+}
+
+.mediaMock {
+  background: #0c162c;
+
+  @media (max-width: 760px) {
+    aspect-ratio: auto;
+    min-height: 220px;
+  }
 }
 
 .shot {
@@ -160,7 +176,18 @@
 }
 
 .body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
   padding: 18px 8px 8px;
+}
+
+.metaRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 6px 10px;
 }
 
 .category {
@@ -170,11 +197,21 @@
   color: #4a5a80;
 }
 
+.metricPill {
+  padding: 2px 9px;
+  border-radius: 999px;
+  background: rgba(29, 58, 124, 0.09);
+  color: #1d3a7c;
+  font-size: 11px;
+  font-weight: 600;
+}
+
 .cardTitle {
   margin-top: 8px;
   font-size: 21px;
   font-weight: 600;
-  line-height: 1.2;
+  line-height: 1.22;
+  text-wrap: balance;
 }
 
 .summary {
@@ -187,10 +224,15 @@
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  margin-top: 14px;
+  margin-top: auto;
+  padding-top: 16px;
   font-weight: 700;
   font-size: 14px;
   color: #1d3a7c;
+
+  svg {
+    transition: transform 0.25s ease;
+  }
 }
 
 .more {
@@ -213,15 +255,23 @@
   a {
     display: flex;
     flex-direction: column;
-    gap: 6px;
+    justify-content: space-between;
+    height: 100%;
+    gap: 10px;
     padding: 20px 22px;
     border-radius: 18px;
-    background: rgba(255, 255, 255, 0.55);
-    border: 1px solid rgba(255, 255, 255, 0.8);
-    transition: background-color 0.2s ease;
+    background: rgba(255, 255, 255, 0.68);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.88);
+    transition:
+      background-color 0.2s ease,
+      transform 0.25s ease,
+      box-shadow 0.25s ease;
 
     &:hover {
-      background: rgba(255, 255, 255, 0.85);
+      background: rgba(255, 255, 255, 0.92);
+      transform: translateY(-3px);
+      box-shadow: 0 20px 40px -24px rgba(14, 26, 51, 0.35);
     }
   }
 }
