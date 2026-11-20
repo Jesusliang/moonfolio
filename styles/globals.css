@@ -13,12 +13,28 @@
   --earth-muted: #f0d7c2;
   --sand: #f6ddb0;
 
+  --stratum-0: #7a573d;
+  --stratum-1: #67472f;
+  --stratum-2: #543824;
+  --stratum-3: #412817;
+  --stratum-4: #2b190d;
+  --core-end: #190e07;
+
   --font-display: 'Unbounded', ui-sans-serif, system-ui, sans-serif;
   --font-sans: 'DM Sans', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
   --font-mono: 'DM Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
 
   --container: 1120px;
   --gutter: 24px;
+}
+
+[data-theme='dark'] {
+  --stratum-0: #2a211e;
+  --stratum-1: #221a18;
+  --stratum-2: #1b1412;
+  --stratum-3: #140e0d;
+  --stratum-4: #0f0908;
+  --core-end: #080404;
 }
 
 @media (max-width: 640px) {

@@ -10,14 +10,26 @@
 .base {
   position: relative;
   height: 260px;
-  // From the asphalt slab (#4F545C) down to the first stratum (#6B4A33)
-  background: linear-gradient(#46494e 0%, #4a4642 30%, #554536 62%, #6b4a33 100%);
+  // From the asphalt slab down to the first stratum
+  background: linear-gradient(#46494e 0%, #4d4742 30%, #614c3b 62%, var(--stratum-0) 100%);
+  transition: background 0.5s ease;
 
   svg {
     position: absolute;
     inset: 0;
     width: 100%;
     height: 100%;
+  }
+}
+
+:global([data-theme='dark']) {
+  .base {
+    background: linear-gradient(#232833 0%, #252429 35%, #282322 68%, var(--stratum-0) 100%);
+  }
+
+  .pill {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(252, 235, 221, 0.12);
   }
 }
 

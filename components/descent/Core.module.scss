@@ -1,9 +1,10 @@
-// Starts on the deepest stratum (#24150B)
+// Starts on the deepest stratum (--stratum-4)
 .core {
   position: relative;
   overflow: hidden;
-  background: linear-gradient(#24150b, #160c06 40%);
+  background: linear-gradient(var(--stratum-4), var(--core-end) 40%);
   color: var(--earth-text);
+  transition: background 0.5s ease;
 }
 
 .glow {

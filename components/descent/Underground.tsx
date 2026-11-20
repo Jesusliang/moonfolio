@@ -9,8 +9,14 @@ interface Layer {
   items: string
 }
 
-// One colour per stratum, darkening with depth; the core section starts on the last one
-const strata = ['#6B4A33', '#5A3B25', '#48301E', '#3A2213', '#24150B']
+// One CSS variable per stratum so light/dark themes shift the earth palette seamlessly
+const strata = [
+  'var(--stratum-0)',
+  'var(--stratum-1)',
+  'var(--stratum-2)',
+  'var(--stratum-3)',
+  'var(--stratum-4)'
+]
 const edges = [
   'M0,20 Q240,0 480,18 T960,14 T1440,20 V40 H0 Z',
   'M0,24 Q300,4 600,22 T1200,16 T1440,22 V40 H0 Z',
