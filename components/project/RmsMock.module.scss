@@ -1,0 +1,86 @@
+.rms {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  padding: 22px;
+  background: #0e1a33;
+  font-size: 14px;
+}
+
+.large {
+  gap: 16px;
+  padding: clamp(24px, 5vw, 56px);
+  font-size: clamp(14px, 1.6vw, 18px);
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.signal {
+  font-size: 0.78em;
+  color: var(--moonlight);
+}
+
+.delta {
+  padding: 2px 10px;
+  border-radius: 999px;
+  background: rgba(255, 122, 47, 0.18);
+  color: var(--magma);
+  font-size: 0.8em;
+  font-weight: 600;
+}
+
+.prices {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.old {
+  font-size: 1.15em;
+  color: rgba(238, 240, 255, 0.45);
+  text-decoration: line-through;
+}
+
+.arrow {
+  color: var(--moonlight);
+}
+
+.suggested {
+  font-size: 2em;
+  line-height: 1;
+  color: var(--star);
+}
+
+.reason {
+  padding: 0.7em 0.95em;
+  border-radius: 12px;
+  background: #1d3a7c;
+  color: var(--star);
+  line-height: 1.45;
+}
+
+.badge {
+  display: inline-block;
+  margin-right: 8px;
+  padding: 1px 8px;
+  border-radius: 999px;
+  border: 1px solid rgba(159, 180, 255, 0.4);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--moonlight);
+}
+
+.meta {
+  font-size: 0.78em;
+  color: var(--moonlight);
+}

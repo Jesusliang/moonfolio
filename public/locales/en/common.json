@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Jesus Liang — Fullstack Lead",
-    "description": "I build software from the ground up, all the way to orbit. Fullstack Lead at Availroom: React, Node.js, AWS and AI agents."
+    "title": "Jesus Liang — Lead Fullstack Engineer · Applied AI",
+    "description": "I build software from the ground up, all the way to orbit. Lead Fullstack Engineer at Availroom: TypeScript, React, Node.js, Python, Docker and Applied AI."
   },
   "nav": {
     "resume": "Resume",
@@ -20,7 +20,7 @@
     "eyebrow": "01 · Space · Altitude 400 km",
     "titleA": "I build software from the ground up",
     "titleB": "all the way to orbit.",
-    "lead": "I'm Jesus Liang, Fullstack Lead at Availroom. I design, build and ship SaaS products with TypeScript, React, Node.js, AWS and AI.",
+    "lead": "I'm Jesus Liang, Lead Fullstack Engineer at Availroom. I design, build and ship SaaS products with TypeScript, React, Next.js, Node.js, Python, Docker and Applied AI.",
     "ctaContact": "Let's talk",
     "ctaWork": "View projects",
     "concept": "This site is the journey in reverse: it goes down layer by layer, from what is already in orbit to the foundations that hold it up.",
@@ -36,7 +36,7 @@
       },
       {
         "value": "3,000+",
-        "label": "bookings through the widget"
+        "label": "monthly bookings on the platform"
       }
     ]
   },
@@ -65,12 +65,12 @@
       {
         "period": "Apr 2022 — Today",
         "role": "Fullstack Lead · Availroom",
-        "text": "I lead the team: architecture, CI/CD and AWS. Omnichannel platform with AI, predictive CRM and the move to microservices."
+        "text": "Lead end-to-end technical delivery of new products alongside the CTO, founders and design: AI RMS, omnichannel platform, Booking v3, CRM and Docker/Coolify deployments."
       }
     ],
     "aboutLabel": "Feet on the ground",
-    "aboutTitle": "Over five years turning ideas into products.",
-    "aboutText": "Since 2020 I've been building software real people use every day: real-time interfaces, hardware integrations, widgets that run inside other people's websites and AI agents in production. I've gone from writing components to leading a team, and what I enjoy most is the whole cycle: deciding how something gets built, building it, shipping it and seeing how it behaves in the real world."
+    "aboutTitle": "Six years turning ideas into products.",
+    "aboutText": "Since 2020 I've been building software real people use every day: AI Revenue Management systems, real-time interfaces, hardware integrations, widgets running inside third-party websites and AI agents in production. What I enjoy most is the full cycle: deciding how something gets built alongside product and design, building it, shipping it and seeing how it behaves in the real world."
   },
   "underground": {
     "label": "04 · Underground",
@@ -80,27 +80,27 @@
       {
         "depth": "−10 m",
         "name": "Interface",
-        "items": "TypeScript · React · Next.js · Zustand · Redux · Vite"
+        "items": "TypeScript · React · Next.js · React Native · Zustand · Tailwind · Vite"
       },
       {
         "depth": "−20 m",
         "name": "Services",
-        "items": "Node.js · Express · GraphQL · REST · WebSockets · Microservices"
+        "items": "Node.js (Fastify, Express) · Python · REST · GraphQL · WebSockets · RabbitMQ · BullMQ"
       },
       {
         "depth": "−30 m",
         "name": "Data",
-        "items": "PostgreSQL · MongoDB · SQL / NoSQL"
+        "items": "PostgreSQL · MongoDB · Redis · MySQL · Prisma · Drizzle"
       },
       {
         "depth": "−40 m",
-        "name": "Infrastructure",
-        "items": "AWS · Docker · CI/CD · GitHub Actions"
+        "name": "Infrastructure & Quality",
+        "items": "Docker · AWS · Coolify · GitHub Actions (CI/CD) · Vitest · Playwright · Sentry"
       },
       {
         "depth": "−50 m",
-        "name": "Intelligence",
-        "items": "OpenAI API · AI agents · Workflow automation"
+        "name": "Applied AI",
+        "items": "OpenAI API · Claude API · AI agents · Demand forecasting & backtesting"
       }
     ]
   },
@@ -136,6 +136,12 @@
     "reply": "Sure, I've moved the cleaning to 4 pm. See you at 6!",
     "meta": "AI agent · translated from German · booking updated"
   },
+  "rmsMock": {
+    "badge": "Illustration",
+    "signal": "Forecast occupancy 88% · CompSet €118",
+    "reason": "High holiday demand and competitors priced above your current rate. Recommended +15% increase.",
+    "meta": "RMS engine · backtest validated · ready to publish"
+  },
   "project": {
     "role": "Role",
     "company": "Company",
@@ -153,72 +159,86 @@
     }
   },
   "projects": {
+    "rms": {
+      "category": "AI · Revenue Management",
+      "title": "AI Revenue Management System (RMS)",
+      "summary": "A multi-tenant RMS integrated into the PMS that forecasts demand, monitors Booking.com & Airbnb competitor rates and delivers explainable pricing recommendations.",
+      "metric": "100+ properties in pilot",
+      "role": "End-to-end architecture and technical lead",
+      "period": "2026 — today",
+      "challenge": "Manually pricing hundreds of properties across 365 days leaves revenue on the table in peak season and loses occupancy in low season. We needed an in-house engine wired into the PMS that clearly justifies every price recommendation.",
+      "built": [
+        "Architected a multi-tenant system from scratch with Node.js/TypeScript, Python, PostgreSQL, Redis and BullMQ async queues.",
+        "Integrated demand forecasting, Booking.com & Airbnb competitor rate monitoring (DataForSEO, Bright Data) and backtesting validation.",
+        "Built the strategy and explainable recommendations UI inside Availroom OS, currently piloted with 100+ properties."
+      ]
+    },
     "ai": {
       "category": "AI · Real time",
       "title": "Omnichannel platform with AI agents",
-      "summary": "Every guest message in one real-time inbox, with PMS-connected AI agents that translate, look up bookings and take action.",
+      "summary": "Every guest message in one real-time inbox, with a WhatsApp Business microservice and PMS-connected AI agents that translate and act.",
       "role": "End-to-end design and technical lead",
       "period": "2022 — today",
       "challenge": "Property managers talk to guests from all over the world through WhatsApp, email and the OTAs, and most replies require checking or changing something in the PMS: rates, cleanings, arrival times.",
       "built": [
-        "Designed an end-to-end real-time omnichannel platform that unifies every conversation.",
-        "Integrated PMS-connected AI agents that automate operational workflows such as rates and cleanings.",
-        "Instant translation and contextual replies using each booking's data."
+        "Architected a WhatsApp Business microservice (Meta Cloud API, templates and coexistence) on RabbitMQ, PostgreSQL, MongoDB and S3.",
+        "Integrated PMS-connected AI agents automating operational workflows such as rates, cleanings, translations and contextual replies.",
+        "Connected all messaging into a real-time unified inbox powered by WebSockets."
       ]
     },
     "pms": {
       "category": "SaaS · Real-time collaboration",
-      "title": "PMS / Channel Manager",
+      "title": "Availroom OS · PMS / Channel Manager",
       "summary": "The platform 150+ property managers run on every day: a desktop inside the browser with real-time multi-user collaboration.",
       "metric": "150+ managers",
       "role": "Frontend → Fullstack Lead",
       "period": "2021 — today",
       "challenge": "Managers juggle dozens of properties and several channels, and their teams edit the same bookings at the same time. They needed a tool as fast as a desktop app where nobody overwrites anybody else's work.",
       "built": [
-        "A desktop-style interface with windows and apps, built with React and Redux using memoized selectors (Reselect) to avoid wasted renders.",
+        "New management dashboard (React 19, Vite, Tailwind/shadcn, Zustand) featuring WebSocket messaging, rates, minimum stays and the RMS module.",
         "A Node.js and Express WebSocket microservice for Figma- or Google Docs-style real-time collaboration.",
-        "As Lead, I coordinated the gradual migration of the core to microservices."
+        "Gradual migration of the core to microservices and automated deployments with Docker and Coolify."
       ]
     },
     "booking": {
-      "category": "Embeddable widget",
+      "category": "Embeddable widget · SEO",
       "title": "White-label booking engine",
-      "summary": "A widget any hotel or property manager embeds in their own site to sell direct, with their brand and an experience on par with Booking or Airbnb.",
-      "metric": "3,000+ bookings",
+      "summary": "A Next.js widget any hotel or property manager embeds without iframes (Shadow DOM) or via an SEO-friendly SSR WordPress plugin to sell direct.",
+      "metric": "3,000+ bookings/month",
       "role": "Architecture and development",
-      "period": "2021 — 2022",
-      "challenge": "Every client runs a different website: WordPress, templates or custom builds. It had to deliver a complete booking flow that fits all of them, carries each client's brand and needs no coding on their side.",
+      "period": "2021 — today",
+      "challenge": "Every client runs a different website: WordPress, templates or custom builds. It had to deliver a complete booking flow with price map and checkout without iframes while ranking well on search engines.",
       "built": [
-        "A modular, high-performance engine in React and TypeScript.",
-        "Bundled with Webpack so it can be injected into any third-party site, from web apps to WordPress.",
-        "Search, filters, map, pricing and checkout wired to PMS availability."
+        "Evolved the engine to Next.js and TypeScript, embeddable without iframes via a Shadow DOM script for style isolation.",
+        "Built a WordPress plugin with server-side rendering (SSR) for full SEO across property pages and checkout.",
+        "Google Maps price pins, filters, real-time availability and payment checkout wired to the PMS."
       ]
     },
     "checkin": {
-      "category": "Web app · IoT",
-      "title": "Digital check-in with smart locks",
-      "summary": "Guests check in from their phone, identify themselves with a photo of their document and open the door without keys.",
-      "metric": "6,000+ properties",
-      "role": "Frontend",
-      "period": "2021 — 2022",
-      "challenge": "Handing over keys and collecting documents in person doesn't scale across thousands of properties. The whole process had to work from the guest's phone.",
+      "category": "Web app · AI · IoT",
+      "title": "Digital check-in with AI scanning & smart locks",
+      "summary": "Guests check in from their phone, scan their ID document and open the door without keys across 6,000+ properties.",
+      "metric": "5,000–8,000 check-ins/month",
+      "role": "Frontend → AI Architecture",
+      "period": "2021 — today",
+      "challenge": "Handing over keys and collecting documents in person doesn't scale across thousands of properties. The entire flow had to work from the guest's phone with reliable document extraction.",
       "built": [
-        "A web check-in flow with the booking details and useful property information.",
-        "Integration of an OCR SDK that extracts data from ID cards, passports and driver's licenses from a photo.",
-        "Smart-lock integration to open the building and the door from the app."
+        "Online check-in flow for 6,000+ properties featuring digital signatures and smart-lock integrations.",
+        "Engineered a provider-agnostic document scanning microservice (Claude / OpenAI API structured outputs) with deterministic MRZ and Spanish ID validation.",
+        "Designed to replace the legacy SDK across 2,500–4,000 monthly document scans."
       ]
     },
     "crm": {
       "category": "Internal tool",
-      "title": "Predictive CRM",
-      "summary": "A CRM built from scratch that integrates market APIs to forecast vacation rental performance and speed up the acquisition team.",
+      "title": "Predictive real estate CRM",
+      "summary": "A CRM built from scratch that extracts market data (AirDNA, Puppeteer) to forecast profitability and generate PDF proposals for the acquisition team.",
       "role": "Technical lead",
       "period": "2022 — today",
-      "challenge": "The acquisition team needed to decide quickly which properties to onboard and on what terms, without living in spreadsheets.",
+      "challenge": "The acquisition team needed to decide quickly which properties to onboard and under what terms, without living in manual spreadsheets.",
       "built": [
-        "Led the development of the CRM from scratch.",
-        "Integrated third-party APIs that forecast vacation rental performance.",
-        "Contract generation for the acquisition team."
+        "Led CRM development from scratch with Next.js, Express, Prisma, PostgreSQL, Redis and Socket.io.",
+        "Integrated market data (AirDNA, Puppeteer) to model fixed, variable and hybrid profitability.",
+        "Automated PDF proposals and contract generation for the sales team."
       ]
     },
     "leaderslinked": {

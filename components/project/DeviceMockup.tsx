@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { useTranslation } from 'next-i18next/pages'
 import { FiPlay } from 'react-icons/fi'
 import ChatMock from './ChatMock'
+import RmsMock from './RmsMock'
 import { ProjectMedia } from '../../data/projects'
 import styles from './DeviceMockup.module.scss'
 
@@ -15,7 +16,7 @@ const DeviceMockup: React.FC<Props> = ({ media, title }) => {
   const { t } = useTranslation()
   const [playing, setPlaying] = useState(false)
 
-  if (media.type === 'chat') {
+  if (media.type === 'chat' || media.type === 'rms') {
     return (
       <div className={styles.browser}>
         <div className={styles.bar} aria-hidden>
@@ -24,7 +25,7 @@ const DeviceMockup: React.FC<Props> = ({ media, title }) => {
           <span />
         </div>
         <div className={styles.screen}>
-          <ChatMock large />
+          {media.type === 'rms' ? <RmsMock large /> : <ChatMock large />}
         </div>
       </div>
     )

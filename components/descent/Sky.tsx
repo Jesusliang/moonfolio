@@ -4,6 +4,7 @@ import { useTranslation } from 'next-i18next/pages'
 import { FiArrowRight } from 'react-icons/fi'
 import Reveal from '../ui/Reveal'
 import ChatMock from '../project/ChatMock'
+import RmsMock from '../project/RmsMock'
 import { Project, projects } from '../../data/projects'
 import styles from './Sky.module.scss'
 
@@ -21,6 +22,7 @@ const clouds = [
 
 const Thumb: React.FC<{ project: Project; alt: string }> = ({ project, alt }) => {
   const { media } = project
+  if (media.type === 'rms') return <RmsMock />
   if (media.type === 'chat') return <ChatMock />
   if (media.type === 'phone') {
     return (

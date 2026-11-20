@@ -1,4 +1,4 @@
-export type ProjectId = 'ai' | 'pms' | 'booking' | 'checkin' | 'crm' | 'leaderslinked'
+export type ProjectId = 'rms' | 'ai' | 'pms' | 'booking' | 'checkin' | 'crm' | 'leaderslinked'
 
 export interface ProjectLink {
   kind: 'product' | 'client'
@@ -6,6 +6,7 @@ export interface ProjectLink {
 }
 
 export type ProjectMedia =
+  | { type: 'rms' }
   | { type: 'chat' }
   | { type: 'browser'; poster: string; video?: string }
   | { type: 'phone'; poster: string; video?: string }
@@ -23,10 +24,18 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    id: 'rms',
+    slug: 'revenue-management-ia',
+    company: 'Availroom',
+    tags: ['TypeScript', 'Node.js', 'Fastify', 'Python', 'PostgreSQL', 'Redis', 'BullMQ'],
+    media: { type: 'rms' },
+    featured: true
+  },
+  {
     id: 'ai',
     slug: 'plataforma-omnicanal-ia',
     company: 'Availroom',
-    tags: ['Node.js', 'TypeScript', 'OpenAI API', 'WebSockets', 'MongoDB', 'AWS'],
+    tags: ['Node.js', 'TypeScript', 'OpenAI API', 'RabbitMQ', 'WebSockets', 'PostgreSQL', 'MongoDB'],
     media: { type: 'chat' },
     featured: true
   },
@@ -34,7 +43,7 @@ export const projects: Project[] = [
     id: 'pms',
     slug: 'pms-channel-manager',
     company: 'Availroom',
-    tags: ['React', 'Redux', 'Reselect', 'Node.js', 'WebSockets', 'Microservices'],
+    tags: ['React 19', 'TypeScript', 'Vite', 'Zustand', 'Node.js', 'WebSockets', 'Microservices'],
     media: { type: 'browser', poster: '/images/availroomOs.webp', video: '/videos/os-demo.mp4' },
     links: [{ kind: 'product', url: 'https://www.availroom.com/productos/pms-vrms' }],
     featured: true
@@ -43,7 +52,7 @@ export const projects: Project[] = [
     id: 'booking',
     slug: 'motor-de-reservas',
     company: 'Availroom',
-    tags: ['React', 'TypeScript', 'Webpack', 'GraphQL'],
+    tags: ['Next.js', 'React', 'TypeScript', 'Shadow DOM', 'WordPress SSR', 'GraphQL'],
     media: {
       type: 'browser',
       poster: '/images/bookingWidget.webp',
@@ -61,16 +70,16 @@ export const projects: Project[] = [
     id: 'checkin',
     slug: 'check-in-domotica',
     company: 'Availroom',
-    tags: ['Next.js', 'React', 'TypeScript', 'REST', 'OCR', 'IoT'],
+    tags: ['React', 'TypeScript', 'Claude / OpenAI API', 'REST', 'OCR', 'IoT'],
     media: { type: 'phone', poster: '/images/checkin.webp', video: '/videos/checkin-demo.mp4' },
     links: [{ kind: 'product', url: 'https://www.availroom.com/productos/app-huesped-availguest' }],
-    featured: true
+    featured: false
   },
   {
     id: 'crm',
     slug: 'crm-predictivo',
     company: 'Availroom',
-    tags: ['React', 'Node.js', 'PostgreSQL', 'GraphQL'],
+    tags: ['Next.js', 'Node.js', 'Express', 'Prisma', 'PostgreSQL', 'Redis', 'Socket.io'],
     media: { type: 'browser', poster: '/images/crm.webp' },
     featured: false
   },
