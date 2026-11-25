@@ -1,0 +1,45 @@
+.wrap {
+  position: fixed;
+  top: clamp(28px, 6vh, 72px);
+  right: clamp(-30px, 4vw, 96px);
+  width: clamp(220px, 24vw, 320px);
+  height: clamp(220px, 24vw, 320px);
+  z-index: 2;
+  pointer-events: none;
+  will-change: transform, opacity;
+}
+
+.orb {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.sunGroup,
+.moonGroup {
+  transform-box: fill-box;
+  transform-origin: center;
+  transition:
+    opacity 1.05s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 1.15s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.sunGroup {
+  opacity: 1;
+  transform: translate(0, 0) scale(1);
+}
+
+.moonGroup {
+  opacity: 0;
+  transform: translate(-45px, 68px) scale(0.76);
+}
+
+:global([data-theme='dark']) .sunGroup {
+  opacity: 0;
+  transform: translate(50px, 72px) scale(0.72);
+}
+
+:global([data-theme='dark']) .moonGroup {
+  opacity: 1;
+  transform: translate(0, 0) scale(1);
+}

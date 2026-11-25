@@ -4,6 +4,7 @@ import { useRouter } from 'next/router'
 import { useTranslation } from 'next-i18next/pages'
 import { serverSideTranslations } from 'next-i18next/pages/serverSideTranslations'
 import Altimeter from '../components/descent/Altimeter'
+import CelestialOrb from '../components/descent/CelestialOrb'
 import TopNav from '../components/descent/TopNav'
 import Space from '../components/descent/Space'
 import Sky from '../components/descent/Sky'
@@ -34,6 +35,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <TopNav />
+      <CelestialOrb />
       <Altimeter />
       <FloatingContact />
       <main>

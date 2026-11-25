@@ -44,26 +44,6 @@ const Space: React.FC = () => {
         aria-hidden
       >
         <defs>
-          <radialGradient id="sun-halo" cx="50%" cy="50%" r="50%">
-            <stop offset="0%" stopColor="#FFD97D" stopOpacity="0.48" />
-            <stop offset="48%" stopColor="#FF9E44" stopOpacity="0.16" />
-            <stop offset="100%" stopColor="#FF9E44" stopOpacity="0" />
-          </radialGradient>
-          <radialGradient id="sun-body" cx="38%" cy="35%" r="65%">
-            <stop offset="0%" stopColor="#FFFBE0" />
-            <stop offset="55%" stopColor="#FFD15C" />
-            <stop offset="100%" stopColor="#FF8E3C" />
-          </radialGradient>
-          <radialGradient id="moon-halo" cx="50%" cy="50%" r="50%">
-            <stop offset="0%" stopColor="#B8C8FF" stopOpacity="0.32" />
-            <stop offset="55%" stopColor="#9FB4FF" stopOpacity="0.1" />
-            <stop offset="100%" stopColor="#9FB4FF" stopOpacity="0" />
-          </radialGradient>
-          <radialGradient id="moon-body" cx="35%" cy="32%" r="68%">
-            <stop offset="0%" stopColor="#FFFDF5" />
-            <stop offset="65%" stopColor="#E9E4D4" />
-            <stop offset="100%" stopColor="#BFB7A2" />
-          </radialGradient>
           <linearGradient id="shoot-grad" x1="0%" y1="0%" x2="100%" y2="0%">
             <stop offset="0%" stopColor="#FFFFFF" stopOpacity="0" />
             <stop offset="100%" stopColor="#EEF0FF" stopOpacity="0.95" />
@@ -89,17 +69,6 @@ const Space: React.FC = () => {
           strokeWidth="1.8"
           strokeLinecap="round"
         />
-        <g className={styles.sunGroup}>
-          <circle cx="1240" cy="160" r="150" fill="url(#sun-halo)" />
-          <circle cx="1240" cy="160" r="48" fill="url(#sun-body)" />
-        </g>
-        <g className={styles.moonGroup}>
-          <circle cx="1240" cy="160" r="130" fill="url(#moon-halo)" />
-          <circle cx="1240" cy="160" r="46" fill="url(#moon-body)" />
-          <circle cx="1225" cy="148" r="8" fill="#C9C1AD" opacity=".65" />
-          <circle cx="1256" cy="176" r="11" fill="#C9C1AD" opacity=".55" />
-          <circle cx="1244" cy="142" r="4.5" fill="#C9C1AD" opacity=".45" />
-        </g>
         <ellipse
           cx="720"
           cy="900"
