@@ -17,10 +17,7 @@ const CelestialOrb: React.FC = () => {
 
     const update = () => {
       raf = 0
-      const sky = document.getElementById('sky')
-      if (!sky) return
-
-      const skyRect = sky.getBoundingClientRect()
+      const city = document.getElementById('city')
       const vw = window.innerWidth || 1440
       const vh = window.innerHeight || 900
       const scrollY = window.scrollY
@@ -41,30 +38,24 @@ const CelestialOrb: React.FC = () => {
         return
       }
 
-      // Desktop: follow from top of page down through #sky, then fade out before #city
-      const totalTravel = Math.max(1, sky.offsetTop + sky.offsetHeight - vh * 0.75)
+      if (!city) return
+      const cityRect = city.getBoundingClientRect()
+
+      // Desktop: glide linearly down from #space through #sky and #city, setting physically behind the skyline buildings
+      const totalTravel = Math.max(1, city.offsetTop + city.offsetHeight - vh * 0.6)
       const progress = Math.min(1, Math.max(0, scrollY / totalTravel))
 
-      // Fade out smoothly as the bottom of #sky rises through the viewport
-      const fadeStart = vh * 0.95
-      const fadeEnd = vh * 0.3
-      let opacity = 1
-      if (skyRect.bottom < fadeStart) {
-        opacity = Math.max(0, Math.min(1, (skyRect.bottom - fadeEnd) / (fadeStart - fadeEnd)))
-      }
-
       if (reduced) {
-        el.style.opacity = scrollY < vh ? '1' : '0'
+        el.style.opacity = cityRect.bottom > 0 ? '1' : '0'
         el.style.transform = 'translate3d(0, 0, 0)'
         return
       }
 
-      // Straight, gentle top-to-bottom parallax drift across Space -> Sky
-      const driftY = progress * Math.min(200, vh * 0.24)
+      const driftY = progress * Math.min(340, vh * 0.42)
       const scale = 1 - progress * 0.06
 
       el.style.transform = `translate3d(0, ${driftY.toFixed(1)}px, 0) scale(${scale.toFixed(3)})`
-      el.style.opacity = opacity.toFixed(3)
+      el.style.opacity = cityRect.bottom > 0 ? '1' : '0'
     }
 
     const onScroll = () => {

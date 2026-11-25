@@ -1,6 +1,7 @@
 // Starts on the deepest stratum (--stratum-4)
 .core {
   position: relative;
+  z-index: 3;
   overflow: hidden;
   background: linear-gradient(#2b190d, #190e07 40%);
   color: var(--earth-text);

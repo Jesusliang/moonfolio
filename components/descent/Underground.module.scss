@@ -1,4 +1,6 @@
 .underground {
+  position: relative;
+  z-index: 3;
   color: var(--earth-text);
 
   // Same sub-pixel seam guard as between sections
