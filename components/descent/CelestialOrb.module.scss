@@ -1,9 +1,9 @@
 .wrap {
   position: fixed;
   top: clamp(28px, 6vh, 72px);
-  right: clamp(-30px, 4vw, 96px);
-  width: clamp(220px, 24vw, 320px);
-  height: clamp(220px, 24vw, 320px);
+  right: clamp(-56px, 0.5vw, 20px);
+  width: clamp(200px, 20vw, 270px);
+  height: clamp(200px, 20vw, 270px);
   z-index: 1;
   pointer-events: none;
   will-change: transform, opacity;
@@ -32,7 +32,7 @@
 }
 
 .sunGroup {
-  opacity: 1;
+  opacity: 0.82;
   transform: translate(0, 0) scale(1);
 }
 

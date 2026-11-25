@@ -77,8 +77,8 @@ const CelestialOrb: React.FC = () => {
       <svg className={styles.orb} viewBox="0 0 320 320">
         <defs>
           <radialGradient id="orb-sun-halo" cx="50%" cy="50%" r="50%">
-            <stop offset="0%" stopColor="#FFD97D" stopOpacity="0.52" />
-            <stop offset="48%" stopColor="#FF9E44" stopOpacity="0.18" />
+            <stop offset="0%" stopColor="#FFD97D" stopOpacity="0.34" />
+            <stop offset="48%" stopColor="#FF9E44" stopOpacity="0.11" />
             <stop offset="100%" stopColor="#FF9E44" stopOpacity="0" />
           </radialGradient>
           <radialGradient id="orb-sun-body" cx="38%" cy="35%" r="65%">
@@ -99,8 +99,8 @@ const CelestialOrb: React.FC = () => {
         </defs>
 
         <g className={styles.sunGroup}>
-          <circle cx="160" cy="160" r="150" fill="url(#orb-sun-halo)" />
-          <circle cx="160" cy="160" r="48" fill="url(#orb-sun-body)" />
+          <circle cx="160" cy="160" r="142" fill="url(#orb-sun-halo)" />
+          <circle cx="160" cy="160" r="42" fill="url(#orb-sun-body)" />
         </g>
 
         <g className={styles.moonGroup}>
