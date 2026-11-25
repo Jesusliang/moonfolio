@@ -21,10 +21,27 @@ const CelestialOrb: React.FC = () => {
       if (!sky) return
 
       const skyRect = sky.getBoundingClientRect()
+      const vw = window.innerWidth || 1440
       const vh = window.innerHeight || 900
       const scrollY = window.scrollY
 
-      // Total travel span: from top of page to when the bottom of #sky nears the viewport bottom
+      // Mobile: tuck in corner and exit to the right + fade out quickly on scroll so it never blocks text
+      if (vw <= 760) {
+        const mobileProgress = Math.min(1, Math.max(0, scrollY / 220))
+        if (reduced) {
+          el.style.transform = 'translate3d(0, 0, 0)'
+          el.style.opacity = mobileProgress > 0.5 ? '0' : '1'
+          return
+        }
+        const exitX = mobileProgress * 120
+        const exitY = mobileProgress * 18
+        const opacity = 1 - mobileProgress
+        el.style.transform = `translate3d(${exitX.toFixed(1)}px, ${exitY.toFixed(1)}px, 0)`
+        el.style.opacity = opacity.toFixed(3)
+        return
+      }
+
+      // Desktop: follow from top of page down through #sky, then fade out before #city
       const totalTravel = Math.max(1, sky.offsetTop + sky.offsetHeight - vh * 0.75)
       const progress = Math.min(1, Math.max(0, scrollY / totalTravel))
 
