@@ -59,12 +59,11 @@ const CelestialOrb: React.FC = () => {
         return
       }
 
-      // Gentle downward & slight lateral parallax drift across Space -> Sky
+      // Straight, gentle top-to-bottom parallax drift across Space -> Sky
       const driftY = progress * Math.min(200, vh * 0.24)
-      const driftX = Math.sin(progress * Math.PI) * -28
-      const scale = 1 - progress * 0.08
+      const scale = 1 - progress * 0.06
 
-      el.style.transform = `translate3d(${driftX.toFixed(1)}px, ${driftY.toFixed(1)}px, 0) scale(${scale.toFixed(3)})`
+      el.style.transform = `translate3d(0, ${driftY.toFixed(1)}px, 0) scale(${scale.toFixed(3)})`
       el.style.opacity = opacity.toFixed(3)
     }
 
